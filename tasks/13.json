@@ -1,0 +1,38 @@
+{
+	"expression": "X xor Z xor ((Y xor ¬X) || Z=>Y) xor ¬T",
+	"truthTable": {
+		"array": [
+			1,
+			0,
+			0,
+			1,
+			1,
+			1,
+			1,
+			0,
+			0,
+			1,
+			1,
+			0,
+			0,
+			0,
+			0,
+			1
+		],
+		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP15461cb65febhd2c9hf6000020fb281fb167hf83?MSPStoreType=image/gif&s=32"
+	},
+	"pdnf": [
+		"!t!x!y!z",
+		"!t!xyz",
+		"!tx!y!z",
+		"!tx!yz",
+		"!txy!z",
+		"t!x!yz",
+		"t!xy!z",
+		"txyz"
+	],
+	"dnf": {
+		"text": "(T AND  X AND  Y AND  Z) OR  (T AND  (NOT X) AND  Y AND  (NOT Z)) OR  (T AND  (NOT X) AND  (NOT Y) AND  Z) OR  ((NOT T) AND  X AND  (NOT Y)) OR  ((NOT T) AND  X AND  (NOT Z)) OR  ((NOT T) AND  (NOT X) AND  Y AND  Z) OR  ((NOT T) AND  (NOT Y) AND  (NOT Z))",
+		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP8661ig3i2071f6f5i6g000015e027f93886bg66?MSPStoreType=image/gif&s=39"
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"expression": "(Z=>Z && Y && X) || ¬T=>T && ¬Y",
+	"truthTable": {
+		"array": [
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			1,
+			1,
+			0,
+			1,
+			1,
+			1,
+			0,
+			0
+		],
+		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP31591c7c620h55g3a92700000e1g02820h6d3409?MSPStoreType=image/gif&s=61"
+	},
+	"pdnf": [
+		"t!x!y!z",
+		"t!x!yz",
+		"t!xyz",
+		"tx!y!z",
+		"tx!yz"
+	],
+	"dnf": {
+		"text": "(T AND  (NOT X) AND  Z) OR  (T AND  (NOT Y))",
+		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP24961c7c62a3c1ebde2400003h4id8bd00b98c7g?MSPStoreType=image/gif&s=61"
+	}
+}

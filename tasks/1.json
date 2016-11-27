@@ -1,0 +1,43 @@
+{
+	"expression": "(T || ¬X=>Y || ¬T)=>(¬X=>(Z=>X))",
+	"truthTable": {
+		"array": [
+			1,
+			0,
+			1,
+			0,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			0,
+			1,
+			1,
+			1,
+			1
+		],
+		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP605922d3h3e107b2ch7a000051428gh1hh97276h?MSPStoreType=image/gif&s=34"
+	},
+	"pdnf": [
+		"!t!x!y!z",
+		"!t!xy!z",
+		"!tx!y!z",
+		"!tx!yz",
+		"!txy!z",
+		"!txyz",
+		"t!x!y!z",
+		"t!x!yz",
+		"t!xy!z",
+		"tx!y!z",
+		"tx!yz",
+		"txy!z",
+		"txyz"
+	],
+	"dnf": {
+		"text": "(T AND  (NOT Y)) OR  X OR  (NOT Z)",
+		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP72822bifbggi52898c30000610aihe2ci28acfg?MSPStoreType=image/gif&s=30"
+	}
+}
