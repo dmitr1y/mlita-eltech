@@ -1,0 +1,617 @@
+
+body {
+    margin: 0 auto;
+    font-family: Arial;
+    font-size: 62.5%;
+    color: #444;
+}
+
+.container {
+    position: relative;
+    margin: 100px auto 0 auto;
+    width: 600px;
+    height: 600px;
+    border: solid 1px #ddd;
+}
+
+.arrow {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.arrow:hover {
+    position: absolute;
+    background: rgba(255, 0, 0, 0.7);
+}
+
+.a-top {
+    top: -50px;
+    left: 0;
+    right: 0;
+    min-width: 600px;
+    height: 50px;
+    border-radius: 50px 50px 0 0;
+}
+
+.a-bottom {
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    min-width: 600px;
+    height: 50px;
+    border-radius: 0 0 50px 50px;
+}
+
+.a-left {
+    top: 0;
+    bottom: 0;
+    left: -50px;
+    width: 50px;
+    border-radius: 50px 0 0 50px;
+}
+
+.a-right {
+    top: 0;
+    bottom: 0;
+    right: -50px;
+    width: 50px;
+    border-radius: 0 50px 50px 0;
+}
+
+.cube {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    width: 200px;
+    height: 200px;
+
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.1s ease;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+
+    -webkit-transform: perspective(900px) rotate3d(1, 1, 0, -45deg);
+    -moz-transform: perspective(900px) rotate3d(1, 1, 0, -45deg);
+    -o-transform: perspective(900px) rotate3d(1, 1, 0, -45deg);
+    -ms-transform: perspective(900px) rotate3d(1, 1, 0, -45deg);
+    transform: perspective(900px) rotate3d(1, 1, 0, -45deg);
+}
+
+.a-top:hover ~ .cube {
+    -webkit-transform: perspective(900px) rotate3d(180, -45, 0, -135deg);
+    -moz-transform: perspective(900px) rotate3d(180, -45, 0, -135deg);
+    -o-transform: perspective(900px) rotate3d(180, -45, 0, -135deg);
+    -ms-transform: perspective(900px) rotate3d(180, -45, 0, -135deg);
+    transform: perspective(900px) rotate3d(180, -45, 0, -135deg);
+}
+
+.a-bottom:hover ~ .cube {
+    -webkit-transform: perspective(900px) rotate3d(180, -45, 0, 135deg);
+    -moz-transform: perspective(900px) rotate3d(180, -45, 0, 135deg);
+    -o-transform: perspective(900px) rotate3d(180, -45, 0, 135deg);
+    -ms-transform: perspective(900px) rotate3d(180, -45, 0, 135deg);
+    transform: perspective(900px) rotate3d(180, -45, 0, 135deg);
+}
+
+.a-left:hover ~ .cube {
+    -webkit-transform: perspective(900px) rotate3d(55, 180, 0, -219deg);
+    -moz-transform: perspective(900px) rotate3d(55, 180, 0, -219deg);
+    -o-transform: perspective(900px) rotate3d(55, 180, 0, -219deg);
+    -ms-transform: perspective(900px) rotate3d(55, 180, 0, -219deg);
+    transform: perspective(900px) rotate3d(55, 180, 0, -219deg);
+}
+.a-right:hover ~ .cube {
+    -webkit-transform: perspective(900px) rotate3d(-45, 180, 0, 135deg);
+    -moz-transform: perspective(900px) rotate3d(-45, 180, 0, 135deg);
+    -o-transform: perspective(900px) rotate3d(-45, 180, 0, 135deg);
+    -ms-transform: perspective(900px) rotate3d(-45, 180, 0, 135deg);
+    transform: perspective(900px) rotate3d(-45, 180, 0, 135deg);
+}
+
+
+.cube span {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+.cube .n1 {
+    top: 0;
+    left: 0;
+    background-color: #d00;
+    opacity: 0.6;
+    -webkit-transform: translate3d(0, 0, 100px) rotate3d(0, 0, 0, 90deg);
+    -moz-transform: translate3d(0, 0, 100px) rotate3d(0, 0, 0, 90deg);
+    -o-transform: translate3d(0, 0, 100px) rotate3d(0, 0, 0, 90deg);
+    -ms-transform: translate3d(0, 0, 100px) rotate3d(0, 0, 0, 90deg);
+    transform: translate3d(0, 0, 100px) rotate3d(0, 0, 0, 90deg);
+}
+
+.cube .n2 {
+    top: 0;
+    left: 100%;
+    opacity: 0.9;
+
+    border-left: 100px solid #dd0;
+    border-right: 0;
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+    -webkit-transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, 135deg);
+    -moz-transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, 135deg);
+    -o-transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, 135deg);
+    -ms-transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, 135deg);
+    transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, 135deg);
+}
+
+.cube .n3 {
+    top: 100%;
+    left: 0;
+    opacity: 0.9;
+
+    border-top: 100px solid #999;
+    border-bottom: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+    -webkit-transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, -135deg);
+    -moz-transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, -135deg);
+    -o-transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, -135deg);
+    -ms-transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, -135deg);
+    transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, -135deg);
+}
+
+.cube .n4 {
+    top: 0;
+    right: 100%;
+    opacity: 0.9;
+
+    border-right: 100px solid #04d;
+    border-left: 0;
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    -o-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+
+    -webkit-transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, -135deg);
+    -moz-transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, -135deg);
+    -o-transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, -135deg);
+    -ms-transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, -135deg);
+    transform: translate3d(0, 0, 100px) rotate3d(0, 1, 0, -135deg);
+}
+
+.cube .n5 {
+    bottom: 100%;
+    left: 0;
+    opacity: 0.9;
+
+    border-bottom: 100px solid #0dd;
+    border-top: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+
+    -webkit-transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, 135deg);
+    -moz-transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, 135deg);
+    -o-transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, 135deg);
+    -ms-transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, 135deg);
+    transform: translate3d(0, 0, 100px) rotate3d(1, 0, 0, 135deg);
+}
+
+.cube .n6 {
+    top: 35%;
+    left: 35%;
+    background-color: #6a0;
+    opacity: 0.9;
+    width: 60px;
+    height: 60px;
+
+    -webkit-transform-origin: 0 50%;
+    -moz-transform-origin: 0 50%;
+    -o-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+
+    -webkit-transform: translate3d(0, 0, 30px) rotate3d(1, 0, 0, 180deg);
+    -moz-transform: translate3d(0, 0, 30px) rotate3d(1, 0, 0, 180deg);
+    -o-transform: translate3d(0, 0, 30px) rotate3d(1, 0, 0, 180deg);
+    -ms-transform: translate3d(0, 0, 30px) rotate3d(1, 0, 0, 180deg);
+    transform: translate3d(0, 0, 30px) rotate3d(1, 0, 0, 180deg);
+}
+
+.cube .n7 {
+    top: 0;
+    left: 0;
+    background-color: #d00;
+    opacity: 0.6;
+
+    -webkit-transform: translate3d(0, 0, -100px) rotate3d(0, 0, 0, 90deg);
+    -moz-transform: translate3d(0, 0, -100px) rotate3d(0, 0, 0, 90deg);
+    -o-transform: translate3d(0, 0, -100px) rotate3d(0, 0, 0, 90deg);
+    -ms-transform: translate3d(0, 0, -100px) rotate3d(0, 0, 0, 90deg);
+    transform: translate3d(0, 0, -100px) rotate3d(0, 0, 0, 90deg);
+}
+
+.cube .n8 {
+    top: 0;
+    left: 100%;
+    opacity: 0.9;
+
+    border-left: 100px solid #dd0;
+    border-right: 0;
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+    -webkit-transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, -135deg);
+    -moz-transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, -135deg);
+    -o-transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, -135deg);
+    -ms-transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, -135deg);
+    transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, -135deg);
+}
+
+.cube .n9 {
+    top: 100%;
+    left: 0;
+    opacity: 0.9;
+
+    border-top: 100px solid #999;
+    border-bottom: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+    -webkit-transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, 135deg);
+    -moz-transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, 135deg);
+    -o-transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, 135deg);
+    -ms-transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, 135deg);
+    transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, 135deg);
+}
+
+.cube .n10 {
+    top: 0;
+    right: 100%;
+    opacity: 0.9;
+
+    border-right: 100px solid #04d;
+    border-left: 0;
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    -o-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+
+    -webkit-transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, 135deg);
+    -moz-transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, 135deg);
+    -o-transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, 135deg);
+    -ms-transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, 135deg);
+    transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, 135deg);
+}
+
+.cube .n11 {
+    bottom: 100%;
+    left: 0;
+    opacity: 0.9;
+
+    border-bottom: 100px solid #0dd;
+    border-top: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+
+    -webkit-transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, -135deg);
+    -moz-transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, -135deg);
+    -o-transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, -135deg);
+    -ms-transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, -135deg);
+    transform: translate3d(0, 0, -100px) rotate3d(1, 0, 0, -135deg);
+}
+
+.cube .n12 {
+    top: 35%;
+    left: 35%;
+    background-color: #6a0;
+    opacity: 0.9;
+    width: 60px;
+    height: 60px;
+
+    -webkit-transform-origin: 0 50%;
+    -moz-transform-origin: 0 50%;
+    -o-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+
+    -webkit-transform: translate3d(0, 0, -30px) rotate3d(1, 0, 0, 180deg);
+    -moz-transform: translate3d(0, 0, -30px) rotate3d(1, 0, 0, 0deg);
+    -o-transform: translate3d(0, 0, -30px) rotate3d(1, 0, 0, 180deg);
+    -ms-transform: translate3d(0, 0, -30px) rotate3d(1, 0, 0, 180deg);
+    transform: translate3d(0, 0, -30px) rotate3d(1, 0, 0, 180deg);
+}
+
+
+.cube .n13 {
+    top: 35%;
+    left: 35%;
+    background-color: #6a0;
+    opacity: 0.9;
+    width: 60px;
+    height: 60px;
+
+    -webkit-transform-origin: 0 50%;
+    -moz-transform-origin: 0 50%;
+    -o-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+
+    -webkit-transform: translate3d(0, 0, 30px) rotate3d(0, 1, 0, 90deg);
+    -moz-transform: translate3d(0, 0, 30px) rotate3d(0, 1, 0, 90deg);
+    -o-transform: translate3d(0, 0, 30px) rotate3d(0, 1, 0, 90deg);
+    -ms-transform: translate3d(0, 0, 30px) rotate3d(0, 1, 0, 90deg);
+    transform: translate3d(0, 0, 30px) rotate3d(0, 1, 0, 90deg);
+}
+
+
+.cube .n14 {
+    top: 35%;
+    left: 35%;
+    background-color: #6a0;
+    opacity: 0.9;
+    width: 60px;
+    height: 60px;
+
+    -webkit-transform-origin: 0 50%;
+    -moz-transform-origin: 0 50%;
+    -o-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+
+    -webkit-transform: translate3d(60px, 0, -30px) rotate3d(0, 1, 0, -90deg);
+    -moz-transform: translate3d(60px, 0, -30px) rotate3d(0, 1, 0, -90deg);
+    -o-transform: translate3d(60px, 0, -30px) rotate3d(0, 1, 0, -90deg);
+    -ms-transform: translate3d(60px, 0, -30px) rotate3d(0, 1, 0, -90deg);
+    transform: translate3d(60px, 0, -30px) rotate3d(0, 1, 0, -90deg);
+}
+
+
+.cube .n15 {
+    top: 35%;
+    left: 35%;
+    background-color: #6a0;
+    opacity: 0.9;
+    width: 60px;
+    height: 60px;
+
+    -webkit-transform-origin: 0 50%;
+    -moz-transform-origin: 0 50%;
+    -o-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+
+    -webkit-transform: translate3d(30px, 30px, -30px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, 90deg);
+    -moz-transform: translate3d(30px, 30px, -30px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, 90deg);
+    -o-transform: translate3d(30px, 30px, -30px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, 90deg);
+    -ms-transform: translate3d(30px, 30px, -30px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, 90deg);
+    transform: translate3d(30px, 30px, -30px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, 90deg);
+}
+
+
+.cube .n16 {
+    top: 35%;
+    left: 35%;
+    background-color: #6a0;
+    opacity: 0.9;
+    width: 60px;
+    height: 60px;
+
+    -webkit-transform-origin: 0 50%;
+    -moz-transform-origin: 0 50%;
+    -o-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+
+    -webkit-transform: translate3d(30px, -30px, -30px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, -90deg);
+    -moz-transform: translate3d(30px, -30px, -30px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, -90deg);
+    -o-transform: translate3d(30px, -30px, -30px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, -90deg);
+    -ms-transform: translate3d(30px, -30px, -30px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, -90deg);
+    transform: translate3d(30px, -30px, -30px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, -90deg);
+}
+
+.cube .n17 {
+    bottom: 100%;
+    left: 0;
+    opacity: 0.9;
+
+    border-bottom: 100px solid #0dd;
+    border-top: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+
+    -webkit-transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, 135deg);
+    -moz-transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, 135deg);
+    -o-transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, 135deg);
+    -ms-transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, 135deg);
+    transform: translate3d(0, 0, -100px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, 135deg);
+}
+
+.cube .n18 {
+    bottom: 100%;
+    left: 0;
+    opacity: 0.9;
+
+    border-bottom: 100px solid #0dd;
+    border-top: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+
+    -webkit-transform: translate3d(200px, 0, -100px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, -135deg);
+    -moz-transform: translate3d(200px, 0, -100px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, -135deg);
+    -o-transform: translate3d(200px, 0, -100px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, -135deg);
+    -ms-transform: translate3d(200px, 0, -100px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, -135deg);
+    transform: translate3d(200px, 0, -100px) rotate3d(0, 1, 0, -90deg) rotate3d(1, 0, 0, -135deg);
+}
+
+.cube .n19 {
+    top: 0;
+    left: 100%;
+    opacity: 0.9;
+
+    border-left: 100px solid #dd0;
+    border-right: 0;
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+
+    -webkit-transform: translate3d(0, 200px, -100px) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, -135deg);
+    -moz-transform: translate3d(0, 200px, -100px) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, -135deg);
+    -o-transform: translate3d(0, 200px, -100px) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, -135deg);
+    -ms-transform: translate3d(0, 200px, -100px) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, -135deg);
+    transform: translate3d(0, 200px, -100px) rotate3d(1, 0, 0, 90deg) rotate3d(0, 1, 0, -135deg);
+}
+
+.cube .n20 {
+    top: 0;
+    right: 100%;
+    opacity: 0.9;
+
+    border-right: 100px solid #04d;
+    border-left: 0;
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    -o-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+
+    -webkit-transform: translate3d(0, 200px, -100px) rotate3d(0, 0, 1, 135deg) rotate3d(1, 0, 0, 90deg);
+    -moz-transform: translate3d(0, 200px, -100px) rotate3d(0, 0, 1, 135deg) rotate3d(1, 0, 0, 90deg);
+    -o-transform: translate3d(0, 200px, -100px) rotate3d(0, 0, 1, 135deg) rotate3d(1, 0, 0, 90deg);
+    -ms-transform: translate3d(0, 200px, -100px) rotate3d(0, 0, 1, 135deg) rotate3d(1, 0, 0, 90deg);
+    transform: translate3d(0, 200px, -100px) rotate3d(0, 0, 1, 135deg) rotate3d(1, 0, 0, 90deg);
+}
+
+.cube .n21 {
+    top: 0;
+    left: 0;
+    background-color: #d00;
+    opacity: 0.6;
+
+    -webkit-transform: translate3d(100px, 0, 0) rotate3d(0, 1, 0, 90deg);
+    -moz-transform: translate3d(100px, 0, 0) rotate3d(0, 1, 0, 90deg);
+    -o-transform: translate3d(100px, 0, 0) rotate3d(0, 1, 0, 90deg);
+    -ms-transform: translate3d(100px, 0, 0) rotate3d(0, 1, 0, 90deg);
+    transform: translate3d(100px, 0, 0) rotate3d(0, 1, 0, 90deg);
+}
+
+.cube .n22 {
+    top: 0;
+    left: 0;
+    background-color: #d00;
+    opacity: 0.8;
+
+    -webkit-transform: translate3d(-100px, 0, 0) rotate3d(0, 1, 0, 90deg);
+    -moz-transform: translate3d(-100px, 0, 0) rotate3d(0, 1, 0, 90deg);
+    -o-transform: translate3d(-100px, 0, 0) rotate3d(0, 1, 0, 90deg);
+    -ms-transform: translate3d(-100px, 0, 0) rotate3d(0, 1, 0, 90deg);
+    transform: translate3d(-100px, 0, 0) rotate3d(0, 1, 0, 90deg);
+}
+
+.cube .n23 {
+    left: 0;
+    background-color: #d00;
+    opacity: 0.6;
+
+    -webkit-transform: translate3d(0, 100px, 0) rotate3d(1, 0, 0, 90deg);
+    -moz-transform: translate3d(0, 100px, 0) rotate3d(1, 0, 0, 90deg);
+    -o-transform: translate3d(0, 100px, 0) rotate3d(1, 0, 0, 90deg);
+    -ms-transform: translate3d(0, 100px, 0) rotate3d(1, 0, 0, 90deg);
+    transform: translate3d(0, 100px, 0) rotate3d(1, 0, 0, 90deg);
+}
+
+.cube .n24 {
+    left: 0;
+    background-color: #d00;
+    opacity: 0.6;
+
+    -webkit-transform: translate3d(0, -100px, 0) rotate3d(1, 0, 0, 90deg);
+    -moz-transform: translate3d(0, -100px, 0) rotate3d(1, 0, 0, 90deg);
+    -o-transform: translate3d(0, -100px, 0) rotate3d(1, 0, 0, 90deg);
+    -ms-transform: translate3d(0, -100px, 0) rotate3d(1, 0, 0, 90deg);
+    transform: translate3d(0, -100px, 0) rotate3d(1, 0, 0, 90deg);
+}
