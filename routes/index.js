@@ -6,11 +6,19 @@ var router = express.Router();
 /* GET home page. */
 router.get('/random.json', function(req, res, next) {
     r = Math.floor(Math.random()*15+1);
-    var heapUsed = process.memoryUsage().heapUsed;
-    console.log(heapUsed);
     var obj = JSON.parse(fs.readFileSync('tasks/'+r+'.json', 'utf8'));
     res.json(obj);
-    next();
 });
+
+router.get('/bfg', (req, res)=>{
+    var k = 1
+    for (var i = 1; i <= 10; i++) {
+        bfg.generate((data)=>{
+            console.log("Saving object to "+k+".json")
+            fs.writeFile('tasks/'+k+'.json', JSON.stringify(data, null, 4))
+            k++
+        })
+    }
+})
 
 module.exports = router;

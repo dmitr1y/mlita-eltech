@@ -1,40 +1,59 @@
 {
-	"expression": "((T xor ¬T=>Y xor ¬X) xor ¬T) || (¬Z && ¬Y)",
-	"truthTable": {
-		"array": [
-			1,
-			0,
-			1,
-			1,
-			1,
-			1,
-			0,
-			0,
-			1,
-			1,
-			0,
-			0,
-			1,
-			0,
-			1,
-			1
-		],
-		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP119020ecbh7c1h3ic1i000000f415931bi0aca6d?MSPStoreType=image/gif&s=64"
-	},
-	"pdnf": [
-		"!t!x!y!z",
-		"!t!xy!z",
-		"!t!xyz",
-		"!tx!y!z",
-		"!tx!yz",
-		"t!x!y!z",
-		"t!x!yz",
-		"tx!y!z",
-		"txy!z",
-		"txyz"
-	],
-	"dnf": {
-		"text": "(T AND  X AND  Y) OR  (T AND  (NOT X) AND  (NOT Y)) OR  ((NOT T) AND  X AND  (NOT Y)) OR  ((NOT T) AND  (NOT X) AND  Y) OR  ((NOT Y) AND  (NOT Z))",
-		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP15111hc55h2bb4977e12000038016i895hd69c34?MSPStoreType=image/gif&s=56"
-	}
+    "expression": "(¬T && (X xor ¬T) && ¬Y) || (X && (Y xor ¬Z))",
+    "truthTable": {
+        "array": [
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1
+        ],
+        "assoc": {
+            "1000": 0,
+            "1001": 0,
+            "1010": 0,
+            "1011": 0,
+            "1100": 1,
+            "1101": 0,
+            "1110": 0,
+            "1111": 1,
+            "0000": 1,
+            "0001": 1,
+            "0010": 0,
+            "0011": 0,
+            "0100": 1,
+            "0101": 0,
+            "0110": 0,
+            "0111": 1
+        },
+        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP7901d5iic7fi194ih7d000043bh3da0886i6c1b?MSPStoreType=image/gif&s=58"
+    },
+    "pdnf": [
+        "!t!x!y!z",
+        "!t!x!yz",
+        "!tx!y!z",
+        "!txyz",
+        "tx!y!z",
+        "txyz"
+    ],
+    "dnf": {
+        "text": "((NOT T) AND  (NOT X) AND  (NOT Y)) OR  (X AND  Y AND  Z) OR  (X AND  (NOT Y) AND  (NOT Z))",
+        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP202522gg53bg7c03c490000041iadc8icehbg8f5?MSPStoreType=image/gif&s=55",
+        "arr": [
+            "!t!x!y",
+            "xyz",
+            "x!y!z"
+        ]
+    }
 }

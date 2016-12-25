@@ -1,40 +1,52 @@
 {
-	"expression": "((¬Z || ((Z xor ¬Y) && X)) && ¬X) || Z=>¬T",
-	"truthTable": {
-		"array": [
-			1,
-			1,
-			1,
-			1,
-			1,
-			1,
-			1,
-			1,
-			0,
-			0,
-			0,
-			0,
-			1,
-			0,
-			1,
-			0
-		],
-		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP4871eh20bich26gd053000055c6ge9eeg707ief?MSPStoreType=image/gif&s=15"
-	},
-	"pdnf": [
-		"!t!x!y!z",
-		"!t!x!yz",
-		"!t!xy!z",
-		"!t!xyz",
-		"!tx!y!z",
-		"!tx!yz",
-		"!txy!z",
-		"!txyz",
-		"tx!y!z",
-		"txy!z"
-	],
-	"dnf": {
-		"text": "(NOT T) OR  (X AND  (NOT Z))",
-		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP20451i5f34e68gc3bag10000595d6ghfhedcici9?MSPStoreType=image/gif&s=12"
-	}
+    "expression": "(Z || (¬T xor ¬Y xor ¬Z)) && ¬Y && ¬X && T",
+    "truthTable": {
+        "array": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "assoc": {
+            "1000": 0,
+            "1001": 1,
+            "1010": 0,
+            "1011": 0,
+            "1100": 0,
+            "1101": 0,
+            "1110": 0,
+            "1111": 0,
+            "0000": 0,
+            "0001": 0,
+            "0010": 0,
+            "0011": 0,
+            "0100": 0,
+            "0101": 0,
+            "0110": 0,
+            "0111": 0
+        },
+        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP50281d5ii55i1278iea000000d3eiea00if7b094?MSPStoreType=image/gif&s=58"
+    },
+    "pdnf": [
+        "t!x!yz"
+    ],
+    "dnf": {
+        "text": "T AND  (NOT X) AND  (NOT Y) AND  Z",
+        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP629020ha59bacda5dc8c00002e6a14fi4d941927?MSPStoreType=image/gif&s=64",
+        "arr": [
+            "t!x!yz"
+        ]
+    }
 }

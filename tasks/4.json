@@ -1,34 +1,66 @@
 {
-	"expression": "((X xor ¬Z=>T xor X) xor ¬Z) && ¬Y && ¬Y",
-	"truthTable": {
-		"array": [
-			1,
-			1,
-			0,
-			0,
-			0,
-			1,
-			0,
-			0,
-			0,
-			1,
-			0,
-			0,
-			0,
-			0,
-			0,
-			0
-		],
-		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP28481ia2480e34bfi36d000026cc268g69d2cbi2?MSPStoreType=image/gif&s=55"
-	},
-	"pdnf": [
-		"!t!x!y!z",
-		"!t!x!yz",
-		"!tx!yz",
-		"t!x!yz"
-	],
-	"dnf": {
-		"text": "((NOT T) AND  (NOT X) AND  (NOT Y)) OR  ((NOT T) AND  (NOT Y) AND  Z) OR  ((NOT X) AND  (NOT Y) AND  Z)",
-		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP50041h0ahgac3ahgc4ic00000e934gc21403f636?MSPStoreType=image/gif&s=3"
-	}
+    "expression": "(T && ¬X) || (¬T && ¬Y)=>(Y || Z=>¬T)",
+    "truthTable": {
+        "array": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1
+        ],
+        "assoc": {
+            "1000": 1,
+            "1001": 0,
+            "1010": 0,
+            "1011": 0,
+            "1100": 1,
+            "1101": 1,
+            "1110": 1,
+            "1111": 1,
+            "0000": 1,
+            "0001": 1,
+            "0010": 1,
+            "0011": 1,
+            "0100": 1,
+            "0101": 1,
+            "0110": 1,
+            "0111": 1
+        },
+        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP202122gg53bg7c03c49000003bbi8839f2e8a2cf?MSPStoreType=image/gif&s=55"
+    },
+    "pdnf": [
+        "!t!x!y!z",
+        "!t!x!yz",
+        "!t!xy!z",
+        "!t!xyz",
+        "!tx!y!z",
+        "!tx!yz",
+        "!txy!z",
+        "!txyz",
+        "t!x!y!z",
+        "tx!y!z",
+        "tx!yz",
+        "txy!z",
+        "txyz"
+    ],
+    "dnf": {
+        "text": "(NOT T) OR  X OR  ((NOT Y) AND  (NOT Z))",
+        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP135020h0gf7bb36385ae00001bcb81c8ah83hcg3?MSPStoreType=image/gif&s=63",
+        "arr": [
+            "!t",
+            "x",
+            "!y!z"
+        ]
+    }
 }

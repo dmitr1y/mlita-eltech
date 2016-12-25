@@ -1,35 +1,62 @@
 {
-	"expression": "(Z=>Z && Y && X) || ¬T=>T && ¬Y",
-	"truthTable": {
-		"array": [
-			0,
-			0,
-			0,
-			0,
-			0,
-			0,
-			0,
-			0,
-			1,
-			1,
-			0,
-			1,
-			1,
-			1,
-			0,
-			0
-		],
-		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP31591c7c620h55g3a92700000e1g02820h6d3409?MSPStoreType=image/gif&s=61"
-	},
-	"pdnf": [
-		"t!x!y!z",
-		"t!x!yz",
-		"t!xyz",
-		"tx!y!z",
-		"tx!yz"
-	],
-	"dnf": {
-		"text": "(T AND  (NOT X) AND  Z) OR  (T AND  (NOT Y))",
-		"image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP24961c7c62a3c1ebde2400003h4id8bd00b98c7g?MSPStoreType=image/gif&s=61"
-	}
+    "expression": "(X xor (X || ¬X || ¬Y || ¬T)) || (¬Z && T)",
+    "truthTable": {
+        "array": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0
+        ],
+        "assoc": {
+            "1000": 1,
+            "1001": 1,
+            "1010": 1,
+            "1011": 1,
+            "1100": 1,
+            "1101": 0,
+            "1110": 1,
+            "1111": 0,
+            "0000": 1,
+            "0001": 1,
+            "0010": 1,
+            "0011": 1,
+            "0100": 0,
+            "0101": 0,
+            "0110": 0,
+            "0111": 0
+        },
+        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP6321cee1i0f2g368gfg00001i011deb3ca8idfc?MSPStoreType=image/gif&s=56"
+    },
+    "pdnf": [
+        "!t!x!y!z",
+        "!t!x!yz",
+        "!t!xy!z",
+        "!t!xyz",
+        "t!x!y!z",
+        "t!x!yz",
+        "t!xy!z",
+        "t!xyz",
+        "tx!y!z",
+        "txy!z"
+    ],
+    "dnf": {
+        "text": "(T AND  (NOT Z)) OR  (NOT X)",
+        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP5791ddeagif77fcbc8a000045b3gc3i8629b802?MSPStoreType=image/gif&s=21",
+        "arr": [
+            "t!z",
+            "!x"
+        ]
+    }
 }
