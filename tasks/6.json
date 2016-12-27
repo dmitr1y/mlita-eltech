@@ -1,56 +1,68 @@
 {
-    "expression": "(Z xor (Y || (X xor ¬Z)=>¬T)) && (X xor ¬Y)",
+    "expression": "(((X xor ¬Z) || X=>¬T) && ¬T) || X=>¬Y",
     "truthTable": {
         "array": [
             1,
-            0,
-            0,
-            0,
-            0,
-            0,
             1,
             0,
             0,
+            1,
+            1,
             0,
             0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
             0,
-            0,
-            0,
-            0,
-            1
+            0
         ],
         "assoc": {
-            "1000": 0,
-            "1001": 0,
-            "1010": 0,
-            "1011": 0,
-            "1100": 0,
-            "1101": 0,
+            "1000": 1,
+            "1001": 1,
+            "1010": 1,
+            "1011": 1,
+            "1100": 1,
+            "1101": 1,
             "1110": 0,
-            "1111": 1,
+            "1111": 0,
             "0000": 1,
-            "0001": 0,
+            "0001": 1,
             "0010": 0,
             "0011": 0,
-            "0100": 0,
-            "0101": 0,
-            "0110": 1,
+            "0100": 1,
+            "0101": 1,
+            "0110": 0,
             "0111": 0
         },
-        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP1391cee1ii7dce01ig70000658706agga83c258?MSPStoreType=image/gif&s=56"
+        "image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP12171g51f98ih0eh8chh000044bb3c7g6geb2596?MSPStoreType=image/gif&s=50"
     },
     "pdnf": [
         "!t!x!y!z",
-        "!txy!z",
-        "txyz"
+        "!t!x!yz",
+        "!tx!y!z",
+        "!tx!yz",
+        "t!x!y!z",
+        "t!x!yz",
+        "t!xy!z",
+        "t!xyz",
+        "tx!y!z",
+        "tx!yz"
     ],
     "dnf": {
-        "text": "(T AND  X AND  Y AND  Z) OR  ((NOT T) AND  X AND  Y AND  (NOT Z)) OR  ((NOT T) AND  (NOT X) AND  (NOT Y) AND  (NOT Z))",
-        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP331d5iiddid05091e200005ed1bih659c8b15h?MSPStoreType=image/gif&s=58",
+        "text": "(T AND  (NOT X)) OR  (NOT Y)",
+        "image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP909920f0d9a4fgd982gc000055a1217b3fie802h?MSPStoreType=image/gif&s=64",
         "arr": [
-            "txyz",
-            "!txy!z",
-            "!t!x!y!z"
+            "t!x",
+            "!y"
         ]
+    },
+    "dummy": {
+        "x": false,
+        "y": false,
+        "z": true,
+        "t": false
     }
 }

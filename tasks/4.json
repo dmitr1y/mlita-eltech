@@ -1,19 +1,19 @@
 {
-    "expression": "(T && ¬X) || (¬T && ¬Y)=>(Y || Z=>¬T)",
+    "expression": "Z || (Y && (X xor ¬X))=>X || (Y xor ¬T)",
     "truthTable": {
         "array": [
             1,
             1,
-            1,
-            1,
+            0,
+            0,
             1,
             1,
             1,
             1,
             1,
             0,
-            0,
-            0,
+            1,
+            1,
             1,
             1,
             1,
@@ -22,45 +22,52 @@
         "assoc": {
             "1000": 1,
             "1001": 0,
-            "1010": 0,
-            "1011": 0,
+            "1010": 1,
+            "1011": 1,
             "1100": 1,
             "1101": 1,
             "1110": 1,
             "1111": 1,
             "0000": 1,
             "0001": 1,
-            "0010": 1,
-            "0011": 1,
+            "0010": 0,
+            "0011": 0,
             "0100": 1,
             "0101": 1,
             "0110": 1,
             "0111": 1
         },
-        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP202122gg53bg7c03c49000003bbi8839f2e8a2cf?MSPStoreType=image/gif&s=55"
+        "image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP22841dc8dce8aa343ed0000059d013c4h83b0f22?MSPStoreType=image/gif&s=41"
     },
     "pdnf": [
         "!t!x!y!z",
         "!t!x!yz",
-        "!t!xy!z",
-        "!t!xyz",
         "!tx!y!z",
         "!tx!yz",
         "!txy!z",
         "!txyz",
         "t!x!y!z",
+        "t!xy!z",
+        "t!xyz",
         "tx!y!z",
         "tx!yz",
         "txy!z",
         "txyz"
     ],
     "dnf": {
-        "text": "(NOT T) OR  X OR  ((NOT Y) AND  (NOT Z))",
-        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP135020h0gf7bb36385ae00001bcb81c8ah83hcg3?MSPStoreType=image/gif&s=63",
+        "text": "(T AND  Y) OR  ((NOT T) AND  (NOT Y)) OR  X OR  ((NOT Y) AND  (NOT Z))",
+        "image": "http://www4b.wolframalpha.com/Calculate/MSP/MSP50981igb0e95aiaadeg700004i355h13iiae8c34?MSPStoreType=image/gif&s=39",
         "arr": [
-            "!t",
+            "ty",
+            "!t!y",
             "x",
             "!y!z"
         ]
+    },
+    "dummy": {
+        "x": false,
+        "y": false,
+        "z": false,
+        "t": false
     }
 }

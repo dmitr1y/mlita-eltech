@@ -23,4 +23,8 @@ router.get('/bfg', (req, res)=>{
     }
 })
 
+router.get('/dummy.json', (req,res)=>{
+    res.jsonp(bfg.generate_dummy())
+})
+
 module.exports = router;
