@@ -1,0 +1,59 @@
+{
+    "truthTable": {
+        "array": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+        ],
+        "assoc": {
+            "1000": 1,
+            "1001": 1,
+            "1010": 0,
+            "1011": 1,
+            "1100": 1,
+            "1101": 0,
+            "1110": 0,
+            "1111": 0,
+            "0000": 0,
+            "0001": 0,
+            "0010": 0,
+            "0011": 1,
+            "0100": 1,
+            "0101": 1,
+            "0110": 0,
+            "0111": 0
+        }
+    },
+    "pdnf": [
+        "!t!xyz",
+        "!tx!y!z",
+        "!tx!yz",
+        "t!x!y!z",
+        "t!x!yz",
+        "t!xyz",
+        "tx!y!z"
+    ],
+    "dnf": {
+        "text": "(t AND  (NOT x) AND  y) OR  ((NOT t) AND  x AND  y) OR  (x AND  (NOT y) AND  (NOT z)) OR  ((NOT x) AND  y AND  z)",
+        "image": "http://www4c.wolframalpha.com/Calculate/MSP/MSP2831hfe11f65666df8a00000ci25dgg398a6c5a?MSPStoreType=image/gif&s=50",
+        "arr": [
+            "t!xy",
+            "!txy",
+            "x!y!z",
+            "!xyz"
+        ]
+    }
+}
