@@ -45,4 +45,13 @@ router.get("/dnf", (req, res)=>{
     }
 })
 
+router.get("/selfdual", (req, res)=>{
+    var k = 1
+    for (var i = 1; i <= 15; i++){
+        console.log("Saving object to "+k+".json")
+        fs.writeFile('tasks/selfdual/'+k+'.json', JSON.stringify(bfg.generate_selfdual(), null, 4))
+        k++
+    }
+})
+
 module.exports = router;
