@@ -1,53 +1,229 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Кубик</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen, projection" />
-</head>
-<body>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Альтернативный экзамен по МЛиТА Малютина Вадима и Серафима Урукова</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/hyper.css">
+	<link rel="stylesheet" type="text/css" href="css/facet.css">
+	<link rel="stylesheet" type="text/css" href="css/vertex.css">
+	<link rel="stylesheet" type="text/css" href="css/rib.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<![endif]-->
+		</head>
+		<body>
+			<!-- begin header -->
+			<div class="header">				
+				<nav class="navbar navbar-inverse navbar-static-top">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">МЛиТА</a>
+						</div>
 
-<div class="container">
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#">Вход</a></li>
+								<li><a href="#">Регистрация</a></li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			</div>
+			<!-- end header -->
 
-    <button class="arrow a-top"></button>
-    <button class="arrow a-bottom"></button>
-    <button class="arrow a-left"></button>
-    <button class="arrow a-right"></button>
+			<!-- begin navigation -->
+			<div class="navigation">
+				<!-- begin container -->
+				<div class="container">
+					<!-- begin row -->
+					<div class="row">
+						<ul class="nav nav-tabs">
+							<li role="presentation"><a href="#" class="task task_1">Вычисление значений функций</a></li>
+							<li role="presentation"><a href="#" class="task task_2">Фиктивные переменные</a></li>
+							<li role="presentation"><a href="#" class="task task_3">Минимизация ДНФ</a></li>
+							<li role="presentation"><a href="#" class="task task_4">Монотонность. Диаграмма Хассе</a></li>
+							<li role="presentation"><a href="#" class="task task_5">Самодвойственность</a></li>
+							<li role="presentation"><a href="#" class="task task_6">Многочлен Жегалкина</a></li>
+							<li role="presentation"><a href="#" class="task task_7">Классы замкнутости</a></li>
+						</ul>	
+					</div>
+					<!-- end row -->
+				</div>
+				<!-- end container -->
+			</div>
+			<!-- end navigation -->
 
-    <div class="cube">
-        <span class="n1">l1</span>
-        <span class="n2">l1</span>
-        <span class="n3">l1</span>
-        <span class="n4">l1</span>
-        <span class="n5">l1</span>
-        <span class="n6">l1</span>
-        <span class="n7">l1</span>
-        <span class="n8">l1</span>
-        <span class="n9">l1</span>
-        <span class="n10">lsda</span>
-        <span class="n11">lsda</span>
-        <span class="n12">lsda</span>
-        <span class="n13">lsda</span>
-        <span class="n14">lsda</span>
-        <span class="n15">lsda</span>
-        <span class="n16">lsda</span>
-        <span class="n17">lsda</span>
-        <span class="n18">lsda</span>
-        <span class="n19">lsda</span>
-        <span class="n20">lsda</span>
-        <span class="n21">lsda</span>
-        <span class="n22">lsda</span>
-        <span class="n23">lsda</span>
-        <span class="n24">lsda</span>
-    </div>
+			<!-- begin main -->
+			<div class="main">
+				<!-- begin hypercube -->
+				<div class="hypercube col-md-offset-1 col-md-5 ">
 
-</div>
+					<button class="arrow a-top"></button>
+					<button class="arrow a-bottom"></button>
+					<button class="arrow a-left"></button>
+					<button class="arrow a-right"></button>
 
-<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter16792801 = new Ya.Metrika({id:16792801, enableAll: true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/16792801" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
-<script src="../bower_components/jQuery/dist/jquery.slim.min.js"></script>
-<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="js/hypercube.js"></script>
-</body>
-</html>
+					<div class="cube">
+									<!-- external facet -->
+						<span class="facet external_facet facet_1"></span>
+						<span class="facet external_facet facet_7"></span>
+						<span class="facet external_facet facet_21"></span>
+						<span class="facet external_facet facet_22"></span>
+						<span class="facet external_facet facet_23"></span>
+						<span class="facet external_facet facet_24"></span>
+
+									<!-- average facet -->
+
+						<span class="facet average_facet facet_2"></span>
+						<span class="facet average_facet facet_3"></span>
+						<span class="facet average_facet facet_4"></span>
+						<span class="facet average_facet facet_5"></span>
+						<span class="facet average_facet facet_8"></span>
+						<span class="facet average_facet facet_9"></span>
+						<span class="facet average_facet facet_10"></span>
+						<span class="facet average_facet facet_11"></span>
+						<span class="facet average_facet facet_17"></span>
+						<span class="facet average_facet facet_18"></span>
+						<span class="facet average_facet facet_19"></span>
+						<span class="facet average_facet facet_20"></span>
+
+									<!-- internal facet -->
+				
+						<span class="facet internal_facet facet_6"></span>
+						<span class="facet internal_facet facet_12"></span>
+						<span class="facet internal_facet facet_13"></span>
+						<span class="facet internal_facet facet_14"></span>
+						<span class="facet internal_facet facet_15"></span>
+						<span class="facet internal_facet facet_16"></span>
+
+									<!-- external vertex -->
+
+						<span class="vertex external_vertex vertex_1">?</span>
+						<span class="vertex external_vertex vertex_2">?</span>
+						<span class="vertex external_vertex vertex_3">?</span>
+						<span class="vertex external_vertex vertex_4">?</span>
+						<span class="vertex external_vertex vertex_5">?</span>
+						<span class="vertex external_vertex vertex_6">?</span>
+						<span class="vertex external_vertex vertex_7">?</span>
+						<span class="vertex external_vertex vertex_8">?</span>
+
+									<!-- intrernal vertex -->
+
+						<span class="vertex internal_vertex vertex_9">?</span>
+						<span class="vertex internal_vertex vertex_10">?</span>
+						<span class="vertex internal_vertex vertex_11">?</span>
+						<span class="vertex internal_vertex vertex_12">?</span>
+						<span class="vertex internal_vertex vertex_13">?</span>
+						<span class="vertex internal_vertex vertex_14">?</span>
+						<span class="vertex internal_vertex vertex_15">?</span>
+						<span class="vertex internal_vertex vertex_16">?</span>
+
+									<!-- external rib -->
+
+						<span class="rib external_rib first_facet rib_1"></span>
+						<span class="rib external_rib first_facet rib_2"></span>
+						<span class="rib external_rib first_facet rib_3"></span>
+						<span class="rib external_rib first_facet rib_4"></span>
+						<span class="rib external_rib second_facet rib_5"></span>
+						<span class="rib external_rib second_facet rib_6"></span>
+						<span class="rib external_rib second_facet rib_7"></span>
+						<span class="rib external_rib second_facet rib_8"></span>
+						<span class="rib external_rib third_facet rib_9"></span>
+						<span class="rib external_rib third_facet rib_10"></span>
+						<span class="rib external_rib third_facet rib_11"></span>
+						<span class="rib external_rib third_facet rib_12"></span>
+						<span class="rib external_rib fourth_facet rib_13"></span>
+						<span class="rib external_rib fourth_facet rib_14"></span>
+						<span class="rib external_rib fourth_facet rib_15"></span>
+						<span class="rib external_rib fourth_facet rib_16"></span>
+						<span class="rib external_rib fifth_facet rib_17"></span>
+						<span class="rib external_rib fifth_facet rib_18"></span>
+						<span class="rib external_rib fifth_facet rib_19"></span>
+						<span class="rib external_rib fifth_facet rib_20"></span>
+						<span class="rib external_rib sixth_facet rib_21"></span>
+						<span class="rib external_rib sixth_facet rib_22"></span>
+						<span class="rib external_rib sixth_facet rib_23"></span>
+						<span class="rib external_rib sixth_facet rib_24"></span>
+
+
+									<!-- average rib -->
+						<!-- span.rib.average_rib.rib_$*2 -->
+
+									<!-- intrernal rib -->
+
+						<span class="rib internal_rib seventh_facet rib_25"></span>
+						<span class="rib internal_rib seventh_facet rib_26"></span>
+						<span class="rib internal_rib seventh_facet rib_27"></span>
+						<span class="rib internal_rib seventh_facet rib_28"></span>
+						<span class="rib internal_rib eigth_facet rib_29"></span>
+						<span class="rib internal_rib eigth_facet rib_30"></span>
+						<span class="rib internal_rib eigth_facet rib_31"></span>
+						<span class="rib internal_rib eigth_facet rib_32"></span>
+						<span class="rib internal_rib nineth_facet rib_33"></span>
+						<span class="rib internal_rib nineth_facet rib_34"></span>
+						<span class="rib internal_rib nineth_facet rib_35"></span>
+						<span class="rib internal_rib nineth_facet rib_36"></span>
+						<span class="rib internal_rib tenth_facet rib_37"></span>
+						<span class="rib internal_rib tenth_facet rib_38"></span>
+						<span class="rib internal_rib tenth_facet rib_39"></span>
+						<span class="rib internal_rib tenth_facet rib_40"></span>
+						<span class="rib internal_rib eleventh_facet rib_41"></span>
+						<span class="rib internal_rib eleventh_facet rib_42"></span>
+						<span class="rib internal_rib eleventh_facet rib_43"></span>
+						<span class="rib internal_rib eleventh_facet rib_44"></span>
+						<span class="rib internal_rib twelve_facet rib_45"></span>
+						<span class="rib internal_rib twelve_facet rib_46"></span>
+						<span class="rib internal_rib twelve_facet rib_47"></span>
+						<span class="rib internal_rib twelve_facet rib_48"></span>
+
+					</div>
+				</div>
+
+				<!-- begin control -->
+				<div class="control col-md-4 col-md-offset-1">
+					<!-- Single button -->
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Манипуляция с кубом <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a id="external_view" href="#">Включить грани и ребра</a></li>
+							<li><a id="average_view" href="#">Отключить Внешние грани и ребра</a></li>
+							<li><a id="internal_view" href="#">Отключить Внутренние грани и ребра</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- end control -->
+				<!-- end main -->
+
+				<!-- </div> -->
+				<!-- <div class="buttons col-md-4">Buttons</div> -->
+				<!-- </div> -->
+				<!-- end main -->
+
+
+				<script src="bower_components/jQuery/dist/jquery.min.js"></script>
+				<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+				<script src="js/hypercube.js"></script>
+				<script src="js/buttons.js"></script>
+				<script src="js/vertex.js"></script>
+				<script src="js/facet.js"></script>
+				<script src="js/main.js"></script>
+			</body>
+			</html>
