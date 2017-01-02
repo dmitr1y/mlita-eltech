@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	var variant = 0;
+	var task = 0;
+	var letter = 0;
 
 	$("#external_view").click(function(){
 		$(".rib").fadeIn();
@@ -43,11 +45,13 @@ $(document).ready(function(){
 				// $(".vertex_" + (i + 1)).css({})	
 			}
 		});
+		task = 1;
 	})
 
 	$(".task_2").click(function(){
 		$("#condition").empty().append("Дан гиперкуб, в вершинах стоят значения " + 
-			"0 или 1, задающие таким образом булеву функцию 4 переменных.")
+			"0 или 1, задающие таким образом булеву функцию 4 переменных.");
+		task = 2;
 	})
 
 
@@ -57,12 +61,23 @@ $(document).ready(function(){
 	})
 
 	$(".task_4").click(function(){
-		$("#condition").empty().append("Заметим, что гиперкуб и является по сути основой для построения диаграммы Хассе." +
-			"Дан гиперкуб, в вершинах стоят значения 0 или 1, задающие таким образом булеву функцию 4 переменных. ")
+		$(".title").empty().append("Монотонность. Диаграмма Хассе");
+		task = 4;
 	})
 
 	$(".task_5").click(function(){
 		$("#condition").empty().append("Дан гиперкуб, в вершинах стоят значения 0 или 1, задающие таким образом булеву функцию 4 переменных.");
+		$.getJSON(host + '/task/selfdual', function(json, textStatus) {
+			$("#condition").empty().append(json.text);
+			console.log(json);
+			variant = json.variant;
+			for (var i = 0; i < 16; ++i) {
+				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
+				// $(".vertex_" + (i + 1)).css({})	
+			}
+			letter = json.letter;
+		})
+		task = 5;
 	})
 
 	$(".task_6").click(function(){
@@ -78,10 +93,41 @@ $(document).ready(function(){
 			assoc: {}
 		};
 		for (var i = 0; i < 16; ++i) {
-			answer.assoc[assocify(i)] = $(".vertex_" + (i + 1)).text();
+			var l = $(".vertex_" + (i + 1)).text();
+			answer.assoc[assocify(i)] = parseInt(l[l.length - 1]);
 		}
 		answer.variant = variant;
-		answer.dir = "expressions";
+		switch(task) {
+			case 1: {
+				answer.dir = "expressions";
+				break;
+			}
+			case 2: {
+				answer.dir = "dummy_variables";
+				break;
+			}
+			case 3: {
+				answer.dir = "dnf";
+				break;
+			}
+			case 4: {
+				answer.dir = "monotonic";
+				break;
+			}
+			case 5: {
+				answer.dir = "selfdual";
+				answer.letter = letter;
+				break;
+			}
+			case 6: {
+				answer.dir = "jegalkin";
+				break;
+			}
+			case 7: {
+				answer.dir = "post";
+				break;
+			}
+		}
 		$.ajax({
 			url: host + '/task',
 			type: 'POST',

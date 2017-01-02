@@ -163,97 +163,97 @@ $(document).ready(function(){
 
 	$(".vertex_1").click(function(){
 		$(".vertex_1").append(function() {
-			a[++b[0] % 2](".vertex_1", "f(" + assocify(1) + ") = ")
+			a[++b[0] % 2](".vertex_1", "f(" + assocify(0) + ") = ")
 		});
 	});
 
 	$(".vertex_2").click(function(){
 		$(".vertex_2").append(function() {
-			a[++b[1] % 2](".vertex_2", "f(" + assocify(2) + ") = ")
+			a[++b[1] % 2](".vertex_2", "f(" + assocify(1) + ") = ")
 		});
 	});
 
 	$(".vertex_3").click(function(){
 		$(".vertex_3").append(function() {
-			a[++b[2] % 2](".vertex_3", "f(" + assocify(3) + ") = ")
+			a[++b[2] % 2](".vertex_3", "f(" + assocify(2) + ") = ")
 		});
 	});
 
 	$(".vertex_4").click(function(){
 		$(".vertex_4").append(function() {
-			a[++b[3] % 2](".vertex_4", "f(" + assocify(4) + ") = ")
+			a[++b[3] % 2](".vertex_4", "f(" + assocify(3) + ") = ")
 		});
 	});
 
 	$(".vertex_5").click(function(){
 		$(".vertex_5").append(function() {
-			a[++b[4] % 2](".vertex_5", "f(" + assocify(5) + ") = ")
+			a[++b[4] % 2](".vertex_5", "f(" + assocify(4) + ") = ")
 		});
 	});
 
 	$(".vertex_6").click(function(){
 		$(".vertex_6").append(function() {
-			a[++b[5] % 2](".vertex_6", "f(" + assocify(6) + ") = ")
+			a[++b[5] % 2](".vertex_6", "f(" + assocify(5) + ") = ")
 		});
 	});
 
 	$(".vertex_7").click(function(){
 		$(".vertex_7").append(function() {
-			a[++b[6] % 2](".vertex_7", "f(" + assocify(7) + ") = ")
+			a[++b[6] % 2](".vertex_7", "f(" + assocify(6) + ") = ")
 		});
 	});
 
 	$(".vertex_8").click(function(){
 		$(".vertex_8").append(function() {
-			a[++b[7] % 2](".vertex_8", "f(" + assocify(8) + ") = ")
+			a[++b[7] % 2](".vertex_8", "f(" + assocify(7) + ") = ")
 		});
 	});
 
 	$(".vertex_9").click(function(){
 		$(".vertex_9").append(function() {
-			a[++b[8] % 2](".vertex_9", "f(" + assocify(9) + ") = ")
+			a[++b[8] % 2](".vertex_9", "f(" + assocify(8) + ") = ")
 		});
 	});
 
 	$(".vertex_10").click(function(){
 		$(".vertex_10").append(function() {
-			a[++b[9] % 2](".vertex_10", "f(" + assocify(10) + ") = ")
+			a[++b[9] % 2](".vertex_10", "f(" + assocify(9) + ") = ")
 		});
 	});
 
 	$(".vertex_11").click(function(){
 		$(".vertex_11").append(function() {
-			a[++b[10] % 2](".vertex_11", "f(" + assocify(11) + ") = ")
+			a[++b[10] % 2](".vertex_11", "f(" + assocify(10) + ") = ")
 		});
 	});
 
 	$(".vertex_12").click(function(){
 		$(".vertex_12").append(function() {
-			a[++b[11] % 2](".vertex_12", "f(" + assocify(12) + ") = ")
+			a[++b[11] % 2](".vertex_12", "f(" + assocify(11) + ") = ")
 		});
 	});
 
 	$(".vertex_13").click(function(){
 		$(".vertex_13").append(function() {
-			a[++b[12] % 2](".vertex_13", "f(" + assocify(13) + ") = ")
+			a[++b[12] % 2](".vertex_13", "f(" + assocify(12) + ") = ")
 		});
 	});
 
 	$(".vertex_14").click(function(){
 		$(".vertex_14").append(function() {
-			a[++b[13] % 2](".vertex_14", "f(" + assocify(14) + ") = ")
+			a[++b[13] % 2](".vertex_14", "f(" + assocify(13) + ") = ")
 		});
 	});
 
 	$(".vertex_15").click(function(){
 		$(".vertex_15").append(function() {
-			a[++b[14] % 2](".vertex_15", "f(" + assocify(15) + ") = ")
+			a[++b[14] % 2](".vertex_15", "f(" + assocify(14) + ") = ")
 		});
 	});
 
 	$(".vertex_16").click(function(){
 		$(".vertex_16").append(function() {
-			a[++b[15] % 2](".vertex_16", "f(" + assocify(16) + ") = ")
+			a[++b[15] % 2](".vertex_16", "f(" + assocify(15) + ") = ")
 		});
 	});
 
