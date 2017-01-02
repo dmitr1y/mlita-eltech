@@ -41,12 +41,25 @@ router.get("/:folder", (req, res)=>{
                             break
                         }
                         case 'selfdual': {
+
+                            let banned = new Array()
                             for (let i = 1; i <= 5; i++){
-                                object.truthTable.assoc[bfg.assocify(Math.round(Math.random()*15))] = "?"
+                                let randChoice = Math.round(Math.random()*15)
+                                while (true) {
+                                    if (banned.indexOf(randChoice) < 0){
+                                        break
+                                    } else {
+                                        randChoice = Math.round(Math.random()*15)
+                                    }
+                                }
+                                banned.push(randChoice)
+                                if (randChoice>=8) banned.push(15-randChoice)
+                                else               banned.push(15-randChoice)
+                                object.truthTable.assoc[bfg.assocify(randChoice)] = "?"
                             }
                             delete object.truthTable.array
                             object.letter = "b"
-                            object.text = "Часть значений функций известны, введите остальные значения, чтобы функция была самодвойственной "
+                            object.text = "Часть значений функций известны, введите остальные значения, чтобы функция была самодвойственной"
                         }
                     }
                     res.jsonp(object)

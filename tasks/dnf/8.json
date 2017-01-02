@@ -1,55 +1,58 @@
 {
     "truthTable": {
         "array": [
-            1,
-            0,
-            0,
-            0,
             0,
             0,
             0,
             0,
             0,
             1,
+            0,
             0,
             0,
             1,
             1,
             0,
-            0
+            0,
+            1,
+            1,
+            1
         ],
         "assoc": {
             "1000": 0,
             "1001": 1,
-            "1010": 0,
+            "1010": 1,
             "1011": 0,
-            "1100": 1,
+            "1100": 0,
             "1101": 1,
-            "1110": 0,
-            "1111": 0,
-            "0000": 1,
+            "1110": 1,
+            "1111": 1,
+            "0000": 0,
             "0001": 0,
             "0010": 0,
             "0011": 0,
             "0100": 0,
-            "0101": 0,
+            "0101": 1,
             "0110": 0,
             "0111": 0
         }
     },
     "pdnf": [
+        "!t!x!y!z",
+        "!t!x!yz",
         "!t!xy!z",
-        "!t!xyz",
+        "!tx!yz",
         "!txy!z",
-        "txyz"
+        "t!xy!z"
     ],
     "dnf": {
-        "text": "(t AND  x AND  (NOT y)) OR  (t AND  (NOT y) AND  z) OR  ((NOT t) AND  (NOT x) AND  (NOT y) AND  (NOT z))",
-        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP47722dfc65ff6hd82gg000024784053e7928004?MSPStoreType=image/gif&s=42",
+        "text": "(t AND  x AND  y) OR  (t AND  y AND  (NOT z)) OR  (t AND  (NOT y) AND  z) OR  (x AND  (NOT y) AND  z)",
+        "image": "http://www4c.wolframalpha.com/Calculate/MSP/MSP14231i2bfg5b06gaie01000018bcb7756499bdeh?MSPStoreType=image/gif&s=18",
         "arr": [
-            "tx!y",
+            "txy",
+            "ty!z",
             "t!yz",
-            "!t!x!y!z"
+            "x!yz"
         ]
     }
 }

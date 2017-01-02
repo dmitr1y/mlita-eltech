@@ -6,7 +6,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var generators = require('./routes/generators')
 var get = require('./routes/get')
 var task = require('./routes/task')
 

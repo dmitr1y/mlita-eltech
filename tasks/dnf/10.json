@@ -1,60 +1,59 @@
 {
     "truthTable": {
         "array": [
-            0,
-            1,
             1,
             0,
             0,
-            1,
-            1,
-            0,
-            1,
-            1,
             0,
             0,
             0,
             1,
             0,
-            1
+            1,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0
         ],
         "assoc": {
             "1000": 1,
             "1001": 1,
             "1010": 0,
-            "1011": 0,
+            "1011": 1,
             "1100": 0,
             "1101": 1,
             "1110": 0,
-            "1111": 1,
-            "0000": 0,
-            "0001": 1,
-            "0010": 1,
+            "1111": 0,
+            "0000": 1,
+            "0001": 0,
+            "0010": 0,
             "0011": 0,
             "0100": 0,
-            "0101": 1,
+            "0101": 0,
             "0110": 1,
             "0111": 0
         }
     },
     "pdnf": [
-        "!t!x!y!z",
         "!t!xy!z",
+        "!tx!y!z",
         "!txy!z",
         "!txyz",
         "t!x!yz",
-        "t!xy!z",
-        "tx!yz",
-        "txy!z"
+        "txyz"
     ],
     "dnf": {
-        "text": "(t AND  x AND  z) OR  (t AND  (NOT x) AND  (NOT y)) OR  ((NOT t) AND  y AND  (NOT z)) OR  ((NOT y) AND  z)",
-        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP143021fc4ci8ddf19agb00005bbc221c5bi29ef2?MSPStoreType=image/gif&s=14",
+        "text": "(t AND  (NOT x) AND  (NOT y)) OR  (t AND  (NOT x) AND  z) OR  (t AND  (NOT y) AND  z) OR  ((NOT t) AND  x AND  y AND  (NOT z)) OR  ((NOT x) AND  (NOT y) AND  (NOT z))",
+        "image": "http://www4c.wolframalpha.com/Calculate/MSP/MSP9851b6a2eeh6h8d37hh00005655fe844d13g413?MSPStoreType=image/gif&s=47",
         "arr": [
-            "txz",
             "t!x!y",
-            "!ty!z",
-            "!yz"
+            "t!xz",
+            "t!yz",
+            "!txy!z",
+            "!x!y!z"
         ]
     }
 }
