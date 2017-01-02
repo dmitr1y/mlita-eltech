@@ -39,7 +39,7 @@
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
 								<li><a href="#">Вход</a></li>
-								<li><a href="#">Регистрация</a></li>
+								<li><a id="registration" href="#">Регистрация</a></li>
 							</ul>
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
@@ -73,7 +73,7 @@
 			<div class="main">
 				<!-- begin hypercube -->
 				<div class="hypercube col-md-offset-1 col-md-5 ">
-
+					<div class="title"></div>
 					<button class="arrow a-top"></button>
 					<button class="arrow a-bottom"></button>
 					<button class="arrow a-left"></button>
@@ -114,25 +114,25 @@
 
 									<!-- external vertex -->
 
-						<span class="vertex external_vertex vertex_1">?</span>
-						<span class="vertex external_vertex vertex_2">?</span>
-						<span class="vertex external_vertex vertex_3">?</span>
-						<span class="vertex external_vertex vertex_4">?</span>
-						<span class="vertex external_vertex vertex_5">?</span>
-						<span class="vertex external_vertex vertex_6">?</span>
-						<span class="vertex external_vertex vertex_7">?</span>
-						<span class="vertex external_vertex vertex_8">?</span>
+						<span class="vertex 0000 external_vertex vertex_1">?</span>
+						<span class="vertex 0001 external_vertex vertex_2">?</span>
+						<span class="vertex 0010 external_vertex vertex_3">?</span>
+						<span class="vertex 0011 external_vertex vertex_4">?</span>
+						<span class="vertex 0100 external_vertex vertex_5">?</span>
+						<span class="vertex 0101 external_vertex vertex_6">?</span>
+						<span class="vertex 0110 external_vertex vertex_7">?</span>
+						<span class="vertex 0111 external_vertex vertex_8">?</span>
 
 									<!-- intrernal vertex -->
 
-						<span class="vertex internal_vertex vertex_9">?</span>
-						<span class="vertex internal_vertex vertex_10">?</span>
-						<span class="vertex internal_vertex vertex_11">?</span>
-						<span class="vertex internal_vertex vertex_12">?</span>
-						<span class="vertex internal_vertex vertex_13">?</span>
-						<span class="vertex internal_vertex vertex_14">?</span>
-						<span class="vertex internal_vertex vertex_15">?</span>
-						<span class="vertex internal_vertex vertex_16">?</span>
+						<span class="vertex 1000 internal_vertex vertex_9">?</span>
+						<span class="vertex 1001 internal_vertex vertex_10">?</span>
+						<span class="vertex 1010 internal_vertex vertex_11">?</span>
+						<span class="vertex 1011 internal_vertex vertex_12">?</span>
+						<span class="vertex 1100 internal_vertex vertex_13">?</span>
+						<span class="vertex 1101 internal_vertex vertex_14">?</span>
+						<span class="vertex 1110 internal_vertex vertex_15">?</span>
+						<span class="vertex 1111 internal_vertex vertex_16">?</span>
 
 									<!-- external rib -->
 
@@ -198,6 +198,7 @@
 				<!-- begin control -->
 				<div class="control col-md-4 col-md-offset-1">
 					<div class="description">Задание:<br><span id="condition"></span></div>
+					<div class="answer"></div>
 					<!-- Single button -->
 					<div class="btn-group">
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -208,6 +209,7 @@
 							<li><a id="average_view" href="#">Отключить Внешние грани и ребра</a></li>
 							<li><a id="internal_view" href="#">Отключить Внутренние грани и ребра</a></li>
 						</ul>
+						<button type="button" class="btn btn-primary send">ATVEEEEEEEEEET!</button>
 					</div>
 				</div>
 				<!-- end control -->
@@ -221,6 +223,7 @@
 
 				<script src="bower_components/jQuery/dist/jquery.min.js"></script>
 				<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+				<script src="js/host.js"></script>
 				<script src="js/hypercube.js"></script>
 				<script src="js/buttons.js"></script>
 				<script src="js/vertex.js"></script>

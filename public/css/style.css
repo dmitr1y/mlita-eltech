@@ -40,7 +40,7 @@
 }
 
 
-.description {
+.description, .answer {
 	text-align: center;
 	height: 150px;
 	border: 5px solid beige;

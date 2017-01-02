@@ -4,35 +4,35 @@
     width: 50px; /* 25 */
 }
 .cube .vertex_1 {
-    -webkit-transform: translate3d(0, -20px, 100px);
-    -moz-transform: translate3d(0, -20px, 100px);
-    -o-transform: translate3d(0, -20px, 100px);
-    -ms-transform: translate3d(0, -20px, 100px);
-    transform: translate3d(0, -20px, 100px);
+    -webkit-transform: translate3d(0, -25px, 100px);
+    -moz-transform: translate3d(0, -25px, 100px);
+    -o-transform: translate3d(0, -25px, 100px);
+    -ms-transform: translate3d(0, -25px, 100px);
+    transform: translate3d(0, -25px, 100px);
 }
 
 .cube .vertex_2 {
-    -webkit-transform: translate3d(190px, -20px, 100px);
-    -moz-transform: translate3d(190px, -20px, 100px);
-    -o-transform: translate3d(190px, -20px, 100px);
-    -ms-transform: translate3d(190px, -20px, 100px);
-    transform: translate3d(190px, -20px, 100px);
+    -webkit-transform: translate3d(190px, -25px, 100px);
+    -moz-transform: translate3d(190px, -25px, 100px);
+    -o-transform: translate3d(190px, -25px, 100px);
+    -ms-transform: translate3d(190px, -25px, 100px);
+    transform: translate3d(190px, -25px, 100px);
 }
 
 .cube .vertex_3 {
-    -webkit-transform: translate3d(0, -20px, -100px);
-    -moz-transform: translate3d(0, -20px, -100px);
-    -o-transform: translate3d(0, -20px, -100px);
-    -ms-transform: translate3d(0, -20px, -100px);
-    transform: translate3d(0, -20px, -100px);
+    -webkit-transform: translate3d(0, -25px, -100px);
+    -moz-transform: translate3d(0, -25px, -100px);
+    -o-transform: translate3d(0, -25px, -100px);
+    -ms-transform: translate3d(0, -25px, -100px);
+    transform: translate3d(0, -25px, -100px);
 }
 
 .cube .vertex_4 {
-    -webkit-transform: translate3d(190px, -20px, -100px);
-    -moz-transform: translate3d(190px, -20px, -100px);
-    -o-transform: translate3d(190px, -20px, -100px);
-    -ms-transform: translate3d(190px, -20px, -100px);
-    transform: translate3d(190px, -20px, -100px);
+    -webkit-transform: translate3d(190px, -25px, -100px);
+    -moz-transform: translate3d(190px, -25px, -100px);
+    -o-transform: translate3d(190px, -25px, -100px);
+    -ms-transform: translate3d(190px, -25px, -100px);
+    transform: translate3d(190px, -25px, -100px);
 }
 
 .cube .vertex_5 {
