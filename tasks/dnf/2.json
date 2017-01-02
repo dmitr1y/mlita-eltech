@@ -2,56 +2,60 @@
     "truthTable": {
         "array": [
             1,
+            1,
             0,
+            1,
             0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
             0,
             0,
             1,
-            1,
-            1,
-            0,
-            0,
-            0,
-            0,
-            0,
-            0,
-            1,
-            0
+            1
         ],
         "assoc": {
-            "1000": 1,
+            "1000": 0,
             "1001": 1,
-            "1010": 1,
-            "1011": 0,
+            "1010": 0,
+            "1011": 1,
             "1100": 0,
             "1101": 0,
-            "1110": 0,
+            "1110": 1,
             "1111": 1,
-            "0000": 0,
+            "0000": 1,
             "0001": 1,
             "0010": 0,
-            "0011": 0,
+            "0011": 1,
             "0100": 0,
-            "0101": 0,
+            "0101": 1,
             "0110": 0,
-            "0111": 0
+            "0111": 1
         }
     },
     "pdnf": [
+        "!t!x!y!z",
         "!t!x!yz",
+        "!tx!y!z",
+        "!txy!z",
         "t!x!y!z",
-        "t!x!yz",
         "t!xy!z",
+        "tx!y!z",
+        "txy!z",
         "txyz"
     ],
     "dnf": {
-        "text": "((NOT t) AND  x AND  y) OR  ((NOT t) AND  x AND  z) OR  ((NOT t) AND  (NOT x) AND  (NOT y) AND  (NOT z)) OR  (x AND  y AND  (NOT z))",
-        "image": "http://www4c.wolframalpha.com/Calculate/MSP/MSP2861h742ccecahf42di000012e90b942h5i1516?MSPStoreType=image/gif&s=51",
+        "text": "(t AND  x AND  y) OR  ((NOT t) AND  (NOT x) AND  (NOT y)) OR  ((NOT t) AND  z) OR  ((NOT x) AND  z)",
+        "image": "http://www4f.wolframalpha.com/Calculate/MSP/MSP1521dha188c64i6d2i7000064378163c3fc5572?MSPStoreType=image/gif&s=9",
         "arr": [
-            "!txy",
-            "!txz",
-            "!t!x!y!z",
-            "xy!z"
+            "txy",
+            "!t!x!y",
+            "!tz",
+            "!xz"
         ]
     }
 }
