@@ -2,6 +2,18 @@
 	font-size: 14px;
 }
 
+.navbar {
+	margin-bottom: 0;
+}
+
+.navigation {
+	margin-bottom: 20px;
+}
+
+.task_5 {
+	height: 62px;
+}
+
 .hypercube {
     position: relative;
     margin-top: 50px;
@@ -18,4 +30,19 @@
 	position: relative;
 	height: 500px;
 	border: solid 10px #f00;
+}
+
+.task {    
+	text-align: center;
+	display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+.description {
+	text-align: center;
+	height: 150px;
+	border: 5px solid beige;
+	border-radius: 10px;
 }

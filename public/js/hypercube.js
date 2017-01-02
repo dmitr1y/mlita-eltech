@@ -2,11 +2,11 @@ $(document).ready(function(){
 
 	$(".cube").mousemove(function(e){
 		$(".cube").css({
-			// '-webkit-transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
-			// '-moz-transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
-			// '-o-transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
-			// '-ms-transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
-			// 'transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)'
+			'-webkit-transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
+			'-moz-transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
+			'-o-transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
+			'-ms-transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
+			'transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)'
 		});
 	});
 

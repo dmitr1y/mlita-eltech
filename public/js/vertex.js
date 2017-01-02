@@ -141,101 +141,119 @@ $(document).ready(function(){
 			$(clss).empty();
 			$(clss).append('1');	
 		}
-	}, b = -1;
+	}, 
+	b = [
+		-1,
+		-1,
+		-1,
+		-1, // 4
+		-1,
+		-1,
+		-1,
+		-1, // 8
+		-1,
+		-1,
+		-1,
+		-1, // 12
+		-1,
+		-1,
+		-1,
+		-1 // 16
+	]
 
 	$(".vertex_1").click(function(){
 		$(".vertex_1").append(function() {
-			a[++b % 2](".vertex_1")
+			a[++b[0] % 2](".vertex_1")
 		});
 	});
 
 	$(".vertex_2").click(function(){
 		$(".vertex_2").append(function() {
-			a[++b % 2](".vertex_2")
+			a[++b[1] % 2](".vertex_2")
 		});
 	});
 
 	$(".vertex_3").click(function(){
 		$(".vertex_3").append(function() {
-			a[++b % 2](".vertex_3")
+			a[++b[2] % 2](".vertex_3")
 		});
 	});
 
 	$(".vertex_4").click(function(){
 		$(".vertex_4").append(function() {
-			a[++b % 2](".vertex_4")
+			a[++b[3] % 2](".vertex_4")
 		});
 	});
 
 	$(".vertex_5").click(function(){
 		$(".vertex_5").append(function() {
-			a[++b % 2](".vertex_5")
+			a[++b[4] % 2](".vertex_5")
 		});
 	});
 
 	$(".vertex_6").click(function(){
 		$(".vertex_6").append(function() {
-			a[++b % 2](".vertex_6")
+			a[++b[5] % 2](".vertex_6")
 		});
 	});
 
 	$(".vertex_7").click(function(){
 		$(".vertex_7").append(function() {
-			a[++b % 2](".vertex_7")
+			a[++b[6] % 2](".vertex_7")
 		});
 	});
 
 	$(".vertex_8").click(function(){
 		$(".vertex_8").append(function() {
-			a[++b % 2](".vertex_8")
+			a[++b[7] % 2](".vertex_8")
 		});
 	});
 
 	$(".vertex_9").click(function(){
 		$(".vertex_9").append(function() {
-			a[++b % 2](".vertex_9")
+			a[++b[8] % 2](".vertex_9")
 		});
 	});
 
 	$(".vertex_10").click(function(){
 		$(".vertex_10").append(function() {
-			a[++b % 2](".vertex_10")
+			a[++b[9] % 2](".vertex_10")
 		});
 	});
 
 	$(".vertex_11").click(function(){
 		$(".vertex_11").append(function() {
-			a[++b % 2](".vertex_11")
+			a[++b[10] % 2](".vertex_11")
 		});
 	});
 
 	$(".vertex_12").click(function(){
 		$(".vertex_12").append(function() {
-			a[++b % 2](".vertex_12")
+			a[++b[11] % 2](".vertex_12")
 		});
 	});
 
 	$(".vertex_13").click(function(){
 		$(".vertex_13").append(function() {
-			a[++b % 2](".vertex_13")
+			a[++b[12] % 2](".vertex_13")
 		});
 	});
 
 	$(".vertex_14").click(function(){
 		$(".vertex_14").append(function() {
-			a[++b % 2](".vertex_14")
+			a[++b[13] % 2](".vertex_14")
 		});
 	});
 
 	$(".vertex_15").click(function(){
 		$(".vertex_15").append(function() {
-			a[++b % 2](".vertex_15")
+			a[++b[14] % 2](".vertex_15")
 		});
 	});
 
 	$(".vertex_16").click(function(){
 		$(".vertex_16").append(function() {
-			a[++b % 2](".vertex_16")
+			a[++b[15] % 2](".vertex_16")
 		});
 	});
 
