@@ -40,6 +40,14 @@ router.get("/:folder", (req, res)=>{
                             delete object.dummies_number
                             break
                         }
+                        case 'selfdual': {
+                            for (let i = 1; i <= 5; i++){
+                                object.truthTable.assoc[bfg.assocify(Math.round(Math.random()*15))] = "?"
+                            }
+                            delete object.truthTable.array
+                            object.letter = "b"
+                            object.text = "Часть значений функций известны, введите остальные значения, чтобы функция была самодвойственной "
+                        }
                     }
                     res.jsonp(object)
                 }
@@ -49,6 +57,7 @@ router.get("/:folder", (req, res)=>{
 })
     .post("/", (req,res) => {
         let solution = req.body
+        console.log(solution)
         let f = "./tasks/"+solution.dir+"/"+solution.variant+".json"
         let dude_errors = ""
         fs.readFile(f, (err, data) => {
@@ -56,17 +65,41 @@ router.get("/:folder", (req, res)=>{
                 res.status(404).jsonp({problem: 1, more: "file not found"})
             else {
                 let serverSolution = JSON.parse(data)
-                for (let i = 0; i < 16; i++){
-                    let j = bfg.assocify(i)
-                    if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
-                        dude_errors += j+", "
+                switch (solution.dir){
+                    case 'expressions': {
+                        for (let i = 0; i < 16; i++){
+                            let j = bfg.assocify(i)
+                            if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
+                                dude_errors += j+", "
+                            }
+                        }
+                        dude_errors = dude_errors.slice(0, -2);
+                        if (!dude_errors.length){
+                            res.jsonp({problem: 0, more: "Решение верное"})
+                        } else {
+                            res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
+                        }
+                        break
                     }
-                }
-                dude_errors = dude_errors.slice(0, -2);
-                if (!dude_errors.length){
-                    res.jsonp({problem: 0, more: "Решение верное"})
-                } else {
-                    res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
+                    case 'selfdual':{
+                        switch (solution.letter){
+                            case 'b': {
+                                for (let i = 0; i < 16; i++){
+                                    let j = bfg.assocify(i)
+                                    if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
+                                        dude_errors += j+", "
+                                    }
+                                }
+                                dude_errors = dude_errors.slice(0, -2);
+                                if (!dude_errors.length){
+                                    res.jsonp({problem: 0, more: "Решение верное"})
+                                } else {
+                                    res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
+                                }
+                                break
+                            }
+                        }
+                    }
                 }
             }
         })
