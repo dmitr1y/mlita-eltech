@@ -17,10 +17,8 @@ function fileRandomPath(path, callback){
 }
 
 router.get("/:folder", (req, res)=>{
-    if (req.params.folder == "dummy_variables"){
-        req.params.folder += "/"+Math.round(Math.random()*2)
-    }
-    fileRandomPath('tasks/'+req.params.folder, (f) => {
+    var deeper = req.params.folder == "dummy_variables" ? "/"+Math.round(Math.random()*2) : ""
+    fileRandomPath('tasks/'+req.params.folder+deeper, (f) => {
         if (!f) {
             res.status(404)
             res.jsonp({error: 404})
@@ -28,13 +26,18 @@ router.get("/:folder", (req, res)=>{
             fs.readFile(f, (err, data) => {
                 if (!err){
                     let object = JSON.parse(data)
-                    object.variant = f.match(/\d+/)[0]
+                    object.variant = /(\d+)\.json/.exec(f)[1]
                     switch (req.params.folder){
                         case 'expressions':{
                             delete object.truthTable.array
                             for (let i = 1; i <= 5; i++){
-                                object.truthTable.assoc[bfg.assocify(Math.round(Math.random()*16))] = "?"
+                                object.truthTable.assoc[bfg.assocify(Math.round(Math.random()*15))] = "?"
                             }
+                            break
+                        }
+                        case 'dummy_variables':{
+                            delete object.dummy
+                            delete object.dummies_number
                             break
                         }
                     }
