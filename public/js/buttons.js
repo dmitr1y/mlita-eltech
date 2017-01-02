@@ -1,12 +1,5 @@
 $(document).ready(function(){
 	var variant = 0;
-	var assocify = function(s, k = 4){
-		let n = s.toString(2)
-		zeros = ""
-		for (i = 0; i < k; i++)
-			zeros += "0"
-		return zeros.substr(n.length) + n
-	}
 
 	$("#external_view").click(function(){
 		$(".rib").fadeIn();
@@ -28,6 +21,16 @@ $(document).ready(function(){
 		$(".external_rib").fadeOut();
 	});
 
+	$("#return").click(function(){
+		$(".cube").css({
+			'-webkit-transform': 'perspective(900px) rotate3d(1, 1, 0, -45deg)',
+			'-moz-transform': 'perspective(900px) rotate3d(1, 1, 0, -45deg)',
+			'-o-transform': 'perspective(900px) rotate3d(1, 1, 0, -45deg)',
+			'-ms-transform': 'perspective(900px) rotate3d(1, 1, 0, -45deg)',
+			'transform': 'perspective(900px) rotate3d(1, 1, 0, -45deg)'
+		})
+	})
+
 	$(".task_1").click(function(){
 		$(".title").empty().append("Вычисление значений функции");
 		$("#condition").empty().append("Ввести недостающие значения функции " + 
@@ -36,7 +39,8 @@ $(document).ready(function(){
 			console.log(json);
 			variant = json.variant;
 			for (var i = 0; i < 16; ++i) {
-				$(".vertex_" + (i + 1)).empty().append(json.truthTable.assoc[assocify(i)]);
+				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
+				// $(".vertex_" + (i + 1)).css({})	
 			}
 		});
 	})
@@ -93,7 +97,7 @@ $(document).ready(function(){
 		})
 		.always(function(data) {
 			console.log(data);
-			$(".answer").append(data.more);
+			$(".answer").empty().append(data.more);
 		});
 		console.log(JSON.stringify(answer));
 	})

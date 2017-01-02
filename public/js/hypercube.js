@@ -1,52 +1,49 @@
 $(document).ready(function(){
-
-	$(".cube").mousemove(function(e){
-		$(".cube").css({
-			// '-webkit-transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
-			// '-moz-transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
-			// '-o-transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
-			// '-ms-transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
-			// 'transform': 'rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)'
-		});
-	});
+	var deg = -45;
+	var x = 1, y = 1, z = 0;
 
 	$(".a-top").click(function(){
+		x = 1, y = 1, z = 0, deg += 30;
+		console.log(deg);
 		$(".cube").css({
-			'-webkit-transform': 'perspective(900px) rotate3d(180, -45, 0, -135deg)',
-			'-moz-transform': 'perspective(900px) rotate3d(180, -45, 0, -135deg)',
-			'-o-transform': 'perspective(900px) rotate3d(180, -45, 0, -135deg)',
-			'-ms-transform': 'perspective(900px) rotate3d(180, -45, 0, -135deg)',
-			'transform': 'perspective(900px) rotate3d(180, -45, 0, -135deg)'
+			'-webkit-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'-moz-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'-o-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'-ms-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)'
 		});
 	});
 
 	$(".a-left").click(function(){
+		x = 0, y = 1, z = 1, deg -= 30;
 		$(".cube").css({
-			'-webkit-transform': 'perspective(900px) rotate3d(180, -45, 0, 135deg)',
-			'-moz-transform': 'perspective(900px) rotate3d(180, -45, 0, 135deg)',
-			'-o-transform': 'perspective(900px) rotate3d(180, -45, 0, 135deg)',
-			'-ms-transform': 'perspective(900px) rotate3d(180, -45, 0, 135deg)',
-			'transform': 'perspective(900px) rotate3d(180, -45, 0, 135deg)'
+			'-webkit-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'-moz-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'-o-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'-ms-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)'
 		});
 	});
 
 	$(".a-right").click(function(){
+		x = 0, y = 1, z = 1, deg += 30;
 		$(".cube").css({
-			'-webkit-transform': 'perspective(900px) rotate3d(55, 180, 0, -219deg)',
-			'-moz-transform': 'perspective(900px) rotate3d(55, 180, 0, -219deg)',
-			'-o-transform': 'perspective(900px) rotate3d(55, 180, 0, -219deg)',
-			'-ms-transform': 'perspective(900px) rotate3d(55, 180, 0, -219deg)',
-			'transform': 'perspective(900px) rotate3d(55, 180, 0, -219deg)'
+			'-webkit-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'-moz-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'-o-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'-ms-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)'
 		});
 	});
 
 	$(".a-bottom").click(function(){
+		x = 1, y = 1, z = 0, deg -= 30;
 		$(".cube").css({
-			'-webkit-transform': 'perspective(900px) rotate3d(-45, 180, 0, 135deg)',
-			'-moz-transform': 'perspective(900px) rotate3d(-45, 180, 0, 135deg)',
-			'-o-transform': 'perspective(900px) rotate3d(-45, 180, 0, 135deg)',
-			'-ms-transform': 'perspective(900px) rotate3d(-45, 180, 0, 135deg)',
-			'transform': 'perspective(900px) rotate3d(-45, 180, 0, 135deg)'
+			'-webkit-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'-moz-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'-o-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'-ms-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
+			'transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)'
 		});
 	});
 });
