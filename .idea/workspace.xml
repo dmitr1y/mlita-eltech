@@ -1,22 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0fe221cc-3fd0-4ade-bc38-7e765738295d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/deep-equal/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/deep-equal/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/deep-equal/example/cmp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/deep-equal/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/deep-equal/lib/is_arguments.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/deep-equal/lib/keys.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/deep-equal/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/deep-equal/readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/deep-equal/test/cmp.js" afterPath="" />
+    <list default="true" id="0fe221cc-3fd0-4ade-bc38-7e765738295d" name="Default" comment="Selfdual test server was completely done. Needs to test.">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/10.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/11.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/12.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/13.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/14.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/15.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/16.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/17.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/18.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/19.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/2.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/3.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/4.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/5.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/6.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/7.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/8.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/9.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generator.js" afterPath="$PROJECT_DIR$/generator.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bfg/index.js" afterPath="$PROJECT_DIR$/node_modules/bfg/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/task.js" afterPath="$PROJECT_DIR$/routes/task.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/1.json" afterPath="$PROJECT_DIR$/tasks/monotonic/1.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/10.json" afterPath="$PROJECT_DIR$/tasks/monotonic/10.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/11.json" afterPath="$PROJECT_DIR$/tasks/monotonic/11.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/12.json" afterPath="$PROJECT_DIR$/tasks/monotonic/12.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/13.json" afterPath="$PROJECT_DIR$/tasks/monotonic/13.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/14.json" afterPath="$PROJECT_DIR$/tasks/monotonic/14.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/15.json" afterPath="$PROJECT_DIR$/tasks/monotonic/15.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/16.json" afterPath="$PROJECT_DIR$/tasks/monotonic/16.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/17.json" afterPath="$PROJECT_DIR$/tasks/monotonic/17.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/18.json" afterPath="$PROJECT_DIR$/tasks/monotonic/18.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/19.json" afterPath="$PROJECT_DIR$/tasks/monotonic/19.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/2.json" afterPath="$PROJECT_DIR$/tasks/monotonic/2.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/20.json" afterPath="$PROJECT_DIR$/tasks/monotonic/20.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/3.json" afterPath="$PROJECT_DIR$/tasks/monotonic/3.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/4.json" afterPath="$PROJECT_DIR$/tasks/monotonic/4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/5.json" afterPath="$PROJECT_DIR$/tasks/monotonic/5.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/6.json" afterPath="$PROJECT_DIR$/tasks/monotonic/6.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/7.json" afterPath="$PROJECT_DIR$/tasks/monotonic/7.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/8.json" afterPath="$PROJECT_DIR$/tasks/monotonic/8.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/9.json" afterPath="$PROJECT_DIR$/tasks/monotonic/9.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/1.json" afterPath="$PROJECT_DIR$/tasks/selfdual/1.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/10.json" afterPath="$PROJECT_DIR$/tasks/selfdual/10.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/11.json" afterPath="$PROJECT_DIR$/tasks/selfdual/11.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/12.json" afterPath="$PROJECT_DIR$/tasks/selfdual/12.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/13.json" afterPath="$PROJECT_DIR$/tasks/selfdual/13.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/14.json" afterPath="$PROJECT_DIR$/tasks/selfdual/14.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/15.json" afterPath="$PROJECT_DIR$/tasks/selfdual/15.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/16.json" afterPath="$PROJECT_DIR$/tasks/selfdual/16.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/17.json" afterPath="$PROJECT_DIR$/tasks/selfdual/17.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/18.json" afterPath="$PROJECT_DIR$/tasks/selfdual/18.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/19.json" afterPath="$PROJECT_DIR$/tasks/selfdual/19.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/2.json" afterPath="$PROJECT_DIR$/tasks/selfdual/2.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/20.json" afterPath="$PROJECT_DIR$/tasks/selfdual/20.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/3.json" afterPath="$PROJECT_DIR$/tasks/selfdual/3.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/4.json" afterPath="$PROJECT_DIR$/tasks/selfdual/4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/5.json" afterPath="$PROJECT_DIR$/tasks/selfdual/5.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/6.json" afterPath="$PROJECT_DIR$/tasks/selfdual/6.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/7.json" afterPath="$PROJECT_DIR$/tasks/selfdual/7.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/8.json" afterPath="$PROJECT_DIR$/tasks/selfdual/8.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/9.json" afterPath="$PROJECT_DIR$/tasks/selfdual/9.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.js" afterPath="$PROJECT_DIR$/test/test.js" />
     </list>
     <ignored path="mlita-eltech.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,32 +86,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/bfg/index.js">
+      <file leaf-file-name="1.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tasks/selfdual/1.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-              <folding>
-                <element signature="e#275#406#0" expanded="false" />
-                <element signature="n#!!block;n#unique#0" expanded="false" />
-                <element signature="e#902#4584#0" expanded="false" />
-                <element signature="e#4791#5611#0" expanded="false" />
-                <element signature="e#5695#7794#0" expanded="false" />
-                <element signature="e#7861#11017#0" expanded="false" />
-                <element signature="e#11095#12762#0" expanded="false" />
-                <element signature="e#12852#14369#0" expanded="false" />
-                <element signature="e#12871#13282#0" expanded="false" />
-                <element signature="e#14404#14990#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="32" selection-end-column="23" />
+            <state vertical-scroll-proportion="-12.423077">
+              <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -72,37 +100,39 @@
         <entry file="file://$PROJECT_DIR$/routes/task.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+              <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
+              <folding>
+                <element signature="e#4730#7626#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tasks/selfdual/2.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="3.9230769">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47948718">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generator.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="generator.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tasks/monotonic/20.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8666667">
+              <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -145,10 +175,10 @@
         <option value="$PROJECT_DIR$/routes/solution.js" />
         <option value="$PROJECT_DIR$/routes/generators.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/routes/task.js" />
         <option value="$PROJECT_DIR$/test/test2.js" />
         <option value="$PROJECT_DIR$/test/test.js" />
         <option value="$PROJECT_DIR$/node_modules/bfg/index.js" />
+        <option value="$PROJECT_DIR$/routes/task.js" />
         <option value="$PROJECT_DIR$/generator.js" />
       </list>
     </option>
@@ -239,6 +269,24 @@
               <option name="myItemId" value="tasks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="selfdual" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mlita-eltech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mlita-eltech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -265,7 +313,7 @@
       <recent name="C:\Users\seraf\WebstormProjects\mlita-eltech\tasks" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.Generator">
+  <component name="RunManager" selected="Node.js.bin\www">
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
@@ -346,30 +394,16 @@
       <option name="number" value="Default" />
       <updated>1479645601316</updated>
     </task>
+    <task id="LOCAL-00001" summary="Improoved monotonic generator.">
+      <created>1483445784937</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1483445784937</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test - 2017.01.03 at 14h 34m 01s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2017.01.03 at 14h 34m 34s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2017.01.03 at 14h 34m 44s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2017.01.03 at 14h 35m 23s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2017.01.03 at 14h 35m 36s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2017.01.03 at 14h 35m 52s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2017.01.03 at 14h 36m 01s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
     <history-entry file="Test - 2017.01.03 at 14h 36m 57s.xml">
       <configuration name="Test" configurationId="mocha-javascript-test-runner" />
     </history-entry>
@@ -377,6 +411,27 @@
       <configuration name="Test" configurationId="mocha-javascript-test-runner" />
     </history-entry>
     <history-entry file="Test - 2017.01.03 at 14h 40m 39s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2017.01.03 at 15h 04m 23s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2017.01.03 at 15h 05m 10s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2017.01.03 at 15h 05m 50s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2017.01.03 at 15h 06m 13s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2017.01.03 at 15h 30m 18s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2017.01.03 at 15h 30m 42s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2017.01.03 at 15h 33m 42s.xml">
       <configuration name="Test" configurationId="mocha-javascript-test-runner" />
     </history-entry>
   </component>
@@ -395,16 +450,16 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18601191" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3268921" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4363929" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.273752" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15550596" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993559" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -444,7 +499,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Сформировал генератор задач. Сгенерированы максимально практичные задачи." />
-    <option name="LAST_COMMIT_MESSAGE" value="Сформировал генератор задач. Сгенерированы максимально практичные задачи." />
+    <MESSAGE value="Улучшил генератор монотонной функции. Теперь есть возможность сгенерировать такую, у которой мон-ть нарушена в только одном месте" />
+    <MESSAGE value="Improoved monotonic generator." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improoved monotonic generator." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -453,55 +510,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tasks/dummy_variables/0/1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.255102">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/dummy_variables/2/1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="17.653847">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/dummy_variables/1/1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="18.923077">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/dummy_variables/2/3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="18.923077">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/dummy_variables/2/4.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/dummy_variables/2/5.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="18.923077">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/dummy_variables/2/6.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="18.923077">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tasks/dummy_variables/2/8.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.576923">
@@ -649,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/selfdual/1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tasks/selfdual/13.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -734,85 +735,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/selfdual/not/1.json">
+    <entry file="file://$PROJECT_DIR$/tasks/monotonic/24.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="36" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/selfdual/not/6.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="13" selection-start-line="3" selection-start-column="12" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/selfdual/not/12.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="16.115385">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/selfdual/not/15.json">
+    <entry file="file://$PROJECT_DIR$/tasks/monotonic/25.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="13.730769">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tasks/selfdual/not/16.json">
+    <entry file="file://$PROJECT_DIR$/tasks/monotonic/26.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="15.692307">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/task.js">
+    <entry file="file://$PROJECT_DIR$/tasks/monotonic/1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state vertical-scroll-proportion="16.115385">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/tasks/monotonic/27.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="32" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bfg/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-          <folding>
-            <element signature="e#275#406#0" expanded="false" />
-            <element signature="n#!!block;n#unique#0" expanded="false" />
-            <element signature="e#902#4584#0" expanded="false" />
-            <element signature="e#4791#5611#0" expanded="false" />
-            <element signature="e#5695#7794#0" expanded="false" />
-            <element signature="e#7861#11017#0" expanded="false" />
-            <element signature="e#11095#12762#0" expanded="false" />
-            <element signature="e#12852#14369#0" expanded="false" />
-            <element signature="e#12871#13282#0" expanded="false" />
-            <element signature="e#14404#14990#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="70" column="19" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
+        <state vertical-scroll-proportion="-1.1542699">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -825,10 +783,118 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.005141388">
+          <caret line="31" column="3" selection-start-line="31" selection-start-column="3" selection-end-line="32" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/selfdual/3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1542699">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bfg/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="442" column="58" selection-start-line="442" selection-start-column="58" selection-end-line="442" selection-end-column="58" />
+          <folding>
+            <element signature="e#275#406#0" expanded="false" />
+            <element signature="n#!!block;n#unique#0" expanded="false" />
+            <element signature="e#4791#5611#0" expanded="false" />
+            <element signature="e#5695#7794#0" expanded="false" />
+            <element signature="e#7861#11017#0" expanded="false" />
+            <element signature="e#11159#11550#0" expanded="false" />
+            <element signature="e#13275#13710#0" expanded="false" />
+            <element signature="e#14924#15510#0" expanded="false" />
+            <element signature="e#15544#15675#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
+          <folding>
+            <element signature="e#4730#7626#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47948718">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/selfdual/2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.9230769">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/selfdual/1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/selfdual/40.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="18.73077">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/selfdual/36.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="17.653847">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/selfdual/21.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="13.730769">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/selfdual/23.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="16.115385">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tasks/selfdual/24.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9834711">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8666667">
+          <caret line="64" column="42" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
           <folding />
         </state>
       </provider>

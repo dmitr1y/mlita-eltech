@@ -40,25 +40,34 @@ router.get("/:folder", (req, res)=>{
                             break
                         }
                         case 'selfdual': {
-
-                            let banned = new Array()
-                            for (let i = 1; i <= 5; i++){
-                                let randChoice = Math.round(Math.random()*15)
-                                while (true) {
-                                    if (banned.indexOf(randChoice) < 0){
-                                        break
-                                    } else {
-                                        randChoice = Math.round(Math.random()*15)
+                            if (object.selfdual){
+                                let banned = new Array()
+                                for (let i = 1; i <= 5; i++){
+                                    let randChoice = Math.round(Math.random()*15)
+                                    while (true) {
+                                        if (banned.indexOf(randChoice) < 0){
+                                            break
+                                        } else {
+                                            randChoice = Math.round(Math.random()*15)
+                                        }
                                     }
+                                    banned.push(randChoice)
+                                    if (randChoice>=8) banned.push(15-randChoice)
+                                    else               banned.push(15-randChoice)
+                                    object.truthTable.assoc[bfg.assocify(randChoice)] = "?"
                                 }
-                                banned.push(randChoice)
-                                if (randChoice>=8) banned.push(15-randChoice)
-                                else               banned.push(15-randChoice)
-                                object.truthTable.assoc[bfg.assocify(randChoice)] = "?"
+                                delete object.truthTable.array
+                                object.letter = "b"
+                                object.text = "Часть значений функций известны, введите остальные значения, чтобы функция была самодвойственной"
+                            } else {
+                                if(Math.round(Math.random())){
+                                    object.letter = "a"
+                                    object.text = "Отметьте две вершины, доказывающие, что функция не является монотонной"
+                                } else {
+                                    object.letter = "c"
+                                    object.text = "Поменяйте минимальное число значений, чтобы функция стала  самодвойственной"
+                                }
                             }
-                            delete object.truthTable.array
-                            object.letter = "b"
-                            object.text = "Часть значений функций известны, введите остальные значения, чтобы функция была самодвойственной"
                         }
                     }
                     res.jsonp(object)
@@ -109,6 +118,37 @@ router.get("/:folder", (req, res)=>{
                                     res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
                                 }
                                 break
+                            }
+                            case 'c': {
+                                let arr = new Array(16)
+                                for (x in solution.assoc) arr[parseInt(x,2)] = object.truthTable.assoc[x]
+
+                                let sd = bfg.selfdual(arr)
+                                if (!sd) {
+                                    res.jsonp({problem: 2, more: "Полученная функция не является самодвойственной"})
+                                } else {
+                                    for (let i = 0; i < 16; i++){
+                                        let j = assocify(i)
+                                        if (serverSolution.truthTable.array[i] != arr[i]){
+                                            dude_errors = "Полученная функция действительно самодвойственная, но требовалось поменять минимальное значение"
+                                            break
+                                        }
+                                    }
+                                }
+                                if (!dude_errors.length){
+                                    res.jsonp({problem: 0, more: "Решение верное"})
+                                } else {
+                                    res.jsonp({problem: 2, more: dude_errors})
+                                }
+                            }
+                            case 'a': {
+                                solution.vertexes = solution.vertexes.sort()
+                                if (solution.vertexes[0] == serverSolution.vertexes[0] && serverSolution.vertexes[1] == serverSolution.vertexes[1]){
+                                    res.jsonp({problem: 0, more: "Решение верное"})
+                                } else {
+                                    dude_errors = "Вершины указаны не верно"
+                                    res.jsonp({problem: 2, more: dude_errors})
+                                }
                             }
                         }
                     }

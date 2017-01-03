@@ -51,14 +51,9 @@ if (process.argv.length > 2){
         {
             var k = 1
             for (var i = 1; i <= N; i++){
+                let b = i%2 ? true : false;
                 console.log("Saving object to "+k+".json")
-                fs.writeFile('tasks/selfdual/'+k+'.json', JSON.stringify(bfg.generate_selfdual(), null, 4))
-                k++
-            }
-            k = 1
-            for (var i = 1; i <= N; i++){
-                console.log("Saving object to "+k+".json")
-                fs.writeFile('tasks/selfdual/not/'+k+'.json', JSON.stringify(bfg.generate_selfdual(false), null, 4))
+                fs.writeFile('tasks/selfdual/'+k+'.json', JSON.stringify(bfg.generate_selfdual(b), null, 4))
                 k++
             }
             break
@@ -67,7 +62,8 @@ if (process.argv.length > 2){
         {
             for (var i = 1; i <= N; i++){
                 console.log("Saving object to "+i+".json")
-                fs.writeFile('tasks/monotonic/'+i+'.json', JSON.stringify(bfg.generate_monotonic(), null, 4))
+                let b = i%2 ? true : false
+                fs.writeFile('tasks/monotonic/'+i+'.json', JSON.stringify(bfg.generate_monotonic(b), null, 4))
                 k++
             }
         }
