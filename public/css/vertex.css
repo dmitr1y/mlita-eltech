@@ -1,8 +1,14 @@
 
-.cube span.vertex {
+.cube .vertex {
     height: 25px;
-    width: 125px; /* 25 */
+    font-size: 14px;
+    width: 75px; /* 25 */
 }
+
+.cube .internal_vertex {
+    width: 25px;
+}
+
 .cube .vertex_1 {
     -webkit-transform: translate3d(0, -25px, 100px);
     -moz-transform: translate3d(0, -25px, 100px);

@@ -3,6 +3,7 @@ $(document).ready(function(){
 	var task = 0;
 	var letter = 0;
 
+
 	$("#external_view").click(function(){
 		$(".rib").fadeIn();
 		$(".facet").fadeIn();
@@ -44,9 +45,7 @@ $(document).ready(function(){
 			variant = json.variant;
 			for (var i = 0; i < 16; ++i) {
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
-				$(".vertex_" + (i + 1)).css({
-
-				})
+				putVertex(i, ".vertex_");
 			}
 			$("#expression").empty().append("Задано выражение: " + json.expression);
 		});
@@ -77,7 +76,7 @@ $(document).ready(function(){
 			variant = json.variant;
 			for (var i = 0; i < 16; ++i) {
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
-				// $(".vertex_" + (i + 1)).css({})	
+				putVertex(i, ".vertex_");
 			}
 			letter = json.letter;
 		})
@@ -122,8 +121,8 @@ $(document).ready(function(){
 				answer.dir = "selfdual";
 				answer.letter = letter;
 				answer.vertexes = [
-					assocify(parseInt(/vertex_(\d+)/.exec(selfdualAnswer.firstClass)[1]) - 1),
-					assocify(parseInt(/vertex_(\d+)/.exec(selfdualAnswer.secondClass)[1]) - 1)
+				assocify(parseInt(/vertex_(\d+)/.exec(selfdualAnswer.firstClass)[1]) - 1),
+				assocify(parseInt(/vertex_(\d+)/.exec(selfdualAnswer.secondClass)[1]) - 1)
 				];
 				break;
 			}

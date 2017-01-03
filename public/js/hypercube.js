@@ -3,7 +3,7 @@ $(document).ready(function(){
 	var x = 1, y = 1, z = 0;
 
 	$(".a-top").click(function(){
-		x = 1, y = 1, z = 0, deg += 30;
+		x = 1, y = 1, z = 0, deg += 10;
 		console.log(deg);
 		$(".cube").css({
 			'-webkit-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
@@ -15,7 +15,7 @@ $(document).ready(function(){
 	});
 
 	$(".a-left").click(function(){
-		x = 0, y = 1, z = 1, deg -= 30;
+		x = 0, y = 1, z = 1, deg -= 10;
 		$(".cube").css({
 			'-webkit-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
 			'-moz-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
@@ -26,7 +26,7 @@ $(document).ready(function(){
 	});
 
 	$(".a-right").click(function(){
-		x = 0, y = 1, z = 1, deg += 30;
+		x = 0, y = 1, z = 1, deg += 10;
 		$(".cube").css({
 			'-webkit-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
 			'-moz-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
@@ -37,7 +37,7 @@ $(document).ready(function(){
 	});
 
 	$(".a-bottom").click(function(){
-		x = 1, y = 1, z = 0, deg -= 30;
+		x = 1, y = 1, z = 0, deg -= 10;
 		$(".cube").css({
 			'-webkit-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',
 			'-moz-transform': 'perspective(900px) rotate3d(' + x + ' , ' + y + ' , ' + z + ' , ' + deg + 'deg)',

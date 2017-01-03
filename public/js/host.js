@@ -22,3 +22,25 @@ var selfdualAnswer = {
 	},
 },
 click = -1;
+
+var putVertex = function(i, clss) {
+	$(clss).css('width', '75px');
+	if (i > 7) {
+		if (!(i % 2)) {
+			$(clss + (i + 1)).css({
+				'margin-left': '-35px',
+				'margin-right': '35px'
+			})
+		} else {
+			$(clss + (i + 1)).css({
+				'margin-left': '-5px',
+				'margin-right': '5px'
+			})
+		}
+	} else {
+		$(clss + (i + 1)).css({
+			'margin-left': '-25px',
+			'margin-right': '25px'
+		})
+	}
+};
