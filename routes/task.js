@@ -153,13 +153,17 @@ router.get("/:folder", (req, res)=>{
                                 break
                             }
                             case 'a': {
-                                solution.vertexes = solution.vertexes.sort()
-                                if (solution.vertexes[0] == serverSolution.vertexes[0] && serverSolution.vertexes[1] == serverSolution.vertexes[1]){
-                                    res.jsonp({problem: 0, more: "Решение верное"})
-                                } else {
-                                    dude_errors = "Вершины указаны не верно"
-                                    res.jsonp({problem: 2, more: dude_errors})
+                                if (solution.vertexes){
+                                    solution.vertexes = solution.vertexes.sort()
+                                    if (solution.vertexes[0] == serverSolution.vertexes[0] && serverSolution.vertexes[1] == serverSolution.vertexes[1]){
+                                        res.jsonp({problem: 0, more: "Решение верное"})
+                                    } else {
+                                        dude_errors = "Вершины указаны не верно"
+                                        res.jsonp({problem: 2, more: dude_errors})
+                                    }
                                 }
+                                else
+                                    res.jsonp({problem: 1, more: "Bad request"})
                             }
                         }
                     }
