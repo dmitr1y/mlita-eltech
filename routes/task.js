@@ -1,7 +1,6 @@
 var express = require('express');
 var bfg = require('bfg');
 var fs = require('fs');
-//var deepEqual = require("deep-equal")
 var router = express.Router();
 
 function fileRandomPath(path, callback){

@@ -63,6 +63,14 @@ if (process.argv.length > 2){
             }
             break
         }
+        case 'monotonic':
+        {
+            for (var i = 1; i <= N; i++){
+                console.log("Saving object to "+i+".json")
+                fs.writeFile('tasks/monotonic/'+i+'.json', JSON.stringify(bfg.generate_monotonic(), null, 4))
+                k++
+            }
+        }
     }
     console.log("Generation finished")
 } else {
