@@ -105,13 +105,17 @@ router.get("/:folder", (req, res)=>{
                     case 'selfdual':{
                         switch (solution.letter){
                             case 'b': {
+                                let arr = new Array(16)
+                                for (x in solution.assoc) arr[parseInt(x,2)] = object.truthTable.assoc[x]
+
                                 for (let i = 0; i < 16; i++){
                                     let j = bfg.assocify(i)
                                     if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
                                         dude_errors += j+", "
                                     }
                                 }
-                                dude_errors = dude_errors.slice(0, -2);
+                                if (bfg.selfdual(arr)) dude_errors = ""
+                                else dude_errors = dude_errors.slice(0, -2);
                                 if (!dude_errors.length){
                                     res.jsonp({problem: 0, more: "Решение верное"})
                                 } else {
