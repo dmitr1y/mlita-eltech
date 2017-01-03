@@ -1,10 +1,9 @@
 .cube .rib {
-	background: #000;
-	-webkit-transform: translate3d(0, 0, 0);
-	-moz-transform: translate3d(0, 0, 0);
-	-o-transform: translate3d(0, 0, 0);
-	-ms-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
+	/* background-color: orange; */
+	border-top: 20px solid orange;
+	border-bottom: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
 }
 
 .cube .external_rib {
@@ -15,6 +14,15 @@
 .cube .internal_rib {
 	width: 60px;
 	height: 10px;
+	border-top: 10px solid purple;
+	border-bottom: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+}
+
+.cube .average_rib {
+	width: 200px;
+	height: 20px;
 }
 
 .cube .rib_1  {
@@ -26,35 +34,35 @@
 }
 
 .cube .rib_2  {
-	-webkit-transform: translate3d(-90px, 90px, 100px) rotate3d(0,0,1,90deg);
-	-moz-transform: translate3d(-90px, 90px, 100px) rotate3d(0,0,1,90deg);
-	-o-transform: translate3d(-90px, 90px, 100px) rotate3d(0,0,1,90deg);
-	-ms-transform: translate3d(-90px, 90px, 100px) rotate3d(0,0,1,90deg);
-	transform: translate3d(-90px, 90px, 100px) rotate3d(0,0,1,90deg);
+	-webkit-transform: translate3d(-90px, 90px, 100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	-moz-transform: translate3d(-90px, 90px, 100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	-o-transform: translate3d(-90px, 90px, 100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	-ms-transform: translate3d(-90px, 90px, 100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	transform: translate3d(-90px, 90px, 100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
 }
 
 .cube .rib_3  {
-	-webkit-transform: translate3d(0, 180px, 100px);
-	-moz-transform: translate3d(0, 180px, 100px);
-	-o-transform: translate3d(0, 180px, 100px);
-	-ms-transform: translate3d(0, 180px, 100px);
-	transform: translate3d(0, 180px, 100px);
+	-webkit-transform: translate3d(0, 180px, 100px) rotate3d(0,0,1,180deg);
+	-moz-transform: translate3d(0, 180px, 100px) rotate3d(0,0,1,180deg);
+	-o-transform: translate3d(0, 180px, 100px) rotate3d(0,0,1,180deg);
+	-ms-transform: translate3d(0, 180px, 100px) rotate3d(0,0,1,180deg);
+	transform: translate3d(0, 180px, 100px) rotate3d(0,0,1,180deg);
 }
 
 .cube .rib_4  {
-	-webkit-transform: translate3d(90px, 90px, 100px) rotate3d(0,0,1,270deg);
-	-moz-transform: translate3d(90px, 90px, 100px) rotate3d(0,0,1,270deg);
-	-o-transform: translate3d(90px, 90px, 100px) rotate3d(0,0,1,270deg);
-	-ms-transform: translate3d(90px, 90px, 100px) rotate3d(0,0,1,270deg);
-	transform: translate3d(90px, 90px, 100px) rotate3d(0,0,1,270deg);
+	-webkit-transform: translate3d(90px, 90px, 100.1px) rotate3d(0,0,1,270deg) rotate3d(1,0,0,180deg);
+	-moz-transform: translate3d(90px, 90px, 100.1px) rotate3d(0,0,1,270deg) rotate3d(1,0,0,180deg);
+	-o-transform: translate3d(90px, 90px, 100.1px) rotate3d(0,0,1,270deg) rotate3d(1,0,0,180deg);
+	-ms-transform: translate3d(90px, 90px, 100.1px) rotate3d(0,0,1,270deg) rotate3d(1,0,0,180deg);
+	transform: translate3d(90px, 90px, 100.1px) rotate3d(0,0,1,270deg) rotate3d(1,0,0,180deg);
 }
 
 .cube .rib_5  {
-	-webkit-transform: translate3d(0, -10px, 90px) rotate3d(1,0,0,90deg);
-	-moz-transform: translate3d(0, -10px, 90px) rotate3d(1,0,0,90deg);
-	-o-transform: translate3d(0, -10px, 90px) rotate3d(1,0,0,90deg);
-	-ms-transform: translate3d(0, -10px, 90px) rotate3d(1,0,0,90deg);
-	transform: translate3d(0, -10px, 90px) rotate3d(1,0,0,90deg);
+	-webkit-transform: translate3d(0, -10px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
+	-moz-transform: translate3d(0, -10px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
+	-o-transform: translate3d(0, -10px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
+	-ms-transform: translate3d(0, -10px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
+	transform: translate3d(0, -10px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
 }
 
 .cube .rib_6  {
@@ -74,11 +82,11 @@
 }
 
 .cube .rib_8  {
-	-webkit-transform: translate3d(90px, -10px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,90deg);
-	-moz-transform: translate3d(90px, -10px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,90deg);
-	-o-transform: translate3d(90px, -10px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,90deg);
-	-ms-transform: translate3d(90px, -10px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,90deg);
-	transform: translate3d(90px, -10px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,90deg);
+	-webkit-transform: translate3d(90px, -10px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
+	-moz-transform: translate3d(90px, -10px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
+	-o-transform: translate3d(90px, -10px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
+	-ms-transform: translate3d(90px, -10px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
+	transform: translate3d(90px, -10px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
 }
 
 .cube .rib_9  {
@@ -90,19 +98,19 @@
 }
 
 .cube .rib_10 {
-	-webkit-transform: translate3d(100px,180px, 0) rotate3d(0,1,0,90deg);
-	-moz-transform: translate3d(100px,180px, 0) rotate3d(0,1,0,90deg);
-	-o-transform: translate3d(100px,180px, 0) rotate3d(0,1,0,90deg);
-	-ms-transform: translate3d(100px,180px, 0) rotate3d(0,1,0,90deg);
-	transform: translate3d(100px,180px, 0) rotate3d(0,1,0,90deg);
+	-webkit-transform: translate3d(100.1px,180px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,180deg);
+	-moz-transform: translate3d(100.1px,180px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,180deg);
+	-o-transform: translate3d(100.1px,180px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,180deg);
+	-ms-transform: translate3d(100.1px,180px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,180deg);
+	transform: translate3d(100.1px,180px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,180deg);
 }
 
 .cube .rib_11 {
-	-webkit-transform: translate3d(100px, 90px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
-	-moz-transform: translate3d(100px, 90px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
-	-o-transform: translate3d(100px, 90px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
-	-ms-transform: translate3d(100px, 90px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
-	transform: translate3d(100px, 90px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
+	-webkit-transform: translate3d(100px, 90px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
+	-moz-transform: translate3d(100px, 90px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
+	-o-transform: translate3d(100px, 90px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
+	-ms-transform: translate3d(100px, 90px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
+	transform: translate3d(100px, 90px, 90px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
 }
 
 .cube .rib_12 {
@@ -130,19 +138,19 @@
 }
 
 .cube .rib_15 {
-	-webkit-transform: translate3d(-100px, 90px, -90px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
-	-moz-transform: translate3d(-100px, 90px, -90px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
-	-o-transform: translate3d(-100px, 90px, -90px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
-	-ms-transform: translate3d(-100px, 90px, -90px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
-	transform: translate3d(-100px, 90px, -90px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
+	-webkit-transform: translate3d(-100.1px, 90px, -90px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg) rotate3d(1,0,0,180deg);
+	-moz-transform: translate3d(-100.1px, 90px, -90px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg) rotate3d(1,0,0,180deg);
+	-o-transform: translate3d(-100.1px, 90px, -90px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg) rotate3d(1,0,0,180deg);
+	-ms-transform: translate3d(-100.1px, 90px, -90px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg) rotate3d(1,0,0,180deg);
+	transform: translate3d(-100.1px, 90px, -90px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg) rotate3d(1,0,0,180deg);
 }
 
 .cube .rib_16 {
-	-webkit-transform: translate3d(-100px, 180px, 0) rotate3d(0, 1, 0, 270deg);
-	-moz-transform: translate3d(-100px, 180px, 0) rotate3d(0, 1, 0, 270deg);
-	-o-transform: translate3d(-100px, 180px, 0) rotate3d(0, 1, 0, 270deg);
-	-ms-transform: translate3d(-100px, 180px, 0) rotate3d(0, 1, 0, 270deg);
-	transform: translate3d(-100px, 180px, 0) rotate3d(0, 1, 0, 270deg);
+	-webkit-transform: translate3d(-100px, 180px, 0) rotate3d(0, 1, 0, 270deg) rotate3d(0,0,1,180deg);
+	-moz-transform: translate3d(-100px, 180px, 0) rotate3d(0, 1, 0, 270deg) rotate3d(0,0,1,180deg);
+	-o-transform: translate3d(-100px, 180px, 0) rotate3d(0, 1, 0, 270deg) rotate3d(0,0,1,180deg);
+	-ms-transform: translate3d(-100px, 180px, 0) rotate3d(0, 1, 0, 270deg) rotate3d(0,0,1,180deg);
+	transform: translate3d(-100px, 180px, 0) rotate3d(0, 1, 0, 270deg) rotate3d(0,0,1,180deg);
 }
 
 .cube .rib_17 { /* ? */
@@ -154,11 +162,11 @@
 }
 
 .cube .rib_18 { /* ? */
-	-webkit-transform: translate3d(-90px, 90px, -100.1px) rotate3d(0,0,1,90deg);
-	-moz-transform: translate3d(-90px, 90px, -100.1px) rotate3d(0,0,1,90deg);
-	-o-transform: translate3d(-90px, 90px, -100.1px) rotate3d(0,0,1,90deg);
-	-ms-transform: translate3d(-90px, 90px, -100.1px) rotate3d(0,0,1,90deg);
-	transform: translate3d(-90px, 90px, -100.1px) rotate3d(0,0,1,90deg);
+	-webkit-transform: translate3d(-90px, 90px, -100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	-moz-transform: translate3d(-90px, 90px, -100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	-o-transform: translate3d(-90px, 90px, -100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	-ms-transform: translate3d(-90px, 90px, -100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	transform: translate3d(-90px, 90px, -100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
 }
 
 .cube .rib_19 { /* ? */
@@ -170,11 +178,11 @@
 }
 
 .cube .rib_20 { /* ? */
-	-webkit-transform: translate3d(0, 180px, -100.1px);
-	-moz-transform: translate3d(0, 180px, -100.1px);
-	-o-transform: translate3d(0, 180px, -100.1px);
-	-ms-transform: translate3d(0, 180px, -100.1px);
-	transform: translate3d(0, 180px, -100.1px);
+	-webkit-transform: translate3d(0, 180px, -100.1px) rotate3d(1,0,0,180deg);
+	-moz-transform: translate3d(0, 180px, -100.1px) rotate3d(1,0,0,180deg);
+	-o-transform: translate3d(0, 180px, -100.1px) rotate3d(1,0,0,180deg);
+	-ms-transform: translate3d(0, 180px, -100.1px) rotate3d(1,0,0,180deg);
+	transform: translate3d(0, 180px, -100.1px) rotate3d(1,0,0,180deg);
 }
 
 .cube .rib_21 {
@@ -194,51 +202,51 @@
 }
 
 .cube .rib_23 {
-	-webkit-transform: translate3d(-90px, 190px, 0) rotate3d(1,0,0,270deg) rotate3d(0,0,1,90deg);
-	-moz-transform: translate3d(-90px, 190px, 0) rotate3d(1,0,0,270deg) rotate3d(0,0,1,90deg);
-	-o-transform: translate3d(-90px, 190px, 0) rotate3d(1,0,0,270deg) rotate3d(0,0,1,90deg);
-	-ms-transform: translate3d(-90px, 190px, 0) rotate3d(1,0,0,270deg) rotate3d(0,0,1,90deg);
-	transform: translate3d(-90px, 190px, 0) rotate3d(1,0,0,270deg) rotate3d(0,0,1,90deg);
+	-webkit-transform: translate3d(-90px, 190px, 0) rotate3d(1,0,0,270deg) rotate3d(0,0,1,270deg);
+	-moz-transform: translate3d(-90px, 190px, 0) rotate3d(1,0,0,270deg) rotate3d(0,0,1,270deg);
+	-o-transform: translate3d(-90px, 190px, 0) rotate3d(1,0,0,270deg) rotate3d(0,0,1,270deg);
+	-ms-transform: translate3d(-90px, 190px, 0) rotate3d(1,0,0,270deg) rotate3d(0,0,1,270deg);
+	transform: translate3d(-90px, 190px, 0) rotate3d(1,0,0,270deg) rotate3d(0,0,1,270deg);
 }
 
 .cube .rib_24 {
-	-webkit-transform: translate3d(0, 190px, -90px) rotate3d(1,0,0,270deg);
-	-moz-transform: translate3d(0, 190px, -90px) rotate3d(1,0,0,270deg);
-	-o-transform: translate3d(0, 190px, -90px) rotate3d(1,0,0,270deg);
-	-ms-transform: translate3d(0, 190px, -90px) rotate3d(1,0,0,270deg);
-	transform: translate3d(0, 190px, -90px) rotate3d(1,0,0,270deg);
+	-webkit-transform: translate3d(0, 190px, -90px) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
+	-moz-transform: translate3d(0, 190px, -90px) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
+	-o-transform: translate3d(0, 190px, -90px) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
+	-ms-transform: translate3d(0, 190px, -90px) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
+	transform: translate3d(0, 190px, -90px) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
 }
 
 .cube .rib_25  {
-	-webkit-transform: translate3d(70px,70px,30px);
-	-moz-transform: translate3d(70px,70px,30px);
-	-o-transform: translate3d(70px,70px,30px);
-	-ms-transform: translate3d(70px,70px,30px);
-	transform: translate3d(70px,70px,30px);
+	-webkit-transform: translate3d(70px,70px,30.1px) rotate3d(0,1,0,180deg);
+	-moz-transform: translate3d(70px,70px,30.1px) rotate3d(0,1,0,180deg);
+	-o-transform: translate3d(70px,70px,30.1px) rotate3d(0,1,0,180deg);
+	-ms-transform: translate3d(70px,70px,30.1px) rotate3d(0,1,0,180deg);
+	transform: translate3d(70px,70px,30.1px) rotate3d(0,1,0,180deg);
 }
 
 .cube .rib_26  {
-	-webkit-transform: translate3d(45px, 95px, 30px) rotate3d(0,0,1,90deg);
-	-moz-transform: translate3d(45px, 95px, 30px) rotate3d(0,0,1,90deg);
-	-o-transform: translate3d(45px, 95px, 30px) rotate3d(0,0,1,90deg);
-	-ms-transform: translate3d(45px, 95px, 30px) rotate3d(0,0,1,90deg);
-	transform: translate3d(45px, 95px, 30px) rotate3d(0,0,1,90deg);
+	-webkit-transform: translate3d(45px, 95px, 30.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	-moz-transform: translate3d(45px, 95px, 30.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	-o-transform: translate3d(45px, 95px, 30.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	-ms-transform: translate3d(45px, 95px, 30.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	transform: translate3d(45px, 95px, 30.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
 }
 
 .cube .rib_27  {
-	-webkit-transform: translate3d(70px, 120px, 30px);
-	-moz-transform: translate3d(70px, 120px, 30px);
-	-o-transform: translate3d(70px, 120px, 30px);
-	-ms-transform: translate3d(70px, 120px, 30px);
-	transform: translate3d(70px, 120px, 30px);
+	-webkit-transform: translate3d(70px, 120px, 30.1px) rotate3d(1,0,0,180deg);
+	-moz-transform: translate3d(70px, 120px, 30.1px) rotate3d(1,0,0,180deg);
+	-o-transform: translate3d(70px, 120px, 30.1px) rotate3d(1,0,0,180deg);
+	-ms-transform: translate3d(70px, 120px, 30.1px) rotate3d(1,0,0,180deg);
+	transform: translate3d(70px, 120px, 30.1px) rotate3d(1,0,0,180deg);
 }
 
 .cube .rib_28  {
-	-webkit-transform: translate3d(95px, 95px, 30px) rotate3d(0,0,1,270deg);
-	-moz-transform: translate3d(95px, 95px, 30px) rotate3d(0,0,1,270deg);
-	-o-transform: translate3d(95px, 95px, 30px) rotate3d(0,0,1,270deg);
-	-ms-transform: translate3d(95px, 95px, 30px) rotate3d(0,0,1,270deg);
-	transform: translate3d(95px, 95px, 30px) rotate3d(0,0,1,270deg);
+	-webkit-transform: translate3d(95px, 95px, 30.1px) rotate3d(0,0,1,270deg) rotate3d(1,0,0,180deg);
+	-moz-transform: translate3d(95px, 95px, 30.1px) rotate3d(0,0,1,270deg) rotate3d(1,0,0,180deg);
+	-o-transform: translate3d(95px, 95px, 30.1px) rotate3d(0,0,1,270deg) rotate3d(1,0,0,180deg);
+	-ms-transform: translate3d(95px, 95px, 30.1px) rotate3d(0,0,1,270deg) rotate3d(1,0,0,180deg);
+	transform: translate3d(95px, 95px, 30.1px) rotate3d(0,0,1,270deg) rotate3d(1,0,0,180deg);
 }
 
 .cube .rib_29  {
@@ -250,19 +258,19 @@
 }
 
 .cube .rib_30  {
-	-webkit-transform: translate3d(70px, 125px, -25px) rotate3d(1,0,0,270deg);
-	-moz-transform: translate3d(70px, 125px, -25px) rotate3d(1,0,0,270deg);
-	-o-transform: translate3d(70px, 125px, -25px) rotate3d(1,0,0,270deg);
-	-ms-transform: translate3d(70px, 125px, -25px) rotate3d(1,0,0,270deg);
-	transform: translate3d(70px, 125px, -25px) rotate3d(1,0,0,270deg);
+	-webkit-transform: translate3d(70px, 125.1px, -25px) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
+	-moz-transform: translate3d(70px, 125.1px, -25px) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
+	-o-transform: translate3d(70px, 125.1px, -25px) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
+	-ms-transform: translate3d(70px, 125.1px, -25px) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
+	transform: translate3d(70px, 125.1px, -25px) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
 }
 
 .cube .rib_31  {
-	-webkit-transform: translate3d(45px, 125px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,270deg);
-	-moz-transform: translate3d(45px, 125px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,270deg);
-	-o-transform: translate3d(45px, 125px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,270deg);
-	-ms-transform: translate3d(45px, 125px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,270deg);
-	transform: translate3d(45px, 125px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,270deg);
+	-webkit-transform: translate3d(45px, 125px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
+	-moz-transform: translate3d(45px, 125px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
+	-o-transform: translate3d(45px, 125px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
+	-ms-transform: translate3d(45px, 125px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
+	transform: translate3d(45px, 125px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,270deg) rotate3d(0,0,1,180deg);
 }
 
 .cube .rib_32  {
@@ -282,121 +290,121 @@
 }
 
 .cube .rib_34 {
-	-webkit-transform: translate3d(100px, 120px, 0) rotate3d(0,1,0,90deg);
-	-moz-transform: translate3d(100px, 120px, 0) rotate3d(0,1,0,90deg);
-	-o-transform: translate3d(100px, 120px, 0) rotate3d(0,1,0,90deg);
-	-ms-transform: translate3d(100px, 120px, 0) rotate3d(0,1,0,90deg);
-	transform: translate3d(100px, 120px, 0) rotate3d(0,1,0,90deg);
+	-webkit-transform: translate3d(100px, 120px, 0) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
+	-moz-transform: translate3d(100px, 120px, 0) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
+	-o-transform: translate3d(100px, 120px, 0) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
+	-ms-transform: translate3d(100px, 120px, 0) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
+	transform: translate3d(100px, 120px, 0) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
 }
 
 .cube .rib_35 {
-	-webkit-transform: translate3d(100px, 95px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
-    -moz-transform: translate3d(100px, 95px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
-    -o-transform: translate3d(100px, 95px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
-    -ms-transform: translate3d(100px, 95px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
-    transform: translate3d(100px, 95px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
+	-webkit-transform: translate3d(100px, 95px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
+	-moz-transform: translate3d(100px, 95px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
+	-o-transform: translate3d(100px, 95px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
+	-ms-transform: translate3d(100px, 95px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
+	transform: translate3d(100px, 95px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg) rotate3d(0,0,1,180deg);
 }
 
 .cube .rib_36 {
 	-webkit-transform: translate3d(100px, 95px, -25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
-    -moz-transform: translate3d(100px, 95px, -25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
-    -o-transform: translate3d(100px, 95px, -25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
-    -ms-transform: translate3d(100px, 95px, -25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
-    transform: translate3d(100px, 95px, -25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
+	-moz-transform: translate3d(100px, 95px, -25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
+	-o-transform: translate3d(100px, 95px, -25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
+	-ms-transform: translate3d(100px, 95px, -25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
+	transform: translate3d(100px, 95px, -25px) rotate3d(1,0,0,90deg) rotate3d(0,1,0,90deg);
 }
 
 .cube .rib_37 {
 	-webkit-transform: translate3d(40px, 70px, 0) rotate3d(0, 1, 0, 270deg);
-    -moz-transform: translate3d(40px, 70px, 0) rotate3d(0, 1, 0, 270deg);
-    -o-transform: translate3d(40px, 70px, 0) rotate3d(0, 1, 0, 270deg);
-    -ms-transform: translate3d(40px, 70px, 0) rotate3d(0, 1, 0, 270deg);
-    transform: translate3d(40px, 70px, 0) rotate3d(0, 1, 0, 270deg);
+	-moz-transform: translate3d(40px, 70px, 0) rotate3d(0, 1, 0, 270deg);
+	-o-transform: translate3d(40px, 70px, 0) rotate3d(0, 1, 0, 270deg);
+	-ms-transform: translate3d(40px, 70px, 0) rotate3d(0, 1, 0, 270deg);
+	transform: translate3d(40px, 70px, 0) rotate3d(0, 1, 0, 270deg);
 }
 
 .cube .rib_38 {
 	-webkit-transform: translate3d(40px, 95px, 25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
-    -moz-transform: translate3d(40px, 95px, 25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
-    -o-transform: translate3d(40px, 95px, 25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
-    -ms-transform: translate3d(40px, 95px, 25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
-    transform: translate3d(40px, 95px, 25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
+	-moz-transform: translate3d(40px, 95px, 25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
+	-o-transform: translate3d(40px, 95px, 25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
+	-ms-transform: translate3d(40px, 95px, 25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
+	transform: translate3d(40px, 95px, 25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 90deg);
 }
 
 .cube .rib_39 {
 	-webkit-transform: translate3d(40px, 95px, -25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 270deg);
-    -moz-transform: translate3d(40px, 95px, -25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 270deg);
-    -o-transform: translate3d(40px, 95px, -25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 270deg);
-    -ms-transform: translate3d(40px, 95px, -25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 270deg);
-    transform: translate3d(40px, 95px, -25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 270deg);
+	-moz-transform: translate3d(40px, 95px, -25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 270deg);
+	-o-transform: translate3d(40px, 95px, -25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 270deg);
+	-ms-transform: translate3d(40px, 95px, -25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 270deg);
+	transform: translate3d(40px, 95px, -25px) rotate3d(0, 1, 0, 270deg) rotate3d(0, 0, 1, 270deg);
 }
 
 .cube .rib_40 {
-	-webkit-transform: translate3d(40px, 120px, 0) rotate3d(0, 1, 0, 270deg);
-    -moz-transform: translate3d(40px, 120px, 0) rotate3d(0, 1, 0, 270deg);
-    -o-transform: translate3d(40px, 120px, 0) rotate3d(0, 1, 0, 270deg);
-    -ms-transform: translate3d(40px, 120px, 0) rotate3d(0, 1, 0, 270deg);
-    transform: translate3d(40px, 120px, 0) rotate3d(0, 1, 0, 270deg);
+	-webkit-transform: translate3d(39.9px, 120px, 0) rotate3d(0, 1, 0, 270deg) rotate3d(1,0,0,180deg);
+	-moz-transform: translate3d(39.9px, 120px, 0) rotate3d(0, 1, 0, 270deg) rotate3d(1,0,0,180deg);
+	-o-transform: translate3d(39.9px, 120px, 0) rotate3d(0, 1, 0, 270deg) rotate3d(1,0,0,180deg);
+	-ms-transform: translate3d(39.9px, 120px, 0) rotate3d(0, 1, 0, 270deg) rotate3d(1,0,0,180deg);
+	transform: translate3d(39.9px, 120px, 0) rotate3d(0, 1, 0, 270deg) rotate3d(1,0,0,180deg);
 }
 
 .cube .rib_41 { 
-	-webkit-transform: translate3d(70px, 120px, -30.1px);
-    -moz-transform: translate3d(70px, 120px, -30.1px);
-    -o-transform: translate3d(70px, 120px, -30.1px);
-    -ms-transform: translate3d(70px, 120px, -30.1px);
-    transform: translate3d(70px, 120px, -30.1px);
+	-webkit-transform: translate3d(70px, 120px, -30.1px) rotate3d(0,0,1,180deg);
+	-moz-transform: translate3d(70px, 120px, -30.1px) rotate3d(0,0,1,180deg);
+	-o-transform: translate3d(70px, 120px, -30.1px) rotate3d(0,0,1,180deg);
+	-ms-transform: translate3d(70px, 120px, -30.1px) rotate3d(0,0,1,180deg);
+	transform: translate3d(70px, 120px, -30.1px) rotate3d(0,0,1,180deg);
 }
 
 .cube .rib_42 { 
 	-webkit-transform: translate3d(95px, 95px, -30.1px) rotate3d(0,0,1,90deg);
-    -moz-transform: translate3d(95px, 95px, -30.1px) rotate3d(0,0,1,90deg);
-    -o-transform: translate3d(95px, 95px, -30.1px) rotate3d(0,0,1,90deg);
-    -ms-transform: translate3d(95px, 95px, -30.1px) rotate3d(0,0,1,90deg);
-    transform: translate3d(95px, 95px, -30.1px) rotate3d(0,0,1,90deg);
+	-moz-transform: translate3d(95px, 95px, -30.1px) rotate3d(0,0,1,90deg);
+	-o-transform: translate3d(95px, 95px, -30.1px) rotate3d(0,0,1,90deg);
+	-ms-transform: translate3d(95px, 95px, -30.1px) rotate3d(0,0,1,90deg);
+	transform: translate3d(95px, 95px, -30.1px) rotate3d(0,0,1,90deg);
 }
 
 .cube .rib_43 { 
-	-webkit-transform: translate3d(45px, 95px, -30.1px) rotate3d(0,0,1,90deg);
-    -moz-transform: translate3d(45px, 95px, -30.1px) rotate3d(0,0,1,90deg);
-    -o-transform: translate3d(45px, 95px, -30.1px) rotate3d(0,0,1,90deg);
-    -ms-transform: translate3d(45px, 95px, -30.1px) rotate3d(0,0,1,90deg);
-    transform: translate3d(45px, 95px, -30.1px) rotate3d(0,0,1,90deg);
+	-webkit-transform: translate3d(45px, 95px, -30.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	-moz-transform: translate3d(45px, 95px, -30.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	-o-transform: translate3d(45px, 95px, -30.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	-ms-transform: translate3d(45px, 95px, -30.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
+	transform: translate3d(45px, 95px, -30.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,180deg);
 }
 
 .cube .rib_44 { 
 	-webkit-transform: translate3d(70px, 70px, -30.1px);
-    -moz-transform: translate3d(70px, 70px, -30.1px);
-    -o-transform: translate3d(70px, 70px, -30.1px);
-    -ms-transform: translate3d(70px, 70px, -30.1px);
-    transform: translate3d(70px, 70px, -30.1px);
+	-moz-transform: translate3d(70px, 70px, -30.1px);
+	-o-transform: translate3d(70px, 70px, -30.1px);
+	-ms-transform: translate3d(70px, 70px, -30.1px);
+	transform: translate3d(70px, 70px, -30.1px);
 }
 
 .cube .rib_45 {
-	-webkit-transform: translate3d(70px, 65px, 25px) rotate3d(1,0,0,90deg);
-    -moz-transform: translate3d(70px, 65px, 25px) rotate3d(1,0,0,90deg);
-    -o-transform: translate3d(70px, 65px, 25px) rotate3d(1,0,0,90deg);
-    -ms-transform: translate3d(70px, 65px, 25px) rotate3d(1,0,0,90deg);
-    transform: translate3d(70px, 65px, 25px) rotate3d(1,0,0,90deg);
+	-webkit-transform: translate3d(70px, 65px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
+	-moz-transform: translate3d(70px, 65px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
+	-o-transform: translate3d(70px, 65px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
+	-ms-transform: translate3d(70px, 65px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
+	transform: translate3d(70px, 65px, 25px) rotate3d(1,0,0,90deg) rotate3d(0,0,1,180deg);
 }
 
 .cube .rib_46 {
 	-webkit-transform: translate3d(70px, 65px, -25px) rotate3d(1,0,0,90deg);
-    -moz-transform: translate3d(70px, 65px, -25px) rotate3d(1,0,0,90deg);
-    -o-transform: translate3d(70px, 65px, -25px) rotate3d(1,0,0,90deg);
-    -ms-transform: translate3d(70px, 65px, -25px) rotate3d(1,0,0,90deg);
-    transform: translate3d(70px, 65px, -25px) rotate3d(1,0,0,90deg);
+	-moz-transform: translate3d(70px, 65px, -25px) rotate3d(1,0,0,90deg);
+	-o-transform: translate3d(70px, 65px, -25px) rotate3d(1,0,0,90deg);
+	-ms-transform: translate3d(70px, 65px, -25px) rotate3d(1,0,0,90deg);
+	transform: translate3d(70px, 65px, -25px) rotate3d(1,0,0,90deg);
 }
 
 .cube .rib_47 {
 	-webkit-transform: translate3d(95px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
-    -moz-transform: translate3d(95px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
-    -o-transform: translate3d(95px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
-    -ms-transform: translate3d(95px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
-    transform: translate3d(95px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
+	-moz-transform: translate3d(95px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
+	-o-transform: translate3d(95px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
+	-ms-transform: translate3d(95px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
+	transform: translate3d(95px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
 }
 
 .cube .rib_48 {
-	-webkit-transform: translate3d(45px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
-    -moz-transform: translate3d(45px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
-    -o-transform: translate3d(45px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
-    -ms-transform: translate3d(45px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
-    transform: translate3d(45px, 65px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,90deg);
+	-webkit-transform: translate3d(45px, 64.9px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,270deg);
+	-moz-transform: translate3d(45px, 64.9px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,270deg);
+	-o-transform: translate3d(45px, 64.9px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,270deg);
+	-ms-transform: translate3d(45px, 64.9px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,270deg);
+	transform: translate3d(45px, 64.9px, 0) rotate3d(1,0,0,90deg) rotate3d(0,0,1,270deg);
 }

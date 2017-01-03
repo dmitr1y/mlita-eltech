@@ -73,11 +73,11 @@
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
 
-    -webkit-transform: perspective(900px) rotate3d(1, 1, 0, -45deg);
-    -moz-transform: perspective(900px) rotate3d(1, 1, 0, -45deg);
-    -o-transform: perspective(900px) rotate3d(1, 1, 0, -45deg);
-    -ms-transform: perspective(900px) rotate3d(1, 1, 0, -45deg);
-    transform: perspective(900px) rotate3d(1, 1, 0, -45deg);
+    -webkit-transform: perspective(900px) rotate3d(1, 1, 0, -15deg);
+    -moz-transform: perspective(900px) rotate3d(1, 1, 0, -15deg);
+    -o-transform: perspective(900px) rotate3d(1, 1, 0, -15deg);
+    -ms-transform: perspective(900px) rotate3d(1, 1, 0, -15deg);
+    transform: perspective(900px) rotate3d(1, 1, 0, -15deg);
 }
 /* 
 .a-top:hover ~ .cube {

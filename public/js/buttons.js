@@ -3,6 +3,11 @@ $(document).ready(function(){
 	var task = 0;
 	var letter = 0;
 
+	$(".external_facet").fadeOut();
+	$(".vertex").fadeIn();
+	$(".average_facet").fadeIn();
+	$(".external_rib").fadeOut();
+
 	$("#external_view").click(function(){
 		$(".rib").fadeIn();
 		$(".facet").fadeIn();
@@ -25,11 +30,11 @@ $(document).ready(function(){
 
 	$("#return").click(function(){
 		$(".cube").css({
-			'-webkit-transform': 'perspective(900px) rotate3d(1, 1, 0, -45deg)',
-			'-moz-transform': 'perspective(900px) rotate3d(1, 1, 0, -45deg)',
-			'-o-transform': 'perspective(900px) rotate3d(1, 1, 0, -45deg)',
-			'-ms-transform': 'perspective(900px) rotate3d(1, 1, 0, -45deg)',
-			'transform': 'perspective(900px) rotate3d(1, 1, 0, -45deg)'
+			'-webkit-transform': 'perspective(900px) rotate3d(1, 1, 0, -15deg)',
+			'-moz-transform': 'perspective(900px) rotate3d(1, 1, 0, -15deg)',
+			'-o-transform': 'perspective(900px) rotate3d(1, 1, 0, -15deg)',
+			'-ms-transform': 'perspective(900px) rotate3d(1, 1, 0, -15deg)',
+			'transform': 'perspective(900px) rotate3d(1, 1, 0, -15deg)'
 		})
 	})
 
@@ -42,8 +47,11 @@ $(document).ready(function(){
 			variant = json.variant;
 			for (var i = 0; i < 16; ++i) {
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
-				// $(".vertex_" + (i + 1)).css({})	
+				$(".vertex_" + (i + 1)).css({
+
+				})
 			}
+			$("#expression").empty().append("Задано выражение: " + json.expression);
 		});
 		task = 1;
 	})

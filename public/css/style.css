@@ -1,6 +1,5 @@
 * {
 	font-size: 14px;
-	transition: all 1s ease-in-out;
 }
 
 .navbar {
@@ -21,9 +20,7 @@
 
 .hypercube {
     position: relative;
-    /* margin-top: 50px; */
     min-height: 430px;
-    /* border: solid 10px #0f0; */
 }
 
 .cube .vertex {
@@ -34,7 +31,6 @@
 .control {
 	position: relative;
 	height: 500px;
-	/* border: solid 10px #f00; */
 }
 
 .task {    
