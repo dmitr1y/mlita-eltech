@@ -2,11 +2,11 @@ $(document).ready(function(){
 
 	$(".cube").mousemove(function(e){
 		$(".cube").css({
-			'-webkit-transform': 'translate3d(0, -20px, 100px) rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
-			'-moz-transform': 'translate3d(0, -20px, 100px) rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
-			'-o-transform': 'translate3d(0, -20px, 100px) rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
-			'-ms-transform': 'translate3d(0, -20px, 100px) rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
-			'transform': 'translate3d(0, -20px, 100px) rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)'
+			// '-webkit-transform': 'translate3d(0, -20px, 100px) rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
+			// '-moz-transform': 'translate3d(0, -20px, 100px) rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
+			// '-o-transform': 'translate3d(0, -20px, 100px) rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
+			// '-ms-transform': 'translate3d(0, -20px, 100px) rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)',
+			// 'transform': 'translate3d(0, -20px, 100px) rotateX(' + e.pageX + 'deg) rotateY(' + e.pageY + 'deg)'
 		})
 
 		// $(".vertex_1").css({
