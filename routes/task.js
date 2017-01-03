@@ -62,7 +62,7 @@ router.get("/:folder", (req, res)=>{
                             } else {
                                 if(Math.round(Math.random())){
                                     object.letter = "a"
-                                    object.text = "Отметьте две вершины, доказывающие, что функция не является монотонной"
+                                    object.text = "Отметьте две вершины, доказывающие, что функция не является самодвойственной"
                                 } else {
                                     object.letter = "c"
                                     object.text = "Поменяйте минимальное число значений, чтобы функция стала  самодвойственной"
@@ -106,44 +106,51 @@ router.get("/:folder", (req, res)=>{
                         switch (solution.letter){
                             case 'b': {
                                 let arr = new Array(16)
-                                for (x in solution.assoc) arr[parseInt(x,2)] = object.truthTable.assoc[x]
-
-                                for (let i = 0; i < 16; i++){
-                                    let j = bfg.assocify(i)
-                                    if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
-                                        dude_errors += j+", "
+                                for (x in solution.assoc) arr[parseInt(x,2)] = solution.assoc[x]
+                                if (arr.some(x => { return x == null })){
+                                    res.jsonp({problem: 2, more: "Задача не решена."})
+                                } else {
+                                    for (let i = 0; i < 16; i++){
+                                        let j = bfg.assocify(i)
+                                        if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
+                                            dude_errors += j+", "
+                                        }
+                                    }
+                                    if (bfg.selfdual(arr)) dude_errors = ""
+                                    else dude_errors = dude_errors.slice(0, -2);
+                                    if (!dude_errors.length){
+                                        res.jsonp({problem: 0, more: "Решение верное"})
+                                    } else {
+                                        res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
                                     }
                                 }
-                                if (bfg.selfdual(arr)) dude_errors = ""
-                                else dude_errors = dude_errors.slice(0, -2);
-                                if (!dude_errors.length){
-                                    res.jsonp({problem: 0, more: "Решение верное"})
-                                } else {
-                                    res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
-                                }
+
                                 break
                             }
                             case 'c': {
                                 let arr = new Array(16)
-                                for (x in solution.assoc) arr[parseInt(x,2)] = object.truthTable.assoc[x]
+                                for (x in solution.assoc) arr[parseInt(x,2)] = solution.assoc[x]
 
                                 let sd = bfg.selfdual(arr)
                                 if (!sd) {
                                     res.jsonp({problem: 2, more: "Полученная функция не является самодвойственной"})
                                 } else {
+                                    let c = 0
                                     for (let i = 0; i < 16; i++){
-                                        let j = assocify(i)
+                                        let j = bfg.assocify(i)
                                         if (serverSolution.truthTable.array[i] != arr[i]){
+                                            c++
                                             dude_errors = "Полученная функция действительно самодвойственная, но требовалось поменять минимальное значение"
-                                            break
                                         }
                                     }
+                                    //console.log(c)
+                                    if (!dude_errors.length || c <= 2){
+                                        res.jsonp({problem: 0, more: "Решение верное"})
+                                    } else {
+                                        res.jsonp({problem: 2, more: dude_errors})
+                                    }
                                 }
-                                if (!dude_errors.length){
-                                    res.jsonp({problem: 0, more: "Решение верное"})
-                                } else {
-                                    res.jsonp({problem: 2, more: dude_errors})
-                                }
+                                break
                             }
                             case 'a': {
                                 solution.vertexes = solution.vertexes.sort()
