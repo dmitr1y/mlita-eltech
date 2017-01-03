@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fe221cc-3fd0-4ade-bc38-7e765738295d" name="Default" comment="Selfdual test server was completely done. Needs to test.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/task.js" afterPath="$PROJECT_DIR$/routes/task.js" />
     </list>
     <ignored path="mlita-eltech.iws" />
@@ -26,18 +27,21 @@
       <file leaf-file-name="task.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/task.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6293532">
-              <caret line="130" column="58" selection-start-line="130" selection-start-column="58" selection-end-line="130" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.74875623">
+              <caret line="188" column="29" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
               <folding>
                 <element signature="e#972#1286#0" expanded="false" />
                 <element signature="e#1334#1500#0" expanded="false" />
                 <element signature="e#1542#3431#0" expanded="false" />
                 <element signature="e#3474#4642#0" expanded="false" />
-                <element signature="e#5187#5840#0" expanded="false" />
-                <element signature="e#6684#7940#0" expanded="false" />
-                <element signature="e#7975#9330#0" expanded="false" />
-                <element signature="e#10972#11268#0" expanded="false" />
-                <element signature="e#12051#13715#0" expanded="false" />
+                <element signature="e#5232#5941#0" expanded="false" />
+                <element signature="e#5286#5539#0" expanded="false" />
+                <element signature="e#6069#6810#0" expanded="false" />
+                <element signature="e#6849#8189#0" expanded="false" />
+                <element signature="e#8228#9675#0" expanded="false" />
+                <element signature="e#9762#14427#0" expanded="false" />
+                <element signature="e#11444#11760#0" expanded="false" />
+                <element signature="e#12599#14379#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -236,52 +240,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mlita-eltech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mlita-eltech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mlita-eltech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mlita-eltech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="monotonic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mlita-eltech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mlita-eltech" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -889,18 +847,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6293532">
-          <caret line="130" column="58" selection-start-line="130" selection-start-column="58" selection-end-line="130" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.74875623">
+          <caret line="188" column="29" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
           <folding>
             <element signature="e#972#1286#0" expanded="false" />
             <element signature="e#1334#1500#0" expanded="false" />
             <element signature="e#1542#3431#0" expanded="false" />
             <element signature="e#3474#4642#0" expanded="false" />
-            <element signature="e#5187#5840#0" expanded="false" />
-            <element signature="e#6684#7940#0" expanded="false" />
-            <element signature="e#7975#9330#0" expanded="false" />
-            <element signature="e#10972#11268#0" expanded="false" />
-            <element signature="e#12051#13715#0" expanded="false" />
+            <element signature="e#5232#5941#0" expanded="false" />
+            <element signature="e#5286#5539#0" expanded="false" />
+            <element signature="e#6069#6810#0" expanded="false" />
+            <element signature="e#6849#8189#0" expanded="false" />
+            <element signature="e#8228#9675#0" expanded="false" />
+            <element signature="e#9762#14427#0" expanded="false" />
+            <element signature="e#11444#11760#0" expanded="false" />
+            <element signature="e#12599#14379#0" expanded="false" />
           </folding>
         </state>
       </provider>
