@@ -2,70 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fe221cc-3fd0-4ade-bc38-7e765738295d" name="Default" comment="Selfdual test server was completely done. Needs to test.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/10.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/11.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/12.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/13.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/14.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/15.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/16.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/17.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/18.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/19.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/2.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/3.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/4.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/5.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/6.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/7.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/8.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tasks/selfdual/not/9.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generator.js" afterPath="$PROJECT_DIR$/generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/bfg/index.js" afterPath="$PROJECT_DIR$/node_modules/bfg/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/task.js" afterPath="$PROJECT_DIR$/routes/task.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/1.json" afterPath="$PROJECT_DIR$/tasks/monotonic/1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/10.json" afterPath="$PROJECT_DIR$/tasks/monotonic/10.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/11.json" afterPath="$PROJECT_DIR$/tasks/monotonic/11.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/12.json" afterPath="$PROJECT_DIR$/tasks/monotonic/12.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/13.json" afterPath="$PROJECT_DIR$/tasks/monotonic/13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/14.json" afterPath="$PROJECT_DIR$/tasks/monotonic/14.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/15.json" afterPath="$PROJECT_DIR$/tasks/monotonic/15.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/16.json" afterPath="$PROJECT_DIR$/tasks/monotonic/16.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/17.json" afterPath="$PROJECT_DIR$/tasks/monotonic/17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/18.json" afterPath="$PROJECT_DIR$/tasks/monotonic/18.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/19.json" afterPath="$PROJECT_DIR$/tasks/monotonic/19.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/2.json" afterPath="$PROJECT_DIR$/tasks/monotonic/2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/20.json" afterPath="$PROJECT_DIR$/tasks/monotonic/20.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/3.json" afterPath="$PROJECT_DIR$/tasks/monotonic/3.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/4.json" afterPath="$PROJECT_DIR$/tasks/monotonic/4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/5.json" afterPath="$PROJECT_DIR$/tasks/monotonic/5.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/6.json" afterPath="$PROJECT_DIR$/tasks/monotonic/6.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/7.json" afterPath="$PROJECT_DIR$/tasks/monotonic/7.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/8.json" afterPath="$PROJECT_DIR$/tasks/monotonic/8.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/monotonic/9.json" afterPath="$PROJECT_DIR$/tasks/monotonic/9.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/1.json" afterPath="$PROJECT_DIR$/tasks/selfdual/1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/10.json" afterPath="$PROJECT_DIR$/tasks/selfdual/10.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/11.json" afterPath="$PROJECT_DIR$/tasks/selfdual/11.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/12.json" afterPath="$PROJECT_DIR$/tasks/selfdual/12.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/13.json" afterPath="$PROJECT_DIR$/tasks/selfdual/13.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/14.json" afterPath="$PROJECT_DIR$/tasks/selfdual/14.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/15.json" afterPath="$PROJECT_DIR$/tasks/selfdual/15.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/16.json" afterPath="$PROJECT_DIR$/tasks/selfdual/16.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/17.json" afterPath="$PROJECT_DIR$/tasks/selfdual/17.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/18.json" afterPath="$PROJECT_DIR$/tasks/selfdual/18.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/19.json" afterPath="$PROJECT_DIR$/tasks/selfdual/19.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/2.json" afterPath="$PROJECT_DIR$/tasks/selfdual/2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/20.json" afterPath="$PROJECT_DIR$/tasks/selfdual/20.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/3.json" afterPath="$PROJECT_DIR$/tasks/selfdual/3.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/4.json" afterPath="$PROJECT_DIR$/tasks/selfdual/4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/5.json" afterPath="$PROJECT_DIR$/tasks/selfdual/5.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/6.json" afterPath="$PROJECT_DIR$/tasks/selfdual/6.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/7.json" afterPath="$PROJECT_DIR$/tasks/selfdual/7.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/8.json" afterPath="$PROJECT_DIR$/tasks/selfdual/8.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tasks/selfdual/9.json" afterPath="$PROJECT_DIR$/tasks/selfdual/9.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test.js" afterPath="$PROJECT_DIR$/test/test.js" />
     </list>
     <ignored path="mlita-eltech.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -400,7 +337,13 @@
       <option name="project" value="LOCAL" />
       <updated>1483445784937</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Selfdual test server was completely done. Needs to test.">
+      <created>1483451368639</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1483451368639</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -498,10 +441,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Сформировал генератор задач. Сгенерированы максимально практичные задачи." />
     <MESSAGE value="Улучшил генератор монотонной функции. Теперь есть возможность сгенерировать такую, у которой мон-ть нарушена в только одном месте" />
     <MESSAGE value="Improoved monotonic generator." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improoved monotonic generator." />
+    <MESSAGE value="Selfdual test server was completely done. Needs to test." />
+    <option name="LAST_COMMIT_MESSAGE" value="Selfdual test server was completely done. Needs to test." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -661,6 +606,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -696,6 +642,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5769231">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -703,6 +650,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -710,6 +658,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.4010989">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -717,6 +666,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
