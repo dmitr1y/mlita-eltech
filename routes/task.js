@@ -125,6 +125,19 @@ router.get("/:folder", (req, res)=>{
                 }
                 case 'selfdual': {
                     switch (solution.letter){
+                        case 'a': {
+                            if (solution.vertexes){
+                                solution.vertexes = solution.vertexes.sort()
+                                if (solution.vertexes[0] > solution.vertexes[1]){
+                                    res.jsonp({problem: 0, more: "Решение верное"})
+                                } else {
+                                    dude_errors = "Вершины указаны не верно"
+                                    res.jsonp({problem: 2, more: dude_errors})
+                                }
+                            }
+                            else
+                                res.jsonp({problem: 1, more: "Bad request"})
+                        }
                         case 'b': {
                             let arr = new Array(16)
                             for (x in solution.assoc) arr[parseInt(x,2)] = solution.assoc[x]
@@ -173,7 +186,13 @@ router.get("/:folder", (req, res)=>{
                             }
                             break
                         }
-                        case 'a': {
+
+                    }
+                }
+                case 'monotonic': {
+                    switch (solution.letter){
+                        case 'a':
+                        {
                             if (solution.vertexes){
                                 solution.vertexes = solution.vertexes.sort()
                                 if (solution.vertexes[0] == serverSolution.vertexes[0] && serverSolution.vertexes[1] == serverSolution.vertexes[1]){
@@ -185,13 +204,7 @@ router.get("/:folder", (req, res)=>{
                             }
                             else
                                 res.jsonp({problem: 1, more: "Bad request"})
-                        }
-                    }
-                }
-                case 'monotonic': {
-                    switch (solution.letter){
-                        case 'a':
-                        {
+                            break
                         }
                         case 'b':
                         {
