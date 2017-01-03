@@ -1,6 +1,4 @@
 $(document).ready(function(){
-	mainBorder = "100px solid "
-
 	var changeColor = {
 		0: function(clss) {
 			// $(clss).empty();

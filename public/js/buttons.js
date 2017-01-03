@@ -3,11 +3,6 @@ $(document).ready(function(){
 	var task = 0;
 	var letter = 0;
 
-	$(".external_facet").fadeOut();
-	$(".vertex").fadeIn();
-	$(".average_facet").fadeIn();
-	$(".external_rib").fadeOut();
-
 	$("#external_view").click(function(){
 		$(".rib").fadeIn();
 		$(".facet").fadeIn();
@@ -17,11 +12,13 @@ $(document).ready(function(){
 	$("#average_view").click(function(){
 		$(".external_facet").fadeOut();
 		$(".vertex").fadeIn();
+		$(".average_rib").fadeIn();
 		$(".average_facet").fadeIn();
 		$(".external_rib").fadeOut();
 	});
 
 	$("#internal_view").click(function(){
+		$(".average_rib").fadeOut();
 		$(".external_facet").fadeOut();
 		$(".average_facet").fadeOut();
 		$(".external_vertex").fadeOut();
@@ -74,7 +71,6 @@ $(document).ready(function(){
 	})
 
 	$(".task_5").click(function(){
-		$("#condition").empty().append("Дан гиперкуб, в вершинах стоят значения 0 или 1, задающие таким образом булеву функцию 4 переменных.");
 		$.getJSON(host + '/task/selfdual', function(json, textStatus) {
 			$("#condition").empty().append(json.text);
 			console.log(json);
