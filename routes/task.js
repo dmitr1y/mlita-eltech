@@ -68,6 +68,27 @@ router.get("/:folder", (req, res)=>{
                                     object.text = "Поменяйте минимальное число значений, чтобы функция стала  самодвойственной"
                                 }
                             }
+                            break
+                        }
+                        case 'monotonic': {
+                            delete object.truthTable.array
+                            if (object.monotonic){
+                                object.letter = "b"
+                                object.text = "Часть значений функций известны, введите остальные значения, чтобы функция была монотонной"
+                                for (let i = 0; i < 5; i++){
+                                    let p = Math.round(Math.random()*15)
+                                    object.truthTable.assoc[bfg.assocify(p)] = "?"
+                                }
+                            } else {
+                                if (Math.round(Math.random())){
+                                    object.letter = "c"
+                                    object.text = "Поменяйте минимальное число значений, чтобы функция стала монотонной"
+                                } else {
+                                    object.letter = "a"
+                                    object.text = "Найдите ребро, доказывающее, что функция не является монотонной"
+                                }
+                            }
+                            break
                         }
                     }
                     res.jsonp(object)
@@ -76,100 +97,168 @@ router.get("/:folder", (req, res)=>{
         }
     })
 })
-    .post("/", (req,res) => {
-        let solution = req.body
-        console.log(solution)
-        let f = "./tasks/"+solution.dir+"/"+solution.variant+".json"
-        let dude_errors = ""
-        fs.readFile(f, (err, data) => {
-            if (err)
-                res.status(404).jsonp({problem: 1, more: "file not found"})
-            else {
-                let serverSolution = JSON.parse(data)
-                switch (solution.dir){
-                    case 'expressions': {
-                        for (let i = 0; i < 16; i++){
-                            let j = bfg.assocify(i)
-                            if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
-                                dude_errors += j+", "
-                            }
+.post("/", (req,res) => {
+    let solution = req.body
+    console.log(solution)
+    let f = "./tasks/"+solution.dir+"/"+solution.variant+".json"
+    let dude_errors = ""
+    fs.readFile(f, (err, data) => {
+        if (err)
+            res.status(404).jsonp({problem: 1, more: "file not found"})
+        else {
+            let serverSolution = JSON.parse(data)
+            switch (solution.dir){
+                case 'expressions': {
+                    for (let i = 0; i < 16; i++){
+                        let j = bfg.assocify(i)
+                        if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
+                            dude_errors += j+", "
                         }
-                        dude_errors = dude_errors.slice(0, -2);
-                        if (!dude_errors.length){
-                            res.jsonp({problem: 0, more: "Решение верное"})
-                        } else {
-                            res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
-                        }
-                        break
                     }
-                    case 'selfdual':{
-                        switch (solution.letter){
-                            case 'b': {
-                                let arr = new Array(16)
-                                for (x in solution.assoc) arr[parseInt(x,2)] = solution.assoc[x]
-                                if (arr.some(x => { return x == null })){
-                                    res.jsonp({problem: 2, more: "Задача не решена."})
+                    dude_errors = dude_errors.slice(0, -2);
+                    if (!dude_errors.length){
+                        res.jsonp({problem: 0, more: "Решение верное"})
+                    } else {
+                        res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
+                    }
+                    break
+                }
+                case 'selfdual': {
+                    switch (solution.letter){
+                        case 'b': {
+                            let arr = new Array(16)
+                            for (x in solution.assoc) arr[parseInt(x,2)] = solution.assoc[x]
+                            if (arr.some(x => { return x == null })){
+                                res.jsonp({problem: 2, more: "Задача не решена."})
+                            } else {
+                                for (let i = 0; i < 16; i++){
+                                    let j = bfg.assocify(i)
+                                    if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
+                                        dude_errors += j+", "
+                                    }
+                                }
+                                if (bfg.selfdual(arr)) dude_errors = ""
+                                else dude_errors = dude_errors.slice(0, -2);
+                                if (!dude_errors.length){
+                                    res.jsonp({problem: 0, more: "Решение верное"})
                                 } else {
-                                    for (let i = 0; i < 16; i++){
-                                        let j = bfg.assocify(i)
-                                        if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
-                                            dude_errors += j+", "
-                                        }
-                                    }
-                                    if (bfg.selfdual(arr)) dude_errors = ""
-                                    else dude_errors = dude_errors.slice(0, -2);
-                                    if (!dude_errors.length){
-                                        res.jsonp({problem: 0, more: "Решение верное"})
-                                    } else {
-                                        res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
+                                    res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
+                                }
+                            }
+
+                            break
+                        }
+                        case 'c': {
+                            let arr = new Array(16)
+                            for (x in solution.assoc) arr[parseInt(x,2)] = solution.assoc[x]
+
+                            let sd = bfg.selfdual(arr)
+                            if (!sd) {
+                                res.jsonp({problem: 2, more: "Полученная функция не является самодвойственной"})
+                            } else {
+                                let c = 0
+                                for (let i = 0; i < 16; i++){
+                                    let j = bfg.assocify(i)
+                                    if (serverSolution.truthTable.array[i] != arr[i]){
+                                        c++
+                                        dude_errors = "Полученная функция действительно самодвойственная, но требовалось поменять минимальное значение"
                                     }
                                 }
-
-                                break
-                            }
-                            case 'c': {
-                                let arr = new Array(16)
-                                for (x in solution.assoc) arr[parseInt(x,2)] = solution.assoc[x]
-
-                                let sd = bfg.selfdual(arr)
-                                if (!sd) {
-                                    res.jsonp({problem: 2, more: "Полученная функция не является самодвойственной"})
+                                //console.log(c)
+                                if (!dude_errors.length || c <= 2){
+                                    res.jsonp({problem: 0, more: "Решение верное"})
                                 } else {
-                                    let c = 0
-                                    for (let i = 0; i < 16; i++){
-                                        let j = bfg.assocify(i)
-                                        if (serverSolution.truthTable.array[i] != arr[i]){
-                                            c++
-                                            dude_errors = "Полученная функция действительно самодвойственная, но требовалось поменять минимальное значение"
-                                        }
-                                    }
-                                    //console.log(c)
-                                    if (!dude_errors.length || c <= 2){
-                                        res.jsonp({problem: 0, more: "Решение верное"})
-                                    } else {
-                                        res.jsonp({problem: 2, more: dude_errors})
+                                    res.jsonp({problem: 2, more: dude_errors})
+                                }
+                            }
+                            break
+                        }
+                        case 'a': {
+                            if (solution.vertexes){
+                                solution.vertexes = solution.vertexes.sort()
+                                if (solution.vertexes[0] == serverSolution.vertexes[0] && serverSolution.vertexes[1] == serverSolution.vertexes[1]){
+                                    res.jsonp({problem: 0, more: "Решение верное"})
+                                } else {
+                                    dude_errors = "Вершины указаны не верно"
+                                    res.jsonp({problem: 2, more: dude_errors})
+                                }
+                            }
+                            else
+                                res.jsonp({problem: 1, more: "Bad request"})
+                        }
+                    }
+                }
+                case 'monotonic': {
+                    switch (solution.letter){
+                        case 'a':
+                        {
+                        }
+                        case 'b':
+                        {
+                            let all_numbers = true
+                            for (let i = 0; i < 16; i++) {
+                                let j = bfg.assocify(i)
+                                if (isNaN(parseInt(solution.assoc[j]))) {
+                                    all_numbers = false
+                                    break
+                                }
+                            }
+                            console.log({all_numbers: all_numbers})
+                            if (bfg.monotonic(solution) && all_numbers) {
+                                for (let i = 0; i < 16; i++) {
+                                    let j = bfg.assocify(i)
+                                    if (serverSolution.truthTable.assoc[j] != solution.assoc[j]) {
+                                        dude_errors += j + ", "
                                     }
                                 }
-                                break
+                                if (bfg.monotonic(solution.assoc)) dude_errors = ""
+                                else dude_errors = dude_errors.slice(0, -2);
+                                if (!dude_errors.length) {
+                                    res.jsonp({problem: 0, more: "Решение верное"})
+                                } else {
+                                    res.jsonp({problem: 2, more: "Ошибки в следующих точках: " + dude_errors})
+                                }
+                            } else {
+                                res.jsonp({problem: 2, more: "Полученная функция не является монотонной"})
                             }
-                            case 'a': {
-                                if (solution.vertexes){
-                                    solution.vertexes = solution.vertexes.sort()
-                                    if (solution.vertexes[0] == serverSolution.vertexes[0] && serverSolution.vertexes[1] == serverSolution.vertexes[1]){
-                                        res.jsonp({problem: 0, more: "Решение верное"})
-                                    } else {
-                                        dude_errors = "Вершины указаны не верно"
-                                        res.jsonp({problem: 2, more: dude_errors})
+                            break
+                        }
+                        case 'c':
+                        {
+                            let all_numbers = true
+                            for (let i = 0; i < 16; i++) {
+                                let j = bfg.assocify(i)
+                                if (isNaN(parseInt(solution.assoc[j]))) {
+                                    all_numbers = false
+                                    break
+                                }
+                            }
+                            console.log({all_numbers: all_numbers})
+                            if (bfg.monotonic(solution) && all_numbers) {
+                                let c = 0
+                                for (let i = 0; i < 16; i++) {
+                                    let j = bfg.assocify(i)
+                                    if (serverSolution.truthTable.assoc[j] != solution.assoc[j]) {
+                                        c++
+                                        dude_errors = "Полученная функция действительно монотонная, но требовалось поменять минимальное значение"
                                     }
                                 }
-                                else
-                                    res.jsonp({problem: 1, more: "Bad request"})
+                                console.log({c: c})
+                                if (!dude_errors.length || c <= 2) {
+                                    res.jsonp({problem: 0, more: "Решение верное"})
+                                } else {
+                                    res.jsonp({problem: 2, more: dude_errors})
+                                }
+                            } else {
+                                res.jsonp({problem: 2, more: "Полученная функция не является монотонной"})
                             }
+                            break
                         }
                     }
                 }
             }
-        })
+        }
     })
+})
 
 module.exports = router;
