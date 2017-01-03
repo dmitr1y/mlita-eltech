@@ -121,6 +121,10 @@ $(document).ready(function(){
 			case 5: {
 				answer.dir = "selfdual";
 				answer.letter = letter;
+				answer.vertexes = [
+					assocify(parseInt(/vertex_(\d+)/.exec(selfdualAnswer.firstClass)[1])),
+					assocify(parseInt(/vertex_(\d+)/.exec(selfdualAnswer.secondClass)[1]))
+				];
 				break;
 			}
 			case 6: {

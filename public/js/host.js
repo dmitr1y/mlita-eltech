@@ -6,3 +6,19 @@ var assocify = function(s, k = 4){
 		zeros += "0"
 	return zeros.substr(n.length) + n
 }
+
+var selfdualAnswer = {
+	firstClass: "levayaVershina",
+	secondClass: "pravayaVershina",
+	0: function(clss) {
+		$(this.firstClass).css("color", "black")
+		this.firstClass = clss;
+		$(clss).css("color", "red")
+	},
+	1: function(clss) {
+		$(this.secondClass).css("color", "black")
+		this.secondClass = clss;
+		$(clss).css("color", "red")
+	},
+},
+click = -1;

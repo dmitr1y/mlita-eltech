@@ -1,3 +1,23 @@
+.cube .average_rib {
+	width: 200px;
+	height: 20px;
+/* 	background: orange;
+	border: 0;
+	transform: skewX(100deg);
+ */
+	border-top: 20px solid orange;
+	border-bottom: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent; 
+/* 	border: 0;
+	-webkit-transform: skew(20deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(20deg);
+	     transform: skew(20deg);
+	background: red;
+ */
+}
+
 .cube .av_rib1 {
 	width: 130px;
 	-webkit-transform: translate3d(-15px,30px,-60px) rotate3d(1,0,0,225deg) rotate3d(0,0,1,125deg);

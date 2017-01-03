@@ -6,6 +6,15 @@
 	border-right: 20px solid transparent;
 }
 
+#parallelogram {
+	width: 150px;
+	height: 100px;
+	-webkit-transform: skew(20deg);
+	   -moz-transform: skew(20deg);
+	     -o-transform: skew(20deg);
+	background: red;
+}
+
 .cube .external_rib {
 	width: 200px;
 	height: 20px;
@@ -18,11 +27,6 @@
 	border-bottom: 0;
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
-}
-
-.cube .average_rib {
-	width: 200px;
-	height: 20px;
 }
 
 .cube .rib_1  {
