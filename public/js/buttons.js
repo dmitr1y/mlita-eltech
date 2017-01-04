@@ -70,6 +70,7 @@ $(document).ready(function(){
 				putVertex(i, ".vertex_");
 			}
 			$("#condition").empty().append(json.condition);
+			letter = json.letter;
 		});
 		task = 2;
 		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
@@ -82,7 +83,7 @@ $(document).ready(function(){
 		canUseRib = 1;
 		$(".title").empty().append("Минимизация ДНФ");
 		$(".answer").empty();
-		$.getJSON(host + '/task/expressions', function(json, textStatus) {
+		$.getJSON(host + '/task/dnf', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
 			for (var i = 0; i < 16; ++i) {
@@ -192,6 +193,7 @@ $(document).ready(function(){
 			case 2: {
 				answer.dir = "dummy_variables";
 				answer.dummy_variables = vertexFromRib.answer;
+				answer.letter = letter;
 				break;
 			}
 			case 3: {
