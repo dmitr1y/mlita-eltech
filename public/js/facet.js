@@ -82,58 +82,72 @@ $(document).ready(function(){
 
 	$(".facet_11").click(function(){
 		// averageColor[++b[10] % 2](".facet_11", "border-bottom")
+		dnf[++b[10] % 2](".facet_11", "0010", "0011", "1010", "1011");
 	});
 
 	$(".facet_12").click(function(){
 		changeColor[++b[11] % 2](".facet_12")
+		dnf[++b[11] % 2](".facet_12", "1010", "1011", "1110", "1111");
 	});
 
 	$(".facet_13").click(function(){
 		changeColor[++b[12] % 2](".facet_13")
+		dnf[++b[12] % 2](".facet_13", "1000", "1010", "1100", "1110");
 	});
 
 	$(".facet_14").click(function(){
 		changeColor[++b[13] % 2](".facet_14")
+		dnf[++b[13] % 2](".facet_14", "1001", "1011", "1101", "1111");
 	});
 
 	$(".facet_15").click(function(){
 		changeColor[++b[14] % 2](".facet_15")
+		dnf[++b[14] % 2](".facet_15", "1100", "1101", "1110", "1111");
 	});
 
 	$(".facet_16").click(function(){
 		changeColor[++b[15] % 2](".facet_16")
+		dnf[++b[15] % 2](".facet_16", "1000", "1001", "1010", "1011");
 	});
 
 	$(".facet_17").click(function(){
 		// averageColor[++b[16] % 2](".facet_17", "border-left")
+		dnf[++b[16] % 2](".facet_17", "0000", "0010", "1000", "1010");
 	});
 
 	$(".facet_18").click(function(){
 		// averageColor[++b[17] % 2](".facet_18", "border-top")
+		dnf[++b[17] % 2](".facet_18", "0001", "0011", "1001", "1011");
 	});
 
 	$(".facet_19").click(function(){
 		// averageColor[++b[18] % 2](".facet_19", "border-right")
+		dnf[++b[18] % 2](".facet_19", "0101", "0111", "1101", "1111");
 	});
 
 	$(".facet_20").click(function(){
 		// averageColor[++b[19] % 2](".facet_20", "border-bottom")
+		dnf[++b[19] % 2](".facet_20", "0100", "0110", "1100", "1110");
 	});
 
 	$(".facet_21").click(function(){
 		changeColor[++b[20] % 2](".facet_21")
+		dnf[++b[20] % 2](".facet_21", "0001", "0011", "0101", "0111");
 	});
 
 	$(".facet_22").click(function(){
 		changeColor[++b[21] % 2](".facet_22")
+		dnf[++b[21] % 2](".facet_22", "0000", "0010", "0100", "0110");
 	});
 
 	$(".facet_23").click(function(){
 		changeColor[++b[22] % 2](".facet_23")
+		dnf[++b[22] % 2](".facet_23", "0100", "0101", "0110", "0111");
 	});
 
 	$(".facet_24").click(function(){
 		changeColor[++b[23] % 2](".facet_24")
+		dnf[++b[23] % 2](".facet_24", "0000", "0001", "0010", "0011");
 	});
 
 
