@@ -28,18 +28,24 @@ router.get("/:folder", (req, res)=>{
                     object.variant = /(\d+)\.json/.exec(f)[1]
                     switch (req.params.folder){
                         case 'expressions':{
+                            object.condition = "<b>Задача на вычисление значений функции.</b> "
                             delete object.truthTable.array
                             for (let i = 1; i <= 5; i++){
                                 object.truthTable.assoc[bfg.assocify(Math.round(Math.random()*15))] = "?"
                             }
+                            object.condition += "Дана функция: "+object.expression+". На кубе в соответствующих координатах "+
+                                    "расположены значения функции. Введите недостающие значения, выделенные вопросительным. "+
+                                    "Изменение значений вершин осуществляется кликом мышки."
                             break
                         }
                         case 'dummy_variables':{
                             delete object.dummy
                             delete object.dummies_number
+                            object.condition = "На гиперкубе задана булевая функция. Отметьте набор рёбер"
                             break
                         }
                         case 'selfdual': {
+                            object.condition = "<b>Задача на самодвойственность.</b> "
                             if (object.selfdual){
                                 let banned = new Array()
                                 for (let i = 1; i <= 5; i++){
@@ -58,23 +64,28 @@ router.get("/:folder", (req, res)=>{
                                 }
                                 delete object.truthTable.array
                                 object.letter = "b"
-                                object.text = "Часть значений функций известны, введите остальные значения, чтобы функция была самодвойственной"
+                                object.condition += "На гиперкубе задана функция, введите остальные"+
+                                                  " значения, чтобы функция была самодвойственной. Изменение значений вершин"+
+                                                  " производится с помощью кликов по вершинам гиперкуба."
                             } else {
                                 if(Math.round(Math.random())){
                                     object.letter = "a"
-                                    object.text = "Отметьте две вершины, доказывающие, что функция не является самодвойственной"
+                                    object.condition += "На гиперкубе задана функция. Отметьте две вершины, доказывающие, что функция не является самодвойственной"
                                 } else {
                                     object.letter = "c"
-                                    object.text = "Поменяйте минимальное число значений, чтобы функция стала  самодвойственной"
+                                    object.condition += "На гиперкубе задана функция. Поменяйте <i>минимальное</i> число "+
+                                                       "значений, чтобы функция стала  самодвойственной"
                                 }
                             }
                             break
                         }
                         case 'monotonic': {
+                            object.condition = "<b>Задача на монотонность.</b> "
                             delete object.truthTable.array
                             if (object.monotonic){
                                 object.letter = "b"
-                                object.text = "Часть значений функций известны, введите остальные значения, чтобы функция была монотонной"
+                                object.condition += "Часть значений функций известны, отметьте на кубе остальные значения,"+
+                                                  " чтобы функция была монотонной"
                                 for (let i = 0; i < 5; i++){
                                     let p = Math.round(Math.random()*15)
                                     object.truthTable.assoc[bfg.assocify(p)] = "?"
@@ -82,10 +93,11 @@ router.get("/:folder", (req, res)=>{
                             } else {
                                 if (Math.round(Math.random())){
                                     object.letter = "c"
-                                    object.text = "Поменяйте минимальное число значений, чтобы функция стала монотонной"
+                                    object.condition += "Поменяйте <i>минимальное</i> число значений, чтобы функция стала монотонной"
                                 } else {
                                     object.letter = "a"
-                                    object.text = "Найдите ребро, доказывающее, что функция не является монотонной"
+                                    object.condition += "Найдите ребро, доказывающее, что функция не является монотонной."+
+                                                       " Выделение ребер осуществляется с помощью кликов по ним"
                                 }
                             }
                             break
