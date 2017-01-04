@@ -1,5 +1,11 @@
 // var host = "http://192.168.0.1:3000";
 var host = "http://88.201.187.23:3001";
+// var host = "http://83.217.26.85:3000/";
+
+var canUseRib = 0;
+var canUseVertex = 0;
+var canUseFacet = 0;
+
 var assocify = function(s, k = 4){
 	let n = s.toString(2)
 	zeros = ""
