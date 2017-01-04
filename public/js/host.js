@@ -68,6 +68,7 @@ var putVertex = function(i, clss) {
 
 var convertIntoZhegalkin = function(vertex) {
 	$(".vertex").css('width', '175px')
+	
 	var string = "";
 	for (let i = 0, count = 0; i < vertex.length && count < 4; ++i) {
 		switch(count) {

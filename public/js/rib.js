@@ -94,7 +94,7 @@ $(document).ready(function(){
 
 	$(".rib_10").click(function(){
 		clickOnExternalRib[++b[4] % 2](".rib_10");
-		clickOnExternalRib[b[4] % 2](".rib_23");
+		clickOnExternalRib[b[4] % 2](".rib_22");
 		vertexFromRib[++c[4] % 2](".rib_10", "0101", "0111");
 	});  
 
