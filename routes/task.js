@@ -33,7 +33,7 @@ router.get("/:folder", (req, res)=>{
                             for (let i = 1; i <= 5; i++){
                                 object.truthTable.assoc[bfg.assocify(Math.round(Math.random()*15))] = "?"
                             }
-                            object.condition += "Дана функция: "+object.expression+". На кубе в соответствующих координатах "+
+                            object.condition += "Дана функция: <br/>"+object.expression+" <br/>На кубе в соответствующих координатах "+
                                     "расположены значения функции. Введите недостающие значения, выделенные вопросительным. "+
                                     "Изменение значений вершин осуществляется кликом мышки."
                             break
