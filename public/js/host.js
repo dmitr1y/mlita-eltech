@@ -66,9 +66,28 @@ var putVertex = function(i, clss) {
 	}
 };
 
-var convertIntoZhegalkin = function(vertex) {
+var convertIntoZhegalkin = function(i, clss, vertex) {
 	$(".vertex").css('width', '175px')
-	
+	if (i > 7) {
+		if (!(i % 2)) {
+			$(clss + (i + 1)).css({
+				'margin-left': '-75px',
+				'margin-right': '75px'
+			})
+		} else {
+			$(clss + (i + 1)).css({
+				'margin-left': '0px',
+				'margin-right': '0px'
+			})
+		}
+	} else {
+		$(clss + (i + 1)).css({
+			'margin-left': '-25px',
+			'margin-right': '25px',
+			'width': '75px'
+		})
+	}
+
 	var string = "";
 	for (let i = 0, count = 0; i < vertex.length && count < 4; ++i) {
 		switch(count) {

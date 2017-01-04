@@ -127,8 +127,7 @@ $(document).ready(function(){
 			console.log(json);
 			variant = json.variant;
 			for (var i = 0; i < 16; ++i) {
-				$(".vertex_" + (i + 1)).empty().append(convertIntoZhegalkin(assocify(i)) + " = " + json.truthTable.assoc[assocify(i)]);
-				putVertex(i, ".vertex_");
+				$(".vertex_" + (i + 1)).empty().append(convertIntoZhegalkin(i, ".vertex_", assocify(i)) + " = " + json.truthTable.assoc[assocify(i)]);
 			}
 			$("#condition").empty().append(json.condition);
 			$("#expression").empty();
