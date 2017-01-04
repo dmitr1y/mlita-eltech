@@ -138,6 +138,7 @@ router.get("/:folder", (req, res)=>{
                                 }
                                 else
                                     res.jsonp({problem: 1, more: "Bad request"})
+                                break
                             }
                             case 'b': {
                                 let arr = new Array(16)
