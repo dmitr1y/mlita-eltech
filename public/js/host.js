@@ -65,3 +65,62 @@ var putVertex = function(i, clss) {
 		})
 	}
 };
+
+var convertIntoZhegalkin = function(vertex) {
+	$(".vertex").css('width', '175px')
+	var string = "";
+	for (let i = 0, count = 0; i < vertex.length && count < 4; ++i) {
+		switch(count) {
+			case 0: {
+				string += vertex[i] == 1 ? "t" : "(1+t)";
+				++count;
+				break;
+			}
+			case 1: {
+				string += vertex[i] == 1? "x" : "(1+x)";
+				++count;
+				break;
+			}
+			case 2: {
+				string += vertex[i] == 1? "y" : "(1+y)";
+				++count;
+				break;
+			}
+			case 3: {
+				string += vertex[i] == 1? "z" : "(1+z)";
+				++count;
+				break;
+			}
+		}
+	}	
+	return string;
+}
+
+var convertToSymbols = function(vertex) {
+	var string = "";
+	for (let i = 0, count = 0; i < vertex.length && count < 4; ++i) {
+		switch(count) {
+			case 0: {
+				string += vertex[i] == 1 ? "t" : "!t";
+				++count;
+				break;
+			}
+			case 1: {
+				string += vertex[i] == 1? "x" : "!x";
+				++count;
+				break;
+			}
+			case 2: {
+				string += vertex[i] == 1? "y" : "!y";
+				++count;
+				break;
+			}
+			case 3: {
+				string += vertex[i] == 1? "z" : "!z";
+				++count;
+				break;
+			}
+		}
+	}	
+	return string;
+}

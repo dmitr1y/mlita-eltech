@@ -74,11 +74,11 @@ $(document).ready(function(){
 		// $("#condition").empty().append("Дан гиперкуб, на нём отмечены вершины и каждой вершине сопоставлено её имя " + 
 			// " — элементарная конъюнкция");
 		$(".title").empty().append("Минимизация ДНФ");
-		$.getJSON(host + '/task/dnf', function(json, textStatus) {
+		$.getJSON(host + '/task/expressions', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
 			for (var i = 0; i < 16; ++i) {
-				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
+				$(".vertex_" + (i + 1)).empty().append(convertToSymbols(assocify(i)) + " = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
 			$("#condition").empty().append(json.condition);
@@ -123,11 +123,11 @@ $(document).ready(function(){
 
 	$(".task_6").click(function(){
 		$(".title").empty().append("Многочлен Жегалкина");
-		$.getJSON(host + '/task/jegalkin', function(json, textStatus) {
+		$.getJSON(host + '/task/expressions', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
 			for (var i = 0; i < 16; ++i) {
-				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
+				$(".vertex_" + (i + 1)).empty().append(convertIntoZhegalkin(assocify(i)) + " = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
 			$("#condition").empty().append(json.condition);
