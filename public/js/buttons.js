@@ -3,7 +3,6 @@ $(document).ready(function(){
 	var task = 0;
 	var letter = 0;
 
-
 	$("#external_view").click(function(){
 		$(".rib").fadeIn();
 		$(".facet").fadeIn();
@@ -103,6 +102,7 @@ $(document).ready(function(){
 		switch(task) {
 			case 1: {
 				answer.dir = "expressions";
+				console.log(dummy_variables);
 				break;
 			}
 			case 2: {

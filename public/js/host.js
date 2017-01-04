@@ -20,12 +20,21 @@ var selfdualAnswer = {
 		$(this.secondClass).css("color", "black")
 		this.secondClass = clss;
 		$(clss).css("color", "red")
-	},
+	}
 },
 click = -1;
 
+var dummy_variables = {	
+	answer: {},
+	0: function(clss, v1, v2) {
+		this.answer[clss] = v1 + "," + v2;
+	},
+	1: function(clss, v1, v2) {
+		delete this.answer[clss];
+	}
+}
+
 var putVertex = function(i, clss) {
-	$(clss).css('width', '75px');
 	if (i > 7) {
 		if (!(i % 2)) {
 			$(clss + (i + 1)).css({
@@ -41,7 +50,8 @@ var putVertex = function(i, clss) {
 	} else {
 		$(clss + (i + 1)).css({
 			'margin-left': '-25px',
-			'margin-right': '25px'
+			'margin-right': '25px',
+			'width': '75px'
 		})
 	}
 };

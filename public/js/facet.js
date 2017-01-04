@@ -35,19 +35,19 @@ $(document).ready(function(){
 	});
 
 	$(".facet_2").click(function(){
-		averageColor[++b[1] % 2](".facet_2", "border-left")
+		// averageColor[++b[1] % 2](".facet_2", "border-left")
 	});
 
 	$(".facet_3").click(function(){
-		averageColor[++b[2] % 2](".facet_3", "border-top")
+		// averageColor[++b[2] % 2](".facet_3", "border-top")
 	});
 
 	$(".facet_4").click(function(){
-		averageColor[++b[3] % 2](".facet_4", "border-right")
+		// averageColor[++b[3] % 2](".facet_4", "border-right")
 	});
 
 	$(".facet_5").click(function(){
-		averageColor[++b[4] % 2](".facet_5", "border-bottom")
+		// averageColor[++b[4] % 2](".facet_5", "border-bottom")
 	});
 
 	$(".facet_6").click(function(){
@@ -59,19 +59,19 @@ $(document).ready(function(){
 	});
 
 	$(".facet_8").click(function(){
-		averageColor[++b[7] % 2](".facet_8", "border-left")
+		// averageColor[++b[7] % 2](".facet_8", "border-left")
 	});
 
 	$(".facet_9").click(function(){
-		averageColor[++b[8] % 2](".facet_9", "border-top")
+		// averageColor[++b[8] % 2](".facet_9", "border-top")
 	});
 
 	$(".facet_10").click(function(){
-		averageColor[++b[9] % 2](".facet_10", "border-right")
+		// averageColor[++b[9] % 2](".facet_10", "border-right")
 	});
 
 	$(".facet_11").click(function(){
-		averageColor[++b[10] % 2](".facet_11", "border-bottom")
+		// averageColor[++b[10] % 2](".facet_11", "border-bottom")
 	});
 
 	$(".facet_12").click(function(){
@@ -95,19 +95,19 @@ $(document).ready(function(){
 	});
 
 	$(".facet_17").click(function(){
-		averageColor[++b[16] % 2](".facet_17", "border-left")
+		// averageColor[++b[16] % 2](".facet_17", "border-left")
 	});
 
 	$(".facet_18").click(function(){
-		averageColor[++b[17] % 2](".facet_18", "border-top")
+		// averageColor[++b[17] % 2](".facet_18", "border-top")
 	});
 
 	$(".facet_19").click(function(){
-		averageColor[++b[18] % 2](".facet_19", "border-right")
+		// averageColor[++b[18] % 2](".facet_19", "border-right")
 	});
 
 	$(".facet_20").click(function(){
-		averageColor[++b[19] % 2](".facet_20", "border-bottom")
+		// averageColor[++b[19] % 2](".facet_20", "border-bottom")
 	});
 
 	$(".facet_21").click(function(){
