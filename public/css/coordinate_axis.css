@@ -5,6 +5,7 @@
 }
 
 .cube .ox {
+	background: #55f;
 	-webkit-transform: translate3d(-100px, 95px, 100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,135deg);
 	-moz-transform: translate3d(-100px, 95px, 100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,135deg);
 	-o-transform: translate3d(-100px, 95px, 100.1px) rotate3d(0,0,1,90deg) rotate3d(1,0,0,135deg);
@@ -13,6 +14,7 @@
 }
 
 .cube .oy {
+	background: #f55;
 	-webkit-transform: translate3d(-100px, -5px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,135deg);
 	-moz-transform: translate3d(-100px, -5px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,135deg);
 	-o-transform: translate3d(-100px, -5px, 0) rotate3d(0,1,0,90deg) rotate3d(1,0,0,135deg);
@@ -21,6 +23,7 @@
 }
 
 .cube .oz {
+	background: #5f5;
 	-webkit-transform: translate3d(0, -5.1px, 100px) rotate3d(1,0,0,45deg) rotate3d(0,0,1,180deg);
 	-moz-transform: translate3d(0, -5.1px, 100px) rotate3d(1,0,0,45deg) rotate3d(0,0,1,180deg);
 	-o-transform: translate3d(0, -5.1px, 100px) rotate3d(1,0,0,45deg) rotate3d(0,0,1,180deg);
@@ -29,6 +32,7 @@
 }
 
 .cube .ot {
+	background: #909;
 	width: 125px;
 	-webkit-transform: translate3d(-25px,30px,60px) rotate3d(1,0,0,135deg) rotate3d(0,0,1,125deg);
 	-moz-transform: translate3d(-25px,30px,60px) rotate3d(1,0,0,135deg) rotate3d(0,0,1,125deg);

@@ -115,7 +115,7 @@ $(document).ready(function(){
 			}
 			case 2: {
 				answer.dir = "dummy_variables";
-				answer.dummy_variables = dummy_variables.answer;
+				answer.dummy_variables = vertexFromRib.answer;
 				break;
 			}
 			case 3: {
@@ -124,6 +124,7 @@ $(document).ready(function(){
 			}
 			case 4: {
 				answer.dir = "monotonic";
+				answer.monotonic = vertexFromRib.answer;
 				break;
 			}
 			case 5: {

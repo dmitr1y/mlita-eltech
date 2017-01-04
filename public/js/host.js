@@ -24,7 +24,7 @@ var selfdualAnswer = {
 },
 click = -1;
 
-var dummy_variables = {	
+var vertexFromRib = {	
 	answer: {},
 	0: function(clss, v1, v2) {
 		this.answer[clss] = v1 + "," + v2;
