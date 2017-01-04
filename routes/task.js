@@ -200,6 +200,9 @@ router.get("/:folder", (req, res)=>{
                                 }
                                 break
                             }
+                            default: {
+                                res.status(403).jsonp({problem: 1, more: "letter is required"})
+                            }
                         }
                     }
                     case 'monotonic': {
@@ -280,11 +283,14 @@ router.get("/:folder", (req, res)=>{
                                 }
                                 break
                             }
+                            default: {
+                                res.status(400).jsonp({problem: 1, more: "letter is required"})
+                            }
                         }
                     }
                 }
             } else {
-                res.status(403).jsonp({problem: 1, more: 'assoc array is required'})
+                res.status(400).jsonp({problem: 1, more: 'assoc array is required'})
             }
         }
     })
