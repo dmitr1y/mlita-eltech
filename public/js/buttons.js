@@ -46,7 +46,7 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
-			$("#expression").empty().append("Задано выражение: " + json.expression);
+			$("#expression").empty().append(json.expression);
 		});
 		task = 1;
 	})
@@ -54,6 +54,15 @@ $(document).ready(function(){
 	$(".task_2").click(function(){
 		$("#condition").empty().append("Дан гиперкуб, в вершинах стоят значения " + 
 			"0 или 1, задающие таким образом булеву функцию 4 переменных.");
+		$.getJSON(host + '/task/monotonic', function(json, textStatus) {
+			console.log(json);
+			variant = json.variant;
+			for (var i = 0; i < 16; ++i) {
+				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
+				putVertex(i, ".vertex_");
+			}
+			$("#expression").empty().append(json.expression);
+		});
 		task = 2;
 	})
 
@@ -102,11 +111,11 @@ $(document).ready(function(){
 		switch(task) {
 			case 1: {
 				answer.dir = "expressions";
-				console.log(dummy_variables);
 				break;
 			}
 			case 2: {
 				answer.dir = "dummy_variables";
+				answer.dummy_variables = dummy_variables.answer;
 				break;
 			}
 			case 3: {

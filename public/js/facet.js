@@ -32,30 +32,37 @@ $(document).ready(function(){
 
 	$(".facet_1").click(function(){
 		changeColor[++b[0] % 2](".facet_1")
+		dnf[++b[0] % 2](".facet_1", "0000", "0001", "0100", "0101");
 	});
 
 	$(".facet_2").click(function(){
 		// averageColor[++b[1] % 2](".facet_2", "border-left")
+		dnf[++b[1] % 2](".facet_2", "0001", "0101", "1001", "1101");
 	});
 
 	$(".facet_3").click(function(){
 		// averageColor[++b[2] % 2](".facet_3", "border-top")
+		dnf[++b[2] % 2](".facet_3", "0100", "0101", "1100", "1101");
 	});
 
 	$(".facet_4").click(function(){
 		// averageColor[++b[3] % 2](".facet_4", "border-right")
+		dnf[++b[3] % 2](".facet_4", "0000", "0100", "1000", "1100");
 	});
 
 	$(".facet_5").click(function(){
 		// averageColor[++b[4] % 2](".facet_5", "border-bottom")
+		dnf[++b[4] % 2](".facet_5", "0000", "0001", "1000", "1001");
 	});
 
 	$(".facet_6").click(function(){
 		changeColor[++b[5] % 2](".facet_6")
+		dnf[++b[5] % 2](".facet_6", "1000", "1001", "1100", "1101");
 	});
 
 	$(".facet_7").click(function(){
 		changeColor[++b[6] % 2](".facet_7")
+		dnf[++b[6] % 2](".facet_7", "0010", "0011", "0110", "0111");
 	});
 
 	$(".facet_8").click(function(){

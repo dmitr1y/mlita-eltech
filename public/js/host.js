@@ -1,5 +1,5 @@
 // var host = "http://192.168.0.1:3000";
-var host = "http://83.217.26.85:3000";
+var host = "http://88.201.187.23:3001";
 var assocify = function(s, k = 4){
 	let n = s.toString(2)
 	zeros = ""
@@ -32,7 +32,17 @@ var dummy_variables = {
 	1: function(clss, v1, v2) {
 		delete this.answer[clss];
 	}
-}
+};
+
+var dnf = {
+	answer: {},
+	0: function(clss, v1, v2, v3, v4) {
+		this.answer[clss] = v1 + "," + v2 + "," + v3 + "," + v4;
+	},
+	1: function(clss, v1, v2, v3, v4) {
+		delete this.answer[clss];
+	}
+};
 
 var putVertex = function(i, clss) {
 	if (i > 7) {
