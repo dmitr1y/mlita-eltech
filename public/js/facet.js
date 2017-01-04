@@ -150,5 +150,13 @@ $(document).ready(function(){
 		dnf[++b[23] % 2](".facet_24", "0000", "0001", "0010", "0011");
 	});
 
+	// for (let i = 0, count = 0; i < vertex.length(); ++i) {
+	// 	switch(count) {
+	// 		case 0: {
+				
+	// 		}
+	// 	}
+	// }
+
 
 });

@@ -99,6 +99,7 @@ $(document).ready(function(){
 			}
 			$("#condition").empty().append(json.condition);
 			$("#expression").empty();
+			letter = json.letter;
 		});
 		task = 4;
 	})
@@ -169,11 +170,13 @@ $(document).ready(function(){
 			}
 			case 3: {
 				answer.dir = "dnf";
+				answer.dnf = dnf.answer;
 				break;
 			}
 			case 4: {
 				answer.dir = "monotonic";
 				answer.monotonic = vertexFromRib.answer;
+				answer.letter = letter;
 				break;
 			}
 			case 5: {
