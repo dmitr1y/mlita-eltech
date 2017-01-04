@@ -204,6 +204,7 @@ router.get("/:folder", (req, res)=>{
                                 res.status(403).jsonp({problem: 1, more: "letter is required"})
                             }
                         }
+                        break
                     }
                     case 'monotonic': {
                         switch (solution.letter){
