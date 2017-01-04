@@ -53,6 +53,7 @@ $(document).ready(function(){
 			$("#condition").empty().append(json.condition);
 		});
 		task = 1;
+		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})
 
 	$(".task_2").click(function(){
@@ -71,6 +72,7 @@ $(document).ready(function(){
 			$("#condition").empty().append(json.condition);
 		});
 		task = 2;
+		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})
 
 
@@ -89,13 +91,12 @@ $(document).ready(function(){
 			}
 			$("#condition").empty().append(json.condition);
 		});
+		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})
 
 	$(".task_4").click(function() {
 		$(".title").empty().append("Монотонность. Диаграмма Хассе");
 		$(".answer").empty();
-		canUseRib = 0;
-		canUseVertex = 0;
 		canUseFacet = 0;
 		$.getJSON(host + '/task/monotonic', function(json, textStatus) {
 			console.log(json);
@@ -106,13 +107,16 @@ $(document).ready(function(){
 			}
 			$("#condition").empty().append(json.condition);
 			letter = json.letter;
-			if (letter = "b" || "c") {
+			if (letter == "b" || letter == "c") {
+				canUseRib = 0;
 				canUseVertex = 1;
 			} else {
 				canUseRib = 1;
+				canUseVertex = 0;
 			}
 		});
 		task = 4;
+		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})
 
 	$(".task_5").click(function(){
@@ -133,6 +137,7 @@ $(document).ready(function(){
 			letter = json.letter;
 		})
 		task = 5;
+		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})
 
 	$(".task_6").click(function(){
@@ -149,6 +154,7 @@ $(document).ready(function(){
 			}
 			$("#condition").empty().append(json.condition);
 		});
+		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})
 
 	$(".task_7").click(function(){
@@ -166,6 +172,7 @@ $(document).ready(function(){
 			}
 			$("#condition").empty().append(json.condition);
 		});
+		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})	
 
 	$(".send").click(function(){
