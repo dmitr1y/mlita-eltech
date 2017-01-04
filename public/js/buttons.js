@@ -170,12 +170,13 @@ $(document).ready(function(){
 			}
 			case 3: {
 				answer.dir = "dnf";
-				answer.dnf = dnf.answer;
+				answer.facets = vertexFromFacet.answer;
+				answer.ribs = vertexFromRib.answer;
 				break;
 			}
 			case 4: {
 				answer.dir = "monotonic";
-				answer.monotonic = vertexFromRib.answer;
+				answer.ribs = vertexFromRib.answer;
 				answer.letter = letter;
 				break;
 			}
