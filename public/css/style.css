@@ -31,20 +31,39 @@
 
 .control {
 	position: relative;
-	height: 500px;
 }
 
-.task {    
+.task, .buttons {    
 	text-align: center;
 	display: flex;
     align-items: center;
     justify-content: center; 
 }
 
+.dropdown {
+	margin-right: 5px;
+	margin-left: -5px;
+}
 
 .description, .answer {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
 	text-align: center;
-	height: 150px;
-	border: 5px solid beige;
+	height: 200px;
 	border-radius: 10px;
+}
+
+.send {
+	border-radius: 5px;
+	width: 150px;
+}
+
+.btn-group>.btn:last-child:not(:first-child) {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.description {
+	/* border: 1px solid blue; */
 }

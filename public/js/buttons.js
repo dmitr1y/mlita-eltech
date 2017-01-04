@@ -37,6 +37,10 @@ $(document).ready(function(){
 
 	$(".task_1").click(function(){
 		$(".title").empty().append("Вычисление значений функции");
+		$(".answer").empty();
+		canUseVertex = 1;
+		canUseRib = 0;
+		canUseFacet = 0;
 		// $("#condition").empty().append("Ввести недостающие значения функции " + 
 			// "рядом с каждой вершиной гиперкуба, например, если f(0;0;0;0)=1, то около начала координат нужно поставить 1.");
 		$.getJSON(host + '/task/expressions', function(json, textStatus) {
@@ -47,15 +51,16 @@ $(document).ready(function(){
 				putVertex(i, ".vertex_");
 			}
 			$("#condition").empty().append(json.condition);
-			$("#expression").empty().append(json.expression);
 		});
 		task = 1;
 	})
 
 	$(".task_2").click(function(){
-		// $("#condition").empty().append("Дан гиперкуб, в вершинах стоят значения " + 
-			// "0 или 1, задающие таким образом булеву функцию 4 переменных.");
+		canUseVertex = 0;
+		canUseRib = 1;
+		canUseFacet = 0;
 		$(".title").empty().append("Фиктивные переменные");
+		$(".answer").empty();
 		$.getJSON(host + '/task/dummy_variables', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
@@ -64,16 +69,17 @@ $(document).ready(function(){
 				putVertex(i, ".vertex_");
 			}
 			$("#condition").empty().append(json.condition);
-			$("#expression").empty().append(json.expression);
 		});
 		task = 2;
 	})
 
 
 	$(".task_3").click(function(){
-		// $("#condition").empty().append("Дан гиперкуб, на нём отмечены вершины и каждой вершине сопоставлено её имя " + 
-			// " — элементарная конъюнкция");
+		canUseVertex = 1;
+		canUseFacet = 1;
+		canUseRib = 1;
 		$(".title").empty().append("Минимизация ДНФ");
+		$(".answer").empty();
 		$.getJSON(host + '/task/expressions', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
@@ -82,14 +88,15 @@ $(document).ready(function(){
 				putVertex(i, ".vertex_");
 			}
 			$("#condition").empty().append(json.condition);
-			$("#expression").empty();
 		});
 	})
 
-	$(".task_4").click(function(){
+	$(".task_4").click(function() {
 		$(".title").empty().append("Монотонность. Диаграмма Хассе");
-		// $("#condition").empty().append("Гиперкуб является основой для построения диаграм Хассе. Дан гиперкуб, в вершинах " +
-			// "стоят значения 0 и 1, задающие булеву функцию 4 переменных. ")
+		$(".answer").empty();
+		canUseRib = 0;
+		canUseVertex = 0;
+		canUseFacet = 0;
 		$.getJSON(host + '/task/monotonic', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
@@ -98,14 +105,22 @@ $(document).ready(function(){
 				putVertex(i, ".vertex_");
 			}
 			$("#condition").empty().append(json.condition);
-			$("#expression").empty();
 			letter = json.letter;
+			if (letter = "b" || "c") {
+				canUseVertex = 1;
+			} else {
+				canUseRib = 1;
+			}
 		});
 		task = 4;
 	})
 
 	$(".task_5").click(function(){
+		canUseRib = 0;
+		canUseFacet = 0;
+		canUseVertex = 1;
 		$(".title").empty().append("Самодвойственность");
+		$(".answer").empty();
 		$.getJSON(host + '/task/selfdual', function(json, textStatus) {
 			$("#condition").empty().append(json.text);
 			console.log(json);
@@ -115,27 +130,33 @@ $(document).ready(function(){
 				putVertex(i, ".vertex_");
 			}
 			$("#condition").empty().append(json.condition);
-			$("#expression").empty();
 			letter = json.letter;
 		})
 		task = 5;
 	})
 
 	$(".task_6").click(function(){
+		canUseRib = 0;
+		canUseVertex = 0;
+		canUseFacet = 0;
 		$(".title").empty().append("Многочлен Жегалкина");
+		$(".answer").empty();
 		$.getJSON(host + '/task/expressions', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
 			for (var i = 0; i < 16; ++i) {
-				$(".vertex_" + (i + 1)).empty().append(convertIntoZhegalkin(i, ".vertex_", assocify(i)) + " = " + json.truthTable.assoc[assocify(i)]);
+				$(".vertex_" + (i + 1)).empty().append(convertIntoZhegalkin(i,  ".vertex_", assocify(i)) + " = " + json.truthTable.assoc[assocify(i)]);
 			}
 			$("#condition").empty().append(json.condition);
-			$("#expression").empty();
 		});
 	})
 
 	$(".task_7").click(function(){
 		$(".title").empty().append("Классы замкнутости");
+		$(".answer").empty();
+		canUseVertex = 1;
+		canUseRib = 0;
+		canUseFacet = 0;
 		$.getJSON(host + '/task/insularity', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
@@ -144,7 +165,6 @@ $(document).ready(function(){
 				putVertex(i, ".vertex_");
 			}
 			$("#condition").empty().append(json.condition);
-			$("#expression").empty();
 		});
 	})	
 
