@@ -54,7 +54,8 @@ $(document).ready(function(){
 	$(".task_2").click(function(){
 		$("#condition").empty().append("Дан гиперкуб, в вершинах стоят значения " + 
 			"0 или 1, задающие таким образом булеву функцию 4 переменных.");
-		$.getJSON(host + '/task/monotonic', function(json, textStatus) {
+		$(".title").empty().append("Фиктивные переменные");
+		$.getJSON(host + '/task/dummy_variables', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
 			for (var i = 0; i < 16; ++i) {
@@ -70,14 +71,34 @@ $(document).ready(function(){
 	$(".task_3").click(function(){
 		$("#condition").empty().append("Дан гиперкуб, на нём отмечены вершины и каждой вершине сопоставлено её имя " + 
 			" — элементарная конъюнкция");
+		$(".title").empty().append("Минимизация ДНФ");
+		$.getJSON(host + '/task/dnf', function(json, textStatus) {
+			console.log(json);
+			variant = json.variant;
+			for (var i = 0; i < 16; ++i) {
+				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
+				putVertex(i, ".vertex_");
+			}
+			$("#expression").empty();
+		});
 	})
 
 	$(".task_4").click(function(){
 		$(".title").empty().append("Монотонность. Диаграмма Хассе");
+		$.getJSON(host + '/task/monotonic', function(json, textStatus) {
+			console.log(json);
+			variant = json.variant;
+			for (var i = 0; i < 16; ++i) {
+				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
+				putVertex(i, ".vertex_");
+			}
+			$("#expression").empty();
+		});
 		task = 4;
 	})
 
 	$(".task_5").click(function(){
+		$(".title").empty().append("Самодвойственность");
 		$.getJSON(host + '/task/selfdual', function(json, textStatus) {
 			$("#condition").empty().append(json.text);
 			console.log(json);
@@ -92,11 +113,31 @@ $(document).ready(function(){
 	})
 
 	$(".task_6").click(function(){
-		$("#condition").empty().append("Многочлен Жегалкина.")
+		$(".title").empty().append("Многочлен Жегалкина");
+		$("#condition").empty().append("Многочлен Жегалкина.");
+		$.getJSON(host + '/task/jegalkin', function(json, textStatus) {
+			console.log(json);
+			variant = json.variant;
+			for (var i = 0; i < 16; ++i) {
+				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
+				putVertex(i, ".vertex_");
+			}
+			$("#expression").empty();
+		});
 	})
 
 	$(".task_7").click(function(){
-		$("#condition").empty().append("Классы замкнутости.")
+		$("#condition").empty().append("Классы замкнутости.");
+		$(".title").empty().append("Классы замкнутости");
+		$.getJSON(host + '/task/insularity', function(json, textStatus) {
+			console.log(json);
+			variant = json.variant;
+			for (var i = 0; i < 16; ++i) {
+				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
+				putVertex(i, ".vertex_");
+			}
+			$("#expression").empty();
+		});
 	})	
 
 	$(".send").click(function(){
@@ -141,7 +182,7 @@ $(document).ready(function(){
 				break;
 			}
 			case 7: {
-				answer.dir = "post";
+				answer.dir = "insularity";
 				break;
 			}
 		}
