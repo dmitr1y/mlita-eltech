@@ -67,14 +67,17 @@ $(document).ready(function(){
 
 	$(".facet_8").click(function(){
 		// averageColor[++b[7] % 2](".facet_8", "border-left")
+		dnf[++b[7] % 2](".facet_8", "0011", "0111", "1011", "1111");
 	});
 
 	$(".facet_9").click(function(){
 		// averageColor[++b[8] % 2](".facet_9", "border-top")
+		dnf[++b[8] % 2](".facet_9", "0110", "0111", "1110", "1111");
 	});
 
 	$(".facet_10").click(function(){
 		// averageColor[++b[9] % 2](".facet_10", "border-right")
+		dnf[++b[9] % 2](".facet_10", "0010", "0110", "1010", "1110");
 	});
 
 	$(".facet_11").click(function(){
