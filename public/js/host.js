@@ -34,7 +34,7 @@ var vertexFromRib = {
 	}
 };
 
-var dnf = {
+var vertexFromFacet = {
 	answer: {},
 	0: function(clss, v1, v2, v3, v4) {
 		this.answer[clss] = v1 + "," + v2 + "," + v3 + "," + v4;
