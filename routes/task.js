@@ -16,7 +16,7 @@ function fileRandomPath(path, callback){
 }
 
 router.get("/:folder", (req, res)=>{
-    var deeper = req.params.folder == "dummy_variables" ? "/"+Math.round(Math.random()*2) : ""
+    var deeper = req.params.folder == "dummy_variables" ? "/"+/*Math.round(Math.random()*2)*/ 1 : ""
     fileRandomPath('tasks/'+req.params.folder+deeper, (f) => {
         if (!f) {
             res.status(404)
@@ -40,8 +40,25 @@ router.get("/:folder", (req, res)=>{
                         }
                         case 'dummy_variables':{
                             delete object.dummy
-                            delete object.dummies_number
-                            object.condition = "На гиперкубе задана булевая функция. Отметьте набор рёбер"
+                            object.condition = "На гиперкубе задана булевая функция. "
+                            switch (object.dummies_number){
+                                case 0:{
+                                    object.letter = "0"
+                                    object.condition = "Отметить минимальный набор рёбра, доказывающий, что функция не имеет фиктивных переменных"
+                                    break
+                                }
+                                case 1: {
+                                    object.letter = "1"
+                                    object.condition = "Отметить набор рёбер, доказывающий, что у функции есть одна фиктивная переменная"
+                                    break
+                                }
+                                case 2: {
+                                    object.letter = "2"
+                                    object.condition = "Отметить набор рёбер, доказывающий, что у функции есть две фиктивных переменных"
+                                    break
+                                }
+                            }
+
                             break
                         }
                         case 'selfdual': {
@@ -112,7 +129,11 @@ router.get("/:folder", (req, res)=>{
 .post("/", (req,res) => {
     let solution = req.body
     console.log(solution)
-    let f = "./tasks/"+solution.dir+"/"+solution.variant+".json"
+    let f = ""
+    if (solution.dir == "dummy_variables")
+        f = "./tasks/"+solution.dir+"/"+solution.letter+"/"+solution.variant+".json"
+    else
+        f = "./tasks/"+solution.dir+"/"+solution.variant+".json"
     let dude_errors = ""
     fs.readFile(f, (err, data) => {
         if (err)
@@ -133,6 +154,88 @@ router.get("/:folder", (req, res)=>{
                             res.jsonp({problem: 0, more: "Решение верное"})
                         } else {
                             res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
+                        }
+                        break
+                    }
+                    case 'dummy_variables':{
+                        switch (solution.letter){
+                            case "0": {
+                                res.jsonp({problem:0, more:'test0'})
+                                break
+                            }
+                            case "1": {
+                                let ribs = 0,
+                                fic_x = 0,
+                                fic_y = 0,
+                                fic_z = 0,
+                                fic_t = 0
+                                for (x in solution.dummy_variables){
+                                    let a = solution.dummy_variables[x].split(",")
+                                    for (let i = 0; i < 4; i++){
+                                        if (a[0][i] != a[1][i])
+                                        {
+                                            //which variable is dummy
+                                            switch (i){
+                                                case 0:{ fic_t++; break }
+                                                case 1:{ fic_x++; break }
+                                                case 2:{ fic_y++; break }
+                                                case 3:{ fic_z++; break }
+                                            }
+                                            break
+                                        }
+                                    }
+                                    if (solution.assoc[a[0]] == solution.assoc[a[1]]){
+                                        ribs++
+                                    }
+                                }
+                                if (fic_t+fic_x+fic_y+fic_z != 8){
+                                    res.jsonp({problem:2, more: "Выделено неверное количество рёбер."})
+                                } else {
+                                    serverSolution.dummy.forEach((x,i) => {
+                                        if (x == true){
+                                            switch (i){
+                                                case 0: {
+                                                    if (fic_t == 8) {
+                                                        res.jsonp({problem:0, more: "Решено верно."})
+                                                    } else {
+                                                        res.jsonp({problem:2, more: "Рёбра выделены неверно"})
+                                                    }
+                                                    break
+                                                }
+                                                case 1: {
+                                                    if (fic_x == 8) {
+                                                        res.jsonp({problem:0, more: "Решено верно."})
+                                                    } else {
+                                                        res.jsonp({problem:2, more: "Рёбра выделены неверно"})
+                                                    }
+                                                    break
+                                                }
+                                                case 2: {
+                                                    if (fic_y == 8) {
+                                                        res.jsonp({problem:0, more: "Решено верно."})
+                                                    } else {
+                                                        res.jsonp({problem:2, more: "Рёбра выделены неверно"})
+                                                    }
+                                                    break
+                                                }
+                                                case 3: {
+                                                    if (fic_z == 8) {
+                                                        res.jsonp({problem:0, more: "Решено верно."})
+                                                    } else {
+                                                        res.jsonp({problem:2, more: "Рёбра выделены неверно"})
+                                                    }
+                                                    break
+                                                }
+                                            }
+                                        }
+                                    })
+                                }
+                                break
+                            }
+                            case "2": {
+                                res.jsonp({problem:0, more:'test2'})
+                                break
+                            }
                         }
                         break
                     }
@@ -294,6 +397,10 @@ router.get("/:folder", (req, res)=>{
                                 res.status(400).jsonp({problem: 1, more: "letter is required"})
                             }
                         }
+                        break
+                    }
+                    case 'jegalkin':{
+                        break
                     }
                 }
             } else {
