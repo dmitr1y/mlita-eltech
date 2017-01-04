@@ -209,17 +209,25 @@ router.get("/:folder", (req, res)=>{
                         switch (solution.letter){
                             case 'a':
                             {
-                                if (solution.vertexes){
-                                    solution.vertexes = solution.vertexes.sort()
-                                    if (solution.vertexes[0] == serverSolution.vertexes[0] && serverSolution.vertexes[1] == serverSolution.vertexes[1]){
-                                        res.jsonp({problem: 0, more: "Решение верное"})
-                                    } else {
-                                        dude_errors = "Вершины указаны не верно"
-                                        res.jsonp({problem: 2, more: dude_errors})
+                                if (solution.ribs){
+                                    let c = 0
+                                    for (key in solution.ribs){
+                                        c++
+                                        let arr = solution.ribs[key].split(",")
+                                        if (arr[0] > arr[1]){
+                                            res.jsonp({problem: 0, more: "Решение верное"})
+                                        } else {
+                                            res.jsonp({problem: 2, more: "Не верно выделены ребра"})
+                                            с = 0
+                                            break
+                                        }
+                                    }
+                                    if (c>1){
+                                        res.jsonp({problem: 2, more: "Требуется выделить только 1 ребро"})
                                     }
                                 }
                                 else
-                                    res.jsonp({problem: 1, more: "Bad request"})
+                                    res.jsonp({problem: 1, more: "Bad request. Ribs are required"})
                                 break
                             }
                             case 'b':
@@ -263,7 +271,7 @@ router.get("/:folder", (req, res)=>{
                                     }
                                 }
                                 console.log({all_numbers: all_numbers})
-                                if (bfg.monotonic(solution) && all_numbers) {
+                                if (bfg.monotonic(solution.assoc) && all_numbers) {
                                     let c = 0
                                     for (let i = 0; i < 16; i++) {
                                         let j = bfg.assocify(i)
