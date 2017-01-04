@@ -37,8 +37,8 @@ $(document).ready(function(){
 
 	$(".task_1").click(function(){
 		$(".title").empty().append("Вычисление значений функции");
-		$("#condition").empty().append("Ввести недостающие значения функции " + 
-			"рядом с каждой вершиной гиперкуба, например, если f(0;0;0;0)=1, то около начала координат нужно поставить 1.");
+		// $("#condition").empty().append("Ввести недостающие значения функции " + 
+			// "рядом с каждой вершиной гиперкуба, например, если f(0;0;0;0)=1, то около начала координат нужно поставить 1.");
 		$.getJSON(host + '/task/expressions', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
@@ -46,14 +46,15 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
+			$("#condition").empty().append(json.condition);
 			$("#expression").empty().append(json.expression);
 		});
 		task = 1;
 	})
 
 	$(".task_2").click(function(){
-		$("#condition").empty().append("Дан гиперкуб, в вершинах стоят значения " + 
-			"0 или 1, задающие таким образом булеву функцию 4 переменных.");
+		// $("#condition").empty().append("Дан гиперкуб, в вершинах стоят значения " + 
+			// "0 или 1, задающие таким образом булеву функцию 4 переменных.");
 		$(".title").empty().append("Фиктивные переменные");
 		$.getJSON(host + '/task/dummy_variables', function(json, textStatus) {
 			console.log(json);
@@ -62,6 +63,7 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
+			$("#condition").empty().append(json.condition);
 			$("#expression").empty().append(json.expression);
 		});
 		task = 2;
@@ -69,8 +71,8 @@ $(document).ready(function(){
 
 
 	$(".task_3").click(function(){
-		$("#condition").empty().append("Дан гиперкуб, на нём отмечены вершины и каждой вершине сопоставлено её имя " + 
-			" — элементарная конъюнкция");
+		// $("#condition").empty().append("Дан гиперкуб, на нём отмечены вершины и каждой вершине сопоставлено её имя " + 
+			// " — элементарная конъюнкция");
 		$(".title").empty().append("Минимизация ДНФ");
 		$.getJSON(host + '/task/dnf', function(json, textStatus) {
 			console.log(json);
@@ -79,12 +81,15 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
+			$("#condition").empty().append(json.condition);
 			$("#expression").empty();
 		});
 	})
 
 	$(".task_4").click(function(){
 		$(".title").empty().append("Монотонность. Диаграмма Хассе");
+		// $("#condition").empty().append("Гиперкуб является основой для построения диаграм Хассе. Дан гиперкуб, в вершинах " +
+			// "стоят значения 0 и 1, задающие булеву функцию 4 переменных. ")
 		$.getJSON(host + '/task/monotonic', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
@@ -92,6 +97,7 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
+			$("#condition").empty().append(json.condition);
 			$("#expression").empty();
 		});
 		task = 4;
@@ -107,6 +113,8 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
+			$("#condition").empty().append(json.condition);
+			$("#expression").empty();
 			letter = json.letter;
 		})
 		task = 5;
@@ -114,7 +122,6 @@ $(document).ready(function(){
 
 	$(".task_6").click(function(){
 		$(".title").empty().append("Многочлен Жегалкина");
-		$("#condition").empty().append("Многочлен Жегалкина.");
 		$.getJSON(host + '/task/jegalkin', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
@@ -122,12 +129,12 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
+			$("#condition").empty().append(json.condition);
 			$("#expression").empty();
 		});
 	})
 
 	$(".task_7").click(function(){
-		$("#condition").empty().append("Классы замкнутости.");
 		$(".title").empty().append("Классы замкнутости");
 		$.getJSON(host + '/task/insularity', function(json, textStatus) {
 			console.log(json);
@@ -136,6 +143,7 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
+			$("#condition").empty().append(json.condition);
 			$("#expression").empty();
 		});
 	})	
