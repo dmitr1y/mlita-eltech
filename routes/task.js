@@ -210,21 +210,19 @@ router.get("/:folder", (req, res)=>{
                             case 'a':
                             {
                                 if (solution.ribs){
-                                    let c = 0
+                                    let c = 0, solved = false
                                     for (key in solution.ribs){
-                                        c++
                                         let arr = solution.ribs[key].split(",")
-                                        if (arr[0] > arr[1]){
-                                            res.jsonp({problem: 0, more: "Решение верное"})
+                                        console.log(solution.assoc[arr[0]] > solution.assoc[arr[1]], arr[1], arr[0])
+                                        if (solution.assoc[arr[0]] > solution.assoc[arr[1]]){
+                                            solved = true
                                         } else {
+                                            solved = false
                                             res.jsonp({problem: 2, more: "Не верно выделены ребра"})
-                                            с = 0
                                             break
                                         }
                                     }
-                                    if (c>1){
-                                        res.jsonp({problem: 2, more: "Требуется выделить только 1 ребро"})
-                                    }
+                                    if (solved) res.jsonp({problem: 0, more: "Решение верное"})
                                 }
                                 else
                                     res.jsonp({problem: 1, more: "Bad request. Ribs are required"})
