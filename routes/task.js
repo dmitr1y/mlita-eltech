@@ -19,7 +19,7 @@ router.get("/:folder", (req, res)=>{
     var deeper = req.params.folder == "dummy_variables" ? "/"+/*Math.round(Math.random()*2)*/ 1 : ""
     let object;
     if (req.params.folder == "insularity") {
-        object.condition = "Построить таблицу функции (поставить значения у вершин гиперкуба) так чтобы функция обладала свойствами (далее генериуется некоторый набор постовских классов замкнутости, например) самодвойственности, сохраняла 0 и 1"
+        object.condition = "Построить таблицу функции (поставить значения у вершин гиперкуба) так чтобы функция обладала свойствами "
     } else {
         fileRandomPath('tasks/'+req.params.folder+deeper, (f) => {
             if (!f) {
@@ -413,6 +413,7 @@ router.get("/:folder", (req, res)=>{
                         break
                     }
                     case 'jegalkin':{
+                        res.jsonp({problem: 1, more: 'Функция не формирует линейный многочлен Жегалкина'})
                         break
                     }
                 }
