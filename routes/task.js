@@ -17,10 +17,16 @@ function fileRandomPath(path, callback){
 
 router.get("/:folder", (req, res)=>{
     var deeper = req.params.folder == "dummy_variables" ? "/"+/*Math.round(Math.random()*2)*/ 1 : ""
-    let object;
+    let object = {};
     if (req.params.folder == "insularity") {
         object.condition = "Построить таблицу функции (поставить значения у вершин гиперкуба) так чтобы функция обладала свойствами "
-    } else {
+        res.jsonp(object)
+    }
+    else if (req.params.folder == "jegalkin") {
+        object.condition = "Придумайте и введите значения функции, многочлен  Жегалкина которой линеен"
+        res.jsonp(object)
+    }
+    else {
         fileRandomPath('tasks/'+req.params.folder+deeper, (f) => {
             if (!f) {
                 res.status(404)
@@ -125,10 +131,6 @@ router.get("/:folder", (req, res)=>{
                             }
                             case 'dnf':{
                                 object.condition = "Найти минимальное покрытие отмеченных вершин рёбрами (и вершинами) и тем самым упростить логическое выражение, заданное СДНФ (получив упрощённую ДНФ)"
-                                break
-                            }
-                            case 'jegalkin':{
-                                object.condition = "Придумайте и введите значения функции, многочлен  Жегалкина которой линеен"
                                 break
                             }
                         }
