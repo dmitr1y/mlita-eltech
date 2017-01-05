@@ -18,7 +18,7 @@ function fileRandomPath(path, callback){
 router.get("/:folder", (req, res)=>{
     var deeper = req.params.folder == "dummy_variables" ? "/"+/*Math.round(Math.random()*2)*/ 1 : ""
 
-    if (req.params.folder = "insularity") {
+    if (req.params.folder == "insularity") {
 
     } else {
         fileRandomPath('tasks/'+req.params.folder+deeper, (f) => {
@@ -124,7 +124,7 @@ router.get("/:folder", (req, res)=>{
                                 break
                             }
                             case 'jegalkin':{
-
+                                break
                             }
                         }
                         res.jsonp(object)
