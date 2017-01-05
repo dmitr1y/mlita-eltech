@@ -1,6 +1,7 @@
 // var host = "http://192.168.0.1:3000";
-var host = "http://88.201.187.23:3001";
+//var host = "http://88.201.187.23:3001";
 // var host = "http://83.217.26.85:3000/";
+var host = "http://localhost:3000"
 
 var canUseRib = 0;
 var canUseVertex = 0;
@@ -15,8 +16,8 @@ var assocify = function(s, k = 4){
 }
 
 var selfdualAnswer = {
-	firstClass: "levayaVershina",
-	secondClass: "pravayaVershina",
+	firstClass: "vertex_1",
+	secondClass: "vertex_2",
 	0: function(clss) {
 		$(this.firstClass).css("color", "black")
 		this.firstClass = clss;

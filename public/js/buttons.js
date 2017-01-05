@@ -193,8 +193,8 @@ $(document).ready(function(){
 			case 2: {
 				answer.dir = "dummy_variables";
 				answer.dummy_variables = vertexFromRib.answer;
-				answer.dnf = parseIntoDnf(vertexFromRib.answer, vertexFromFacet.answer, answer.assoc);
-				console.log(answer.dnf);
+				//answer.dnf = parseIntoDnf(vertexFromRib.answer, vertexFromFacet.answer, answer.assoc);
+				//console.log(answer.dnf);
 				answer.letter = letter;
 				break;
 			}
