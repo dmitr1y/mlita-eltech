@@ -128,7 +128,7 @@ router.get("/:folder", (req, res)=>{
                                 break
                             }
                             case 'jegalkin':{
-                                object.condition = "Придумайте и введите значения функции, многочлен  Жегалкина которой линеен и имеет (1, 2 , 3 или не имеет) фиктивных переменных (всего 15 функций)"
+                                object.condition = "Придумайте и введите значения функции, многочлен  Жегалкина которой линеен"
                                 break
                             }
                         }
@@ -142,286 +142,313 @@ router.get("/:folder", (req, res)=>{
 .post("/", (req,res) => {
     let solution = req.body
     console.log(solution)
-    let f = ""
-    if (solution.dir == "dummy_variables")
-        f = "./tasks/"+solution.dir+"/"+solution.letter+"/"+solution.variant+".json"
-    else
-        f = "./tasks/"+solution.dir+"/"+solution.variant+".json"
-    let dude_errors = ""
-    fs.readFile(f, (err, data) => {
-        if (err)
-            res.status(404).jsonp({problem: 1, more: "file not found"})
-        else {
-            if (solution.assoc){
+
+    if (solution.dir == "jegalkin"){
+        fs.readFile("./tasks/jegalkin/superfile.json", (err,data) => {
+            if (err)
+                res.status(404).jsonp({problem: 1, more: "file not found"})
+            else {
                 let serverSolution = JSON.parse(data)
-                switch (solution.dir){
-                    case 'expressions': {
-                        for (let i = 0; i < 16; i++){
-                            let j = bfg.assocify(i)
-                            if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
-                                dude_errors += j+", "
-                            }
+                let arr = new Array(16)
+                for (x in solution.assoc) arr[parseInt(x,2)] = solution.assoc[x]
+                if (arr.some(x => { return x == null })){
+                    res.jsonp({problem: 2, more: "Задача не решена. В некоторых рёбрах не указаны значения"})
+                } else {
+                    let streak = 0
+                    for (let i = 0; i < serverSolution.length; i++){
+                        for (let j = 0; j < serverSolution[i].length; j++){
+                            if (arr[j] == serverSolution[i][j]) streak++
+                            else break
                         }
-                        dude_errors = dude_errors.slice(0, -2);
-                        if (!dude_errors.length){
-                            res.jsonp({problem: 0, more: "Решение верное"})
-                        } else {
-                            res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
-                        }
-                        break
+                        if (streak == 16) break
                     }
-                    case 'dummy_variables':{
-                        switch (solution.letter){
-                            case "0": {
-                                res.jsonp({problem:0, more:'test0'})
-                                break
-                            }
-                            case "1": {
-                                let ribs = 0,
-                                fic_x = 0,
-                                fic_y = 0,
-                                fic_z = 0,
-                                fic_t = 0
-                                for (x in solution.dummy_variables){
-                                    let a = solution.dummy_variables[x].split(",")
-                                    for (let i = 0; i < 4; i++){
-                                        if (a[0][i] != a[1][i])
-                                        {
-                                            //which variable is dummy
-                                            switch (i){
-                                                case 0:{ fic_t++; break }
-                                                case 1:{ fic_x++; break }
-                                                case 2:{ fic_y++; break }
-                                                case 3:{ fic_z++; break }
-                                            }
-                                            break
-                                        }
-                                    }
-                                    if (solution.assoc[a[0]] == solution.assoc[a[1]]){
-                                        ribs++
-                                    }
-                                }
-                                if (fic_t+fic_x+fic_y+fic_z != 8){
-                                    res.jsonp({problem:2, more: "Выделено неверное количество рёбер."})
-                                } else {
-                                    serverSolution.dummy.forEach((x,i) => {
-                                        if (x == true){
-                                            switch (i){
-                                                case 0: {
-                                                    if (fic_t == 8) {
-                                                        res.jsonp({problem:0, more: "Решено верно."})
-                                                    } else {
-                                                        res.jsonp({problem:2, more: "Рёбра выделены неверно"})
-                                                    }
-                                                    break
-                                                }
-                                                case 1: {
-                                                    if (fic_x == 8) {
-                                                        res.jsonp({problem:0, more: "Решено верно."})
-                                                    } else {
-                                                        res.jsonp({problem:2, more: "Рёбра выделены неверно"})
-                                                    }
-                                                    break
-                                                }
-                                                case 2: {
-                                                    if (fic_y == 8) {
-                                                        res.jsonp({problem:0, more: "Решено верно."})
-                                                    } else {
-                                                        res.jsonp({problem:2, more: "Рёбра выделены неверно"})
-                                                    }
-                                                    break
-                                                }
-                                                case 3: {
-                                                    if (fic_z == 8) {
-                                                        res.jsonp({problem:0, more: "Решено верно."})
-                                                    } else {
-                                                        res.jsonp({problem:2, more: "Рёбра выделены неверно"})
-                                                    }
-                                                    break
-                                                }
-                                            }
-                                        }
-                                    })
-                                }
-                                break
-                            }
-                            case "2": {
-                                res.jsonp({problem:0, more:'test2'})
-                                break
-                            }
-                        }
-                        break
-                    }
-                    case 'selfdual': {
-                        switch (solution.letter){
-                            case 'a': {
-                                if (solution.vertexes){
-                                    solution.vertexes = solution.vertexes.sort()
-                                    if (solution.vertexes[0] > solution.vertexes[1]){
-                                        res.jsonp({problem: 0, more: "Решение верное"})
-                                    } else {
-                                        dude_errors = "Вершины указаны не верно"
-                                        res.jsonp({problem: 2, more: dude_errors})
-                                    }
-                                }
-                                else
-                                    res.jsonp({problem: 1, more: "Bad request"})
-                                break
-                            }
-                            case 'b': {
-                                let arr = new Array(16)
-                                for (x in solution.assoc) arr[parseInt(x,2)] = solution.assoc[x]
-                                if (arr.some(x => { return x == null })){
-                                    res.jsonp({problem: 2, more: "Задача не решена."})
-                                } else {
-                                    for (let i = 0; i < 16; i++){
-                                        let j = bfg.assocify(i)
-                                        if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
-                                            dude_errors += j+", "
-                                        }
-                                    }
-                                    if (bfg.selfdual(arr)) dude_errors = ""
-                                    else dude_errors = dude_errors.slice(0, -2);
-                                    if (!dude_errors.length){
-                                        res.jsonp({problem: 0, more: "Решение верное"})
-                                    } else {
-                                        res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
-                                    }
-                                }
-
-                                break
-                            }
-                            case 'c': {
-                                let arr = new Array(16)
-                                for (x in solution.assoc) arr[parseInt(x,2)] = solution.assoc[x]
-
-                                let sd = bfg.selfdual(arr)
-                                if (!sd) {
-                                    res.jsonp({problem: 2, more: "Полученная функция не является самодвойственной"})
-                                } else {
-                                    let c = 0
-                                    for (let i = 0; i < 16; i++){
-                                        let j = bfg.assocify(i)
-                                        if (serverSolution.truthTable.array[i] != arr[i]){
-                                            c++
-                                            dude_errors = "Полученная функция действительно самодвойственная, но требовалось поменять минимальное значение"
-                                        }
-                                    }
-                                    //console.log(c)
-                                    if (!dude_errors.length || c <= 2){
-                                        res.jsonp({problem: 0, more: "Решение верное"})
-                                    } else {
-                                        res.jsonp({problem: 2, more: dude_errors})
-                                    }
-                                }
-                                break
-                            }
-                            default: {
-                                res.status(403).jsonp({problem: 1, more: "letter is required"})
-                            }
-                        }
-                        break
-                    }
-                    case 'monotonic': {
-                        switch (solution.letter){
-                            case 'a':
-                            {
-                                if (solution.ribs){
-                                    let c = 0, solved = false
-                                    for (key in solution.ribs){
-                                        let arr = solution.ribs[key].split(",")
-                                        console.log(solution.assoc[arr[0]] > solution.assoc[arr[1]], arr[1], arr[0])
-                                        if (solution.assoc[arr[0]] > solution.assoc[arr[1]]){
-                                            solved = true
-                                        } else {
-                                            solved = false
-                                            res.jsonp({problem: 2, more: "Не верно выделены ребра"})
-                                            break
-                                        }
-                                    }
-                                    if (solved) res.jsonp({problem: 0, more: "Решение верное"})
-                                }
-                                else
-                                    res.jsonp({problem: 1, more: "Bad request. Ribs are required"})
-                                break
-                            }
-                            case 'b':
-                            {
-                                let all_numbers = true
-                                for (let i = 0; i < 16; i++) {
-                                    let j = bfg.assocify(i)
-                                    if (isNaN(parseInt(solution.assoc[j]))) {
-                                        all_numbers = false
-                                        break
-                                    }
-                                }
-                                console.log({all_numbers: all_numbers})
-                                if (bfg.monotonic(solution) && all_numbers) {
-                                    for (let i = 0; i < 16; i++) {
-                                        let j = bfg.assocify(i)
-                                        if (serverSolution.truthTable.assoc[j] != solution.assoc[j]) {
-                                            dude_errors += j + ", "
-                                        }
-                                    }
-                                    if (bfg.monotonic(solution.assoc)) dude_errors = ""
-                                    else dude_errors = dude_errors.slice(0, -2);
-                                    if (!dude_errors.length) {
-                                        res.jsonp({problem: 0, more: "Решение верное"})
-                                    } else {
-                                        res.jsonp({problem: 2, more: "Ошибки в следующих точках: " + dude_errors})
-                                    }
-                                } else {
-                                    res.jsonp({problem: 2, more: "Полученная функция не является монотонной"})
-                                }
-                                break
-                            }
-                            case 'c':
-                            {
-                                let all_numbers = true
-                                for (let i = 0; i < 16; i++) {
-                                    let j = bfg.assocify(i)
-                                    if (isNaN(parseInt(solution.assoc[j]))) {
-                                        all_numbers = false
-                                        break
-                                    }
-                                }
-                                console.log({all_numbers: all_numbers})
-                                if (bfg.monotonic(solution.assoc) && all_numbers) {
-                                    let c = 0
-                                    for (let i = 0; i < 16; i++) {
-                                        let j = bfg.assocify(i)
-                                        if (serverSolution.truthTable.assoc[j] != solution.assoc[j]) {
-                                            c++
-                                            dude_errors = "Полученная функция действительно монотонная, но требовалось поменять минимальное значение"
-                                        }
-                                    }
-                                    console.log({c: c})
-                                    if (!dude_errors.length || c <= 2) {
-                                        res.jsonp({problem: 0, more: "Решение верное"})
-                                    } else {
-                                        res.jsonp({problem: 2, more: dude_errors})
-                                    }
-                                } else {
-                                    res.jsonp({problem: 2, more: "Полученная функция не является монотонной"})
-                                }
-                                break
-                            }
-                            default: {
-                                res.status(400).jsonp({problem: 1, more: "letter is required"})
-                            }
-                        }
-                        break
-                    }
-                    case 'jegalkin':{
-                        res.jsonp({problem: 1, more: 'Функция не формирует линейный многочлен Жегалкина'})
-                        break
+                    if (streak == 16) {
+                        res.jsonp({problem: 0, more: "Решение верно. Функция описывает линейный многочлен Жегалкина."})
+                    } else {
+                        res.jsonp({problem: 2, more: "Набор значений функции не является линейным многочленом Жегалкина."})
                     }
                 }
-            } else {
-                res.status(400).jsonp({problem: 1, more: 'assoc array is required'})
             }
-        }
-    })
+        })
+    } else {
+        let f = ""
+        if (solution.dir == "dummy_variables")
+            f = "./tasks/"+solution.dir+"/"+solution.letter+"/"+solution.variant+".json"
+        else
+            f = "./tasks/"+solution.dir+"/"+solution.variant+".json"
+        let dude_errors = ""
+        fs.readFile(f, (err, data) => {
+            if (err)
+                res.status(404).jsonp({problem: 1, more: "file not found"})
+            else {
+                if (solution.assoc){
+                    let serverSolution = JSON.parse(data)
+                    switch (solution.dir){
+                        case 'expressions': {
+                            for (let i = 0; i < 16; i++){
+                                let j = bfg.assocify(i)
+                                if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
+                                    dude_errors += j+", "
+                                }
+                            }
+                            dude_errors = dude_errors.slice(0, -2);
+                            if (!dude_errors.length){
+                                res.jsonp({problem: 0, more: "Решение верное"})
+                            } else {
+                                res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
+                            }
+                            break
+                        }
+                        case 'dummy_variables':{
+                            switch (solution.letter){
+                                case "0": {
+                                    res.jsonp({problem:0, more:'test0'})
+                                    break
+                                }
+                                case "1": {
+                                    let ribs = 0,
+                                        fic_x = 0,
+                                        fic_y = 0,
+                                        fic_z = 0,
+                                        fic_t = 0
+                                    for (x in solution.dummy_variables){
+                                        let a = solution.dummy_variables[x].split(",")
+                                        for (let i = 0; i < 4; i++){
+                                            if (a[0][i] != a[1][i])
+                                            {
+                                                //which variable is dummy
+                                                switch (i){
+                                                    case 0:{ fic_t++; break }
+                                                    case 1:{ fic_x++; break }
+                                                    case 2:{ fic_y++; break }
+                                                    case 3:{ fic_z++; break }
+                                                }
+                                                break
+                                            }
+                                        }
+                                        if (solution.assoc[a[0]] == solution.assoc[a[1]]){
+                                            ribs++
+                                        }
+                                    }
+                                    if (fic_t+fic_x+fic_y+fic_z != 8){
+                                        res.jsonp({problem:2, more: "Выделено неверное количество рёбер."})
+                                    } else {
+                                        serverSolution.dummy.forEach((x,i) => {
+                                            if (x == true){
+                                                switch (i){
+                                                    case 0: {
+                                                        if (fic_t == 8) {
+                                                            res.jsonp({problem:0, more: "Решено верно."})
+                                                        } else {
+                                                            res.jsonp({problem:2, more: "Рёбра выделены неверно"})
+                                                        }
+                                                        break
+                                                    }
+                                                    case 1: {
+                                                        if (fic_x == 8) {
+                                                            res.jsonp({problem:0, more: "Решено верно."})
+                                                        } else {
+                                                            res.jsonp({problem:2, more: "Рёбра выделены неверно"})
+                                                        }
+                                                        break
+                                                    }
+                                                    case 2: {
+                                                        if (fic_y == 8) {
+                                                            res.jsonp({problem:0, more: "Решено верно."})
+                                                        } else {
+                                                            res.jsonp({problem:2, more: "Рёбра выделены неверно"})
+                                                        }
+                                                        break
+                                                    }
+                                                    case 3: {
+                                                        if (fic_z == 8) {
+                                                            res.jsonp({problem:0, more: "Решено верно."})
+                                                        } else {
+                                                            res.jsonp({problem:2, more: "Рёбра выделены неверно"})
+                                                        }
+                                                        break
+                                                    }
+                                                }
+                                            }
+                                        })
+                                    }
+                                    break
+                                }
+                                case "2": {
+                                    res.jsonp({problem:0, more:'test2'})
+                                    break
+                                }
+                            }
+                            break
+                        }
+                        case 'selfdual': {
+                            switch (solution.letter){
+                                case 'a': {
+                                    if (solution.vertexes){
+                                        solution.vertexes = solution.vertexes.sort()
+                                        if (solution.vertexes[0] > solution.vertexes[1]){
+                                            res.jsonp({problem: 0, more: "Решение верное"})
+                                        } else {
+                                            dude_errors = "Вершины указаны не верно"
+                                            res.jsonp({problem: 2, more: dude_errors})
+                                        }
+                                    }
+                                    else
+                                        res.jsonp({problem: 1, more: "Bad request"})
+                                    break
+                                }
+                                case 'b': {
+                                    let arr = new Array(16)
+                                    for (x in solution.assoc) arr[parseInt(x,2)] = solution.assoc[x]
+                                    if (arr.some(x => { return x == null })){
+                                        res.jsonp({problem: 2, more: "Задача не решена."})
+                                    } else {
+                                        for (let i = 0; i < 16; i++){
+                                            let j = bfg.assocify(i)
+                                            if (serverSolution.truthTable.assoc[j] != solution.assoc[j]){
+                                                dude_errors += j+", "
+                                            }
+                                        }
+                                        if (bfg.selfdual(arr)) dude_errors = ""
+                                        else dude_errors = dude_errors.slice(0, -2);
+                                        if (!dude_errors.length){
+                                            res.jsonp({problem: 0, more: "Решение верное"})
+                                        } else {
+                                            res.jsonp({problem: 2, more: "Ошибки в следующих точках: "+dude_errors})
+                                        }
+                                    }
+
+                                    break
+                                }
+                                case 'c': {
+                                    let arr = new Array(16)
+                                    for (x in solution.assoc) arr[parseInt(x,2)] = solution.assoc[x]
+
+                                    let sd = bfg.selfdual(arr)
+                                    if (!sd) {
+                                        res.jsonp({problem: 2, more: "Полученная функция не является самодвойственной"})
+                                    } else {
+                                        let c = 0
+                                        for (let i = 0; i < 16; i++){
+                                            let j = bfg.assocify(i)
+                                            if (serverSolution.truthTable.array[i] != arr[i]){
+                                                c++
+                                                dude_errors = "Полученная функция действительно самодвойственная, но требовалось поменять минимальное значение"
+                                            }
+                                        }
+                                        //console.log(c)
+                                        if (!dude_errors.length || c <= 2){
+                                            res.jsonp({problem: 0, more: "Решение верное"})
+                                        } else {
+                                            res.jsonp({problem: 2, more: dude_errors})
+                                        }
+                                    }
+                                    break
+                                }
+                                default: {
+                                    res.status(403).jsonp({problem: 1, more: "letter is required"})
+                                }
+                            }
+                            break
+                        }
+                        case 'monotonic': {
+                            switch (solution.letter){
+                                case 'a':
+                                {
+                                    if (solution.ribs){
+                                        let c = 0, solved = false
+                                        for (key in solution.ribs){
+                                            let arr = solution.ribs[key].split(",")
+                                            console.log(solution.assoc[arr[0]] > solution.assoc[arr[1]], arr[1], arr[0])
+                                            if (solution.assoc[arr[0]] > solution.assoc[arr[1]]){
+                                                solved = true
+                                            } else {
+                                                solved = false
+                                                res.jsonp({problem: 2, more: "Не верно выделены ребра"})
+                                                break
+                                            }
+                                        }
+                                        if (solved) res.jsonp({problem: 0, more: "Решение верное"})
+                                    }
+                                    else
+                                        res.jsonp({problem: 1, more: "Bad request. Ribs are required"})
+                                    break
+                                }
+                                case 'b':
+                                {
+                                    let all_numbers = true
+                                    for (let i = 0; i < 16; i++) {
+                                        let j = bfg.assocify(i)
+                                        if (isNaN(parseInt(solution.assoc[j]))) {
+                                            all_numbers = false
+                                            break
+                                        }
+                                    }
+                                    console.log({all_numbers: all_numbers})
+                                    if (bfg.monotonic(solution) && all_numbers) {
+                                        for (let i = 0; i < 16; i++) {
+                                            let j = bfg.assocify(i)
+                                            if (serverSolution.truthTable.assoc[j] != solution.assoc[j]) {
+                                                dude_errors += j + ", "
+                                            }
+                                        }
+                                        if (bfg.monotonic(solution.assoc)) dude_errors = ""
+                                        else dude_errors = dude_errors.slice(0, -2);
+                                        if (!dude_errors.length) {
+                                            res.jsonp({problem: 0, more: "Решение верное"})
+                                        } else {
+                                            res.jsonp({problem: 2, more: "Ошибки в следующих точках: " + dude_errors})
+                                        }
+                                    } else {
+                                        res.jsonp({problem: 2, more: "Полученная функция не является монотонной"})
+                                    }
+                                    break
+                                }
+                                case 'c':
+                                {
+                                    let all_numbers = true
+                                    for (let i = 0; i < 16; i++) {
+                                        let j = bfg.assocify(i)
+                                        if (isNaN(parseInt(solution.assoc[j]))) {
+                                            all_numbers = false
+                                            break
+                                        }
+                                    }
+                                    console.log({all_numbers: all_numbers})
+                                    if (bfg.monotonic(solution.assoc) && all_numbers) {
+                                        let c = 0
+                                        for (let i = 0; i < 16; i++) {
+                                            let j = bfg.assocify(i)
+                                            if (serverSolution.truthTable.assoc[j] != solution.assoc[j]) {
+                                                c++
+                                                dude_errors = "Полученная функция действительно монотонная, но требовалось поменять минимальное значение"
+                                            }
+                                        }
+                                        console.log({c: c})
+                                        if (!dude_errors.length || c <= 2) {
+                                            res.jsonp({problem: 0, more: "Решение верное"})
+                                        } else {
+                                            res.jsonp({problem: 2, more: dude_errors})
+                                        }
+                                    } else {
+                                        res.jsonp({problem: 2, more: "Полученная функция не является монотонной"})
+                                    }
+                                    break
+                                }
+                                default: {
+                                    res.status(400).jsonp({problem: 1, more: "letter is required"})
+                                }
+                            }
+                            break
+                        }
+                    }
+                } else {
+                    res.status(400).jsonp({problem: 1, more: 'assoc array is required'})
+                }
+            }
+        })
+    }
+
 })
 
 module.exports = router;

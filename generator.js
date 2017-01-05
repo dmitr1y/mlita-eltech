@@ -69,15 +69,9 @@ if (process.argv.length > 2){
         }
         case 'jegalkin':
         {
-            k = 1;
-            for (var i = 1; i <= N; i++){
-                bfg.generate_jegalkin("Y xor Z xor (T and not T) xor (X and not X)", (data) => {
-                    console.log(data.truthTable.array)
-                    //console.log("Saving object to "+k+".json")
-                    //fs.writeFile('tasks/jegalkin/'+k+'.json', JSON.stringify(data, null, 4))
-                    k++
-                })
-            }
+            bfg.generate_jegalkin((data) => {
+                fs.writeFile('tasks/jegalkin/superfile.json', JSON.stringify(data, null, 4))
+            })
         }
     }
     console.log("Generation finished")
