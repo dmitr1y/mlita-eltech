@@ -2,6 +2,7 @@ $(document).ready(function(){
 	var variant = 0;
 	var task = 0;
 	var letter = 0;
+	var hint = "";
 
 	$("#external_view").click(function(){
 		$(".rib").fadeIn();
@@ -41,8 +42,7 @@ $(document).ready(function(){
 		canUseVertex = 1;
 		canUseRib = 0;
 		canUseFacet = 0;
-		// $("#condition").empty().append("Ввести недостающие значения функции " + 
-			// "рядом с каждой вершиной гиперкуба, например, если f(0;0;0;0)=1, то около начала координат нужно поставить 1.");
+		hint = "<br>Можно менять значения вершин.<br>";
 		$.getJSON(host + '/task/expressions', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
@@ -50,16 +50,16 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
-			$("#condition").empty().append(json.condition);
+			$("#condition").empty().append(json.condition + hint);
 		});
 		task = 1;
-		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})
 
 	$(".task_2").click(function(){
 		canUseVertex = 0;
 		canUseRib = 1;
 		canUseFacet = 0;
+		hint = "<br>Можно выбирать рёбра.<br>";
 		$(".title").empty().append("Фиктивные переменные");
 		$(".answer").empty();
 		$.getJSON(host + '/task/dummy_variables', function(json, textStatus) {
@@ -69,11 +69,10 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
-			$("#condition").empty().append(json.condition);
+			$("#condition").empty().append(json.condition + hint);
 			letter = json.letter;
 		});
 		task = 2;
-		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})
 
 
@@ -81,6 +80,7 @@ $(document).ready(function(){
 		canUseVertex = 1;
 		canUseFacet = 1;
 		canUseRib = 1;
+		hint = "<br>Можно выбирать как рёбра, так и грани, так и вершины.<br>";
 		$(".title").empty().append("Минимизация ДНФ");
 		$(".answer").empty();
 		$.getJSON(host + '/task/dnf', function(json, textStatus) {
@@ -90,9 +90,8 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append(convertToSymbols(assocify(i)) + " = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
-			$("#condition").empty().append(json.condition);
+			$("#condition").empty().append(json.condition + hint);
 		});
-		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})
 
 	$(".task_4").click(function() {
@@ -106,24 +105,26 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
-			$("#condition").empty().append(json.condition);
 			letter = json.letter;
 			if (letter == "b" || letter == "c") {
 				canUseRib = 0;
 				canUseVertex = 1;
+				hint = "<br>Можно менять значения вершин.<br>";
 			} else {
 				canUseRib = 1;
 				canUseVertex = 0;
+				hint = "<br>Можно выбирать рёбра.<br>";
 			}
+			$("#condition").empty().append(json.condition + hint);
 		});
 		task = 4;
-		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})
 
 	$(".task_5").click(function(){
 		canUseRib = 0;
 		canUseFacet = 0;
 		canUseVertex = 1;
+		hint = "<br>Можно менять значения вершин.<br>";
 		$(".title").empty().append("Самодвойственность");
 		$(".answer").empty();
 		$.getJSON(host + '/task/selfdual', function(json, textStatus) {
@@ -134,28 +135,27 @@ $(document).ready(function(){
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
-			$("#condition").empty().append(json.condition);
+			$("#condition").empty().append(json.condition + hint);
 			letter = json.letter;
 		})
 		task = 5;
-		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})
 
 	$(".task_6").click(function(){
 		canUseRib = 0;
-		canUseVertex = 0;
+		canUseVertex = 1;
 		canUseFacet = 0;
+		hint = "<br>Можно менять значения вершин.<br>";
 		$(".title").empty().append("Многочлен Жегалкина");
 		$(".answer").empty();
-		$.getJSON(host + '/task/expressions', function(json, textStatus) {
+		$.getJSON(host + '/task/jegalkin', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
 			for (var i = 0; i < 16; ++i) {
 				$(".vertex_" + (i + 1)).empty().append(convertIntoZhegalkin(i,  ".vertex_", assocify(i)) + " = " + json.truthTable.assoc[assocify(i)]);
 			}
-			$("#condition").empty().append(json.condition);
+			$("#condition").empty().append(json.condition + hint);
 		});
-		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})
 
 	$(".task_7").click(function(){
@@ -164,16 +164,16 @@ $(document).ready(function(){
 		canUseVertex = 1;
 		canUseRib = 0;
 		canUseFacet = 0;
-		$.getJSON(host + '/task/insularity', function(json, textStatus) {
+		hint = "<br>Можно менять значения вершин.<br>";
+		$.getJSON(host + '/task/expressions', function(json, textStatus) {
 			console.log(json);
 			variant = json.variant;
 			for (var i = 0; i < 16; ++i) {
 				$(".vertex_" + (i + 1)).empty().append("f(" + assocify(i) + ") = " + json.truthTable.assoc[assocify(i)]);
 				putVertex(i, ".vertex_");
 			}
-			$("#condition").empty().append(json.condition);
+			$("#condition").empty().append(json.condition + hint);
 		});
-		console.log(canUseVertex + " v, " + canUseRib + " r, " + canUseFacet + " f");
 	})	
 
 	$(".send").click(function(){
@@ -193,6 +193,8 @@ $(document).ready(function(){
 			case 2: {
 				answer.dir = "dummy_variables";
 				answer.dummy_variables = vertexFromRib.answer;
+				answer.dnf = parseIntoDnf(vertexFromRib.answer, vertexFromFacet.answer, answer.assoc);
+				console.log(answer.dnf);
 				answer.letter = letter;
 				break;
 			}

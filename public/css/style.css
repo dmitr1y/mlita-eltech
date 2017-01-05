@@ -24,6 +24,10 @@
     min-height: 430px;
 }
 
+.cube {
+	transition: all 0.5s ease;
+}
+
 .cube .vertex {
 	font-size: 16px;
 	font-weight: bold;
@@ -45,13 +49,22 @@
 	margin-left: -5px;
 }
 
-.description, .answer {
+.description, .answer, #clarification {
 	display: table-cell;
 	vertical-align: middle;
 	width: 100%;
 	text-align: center;
-	height: 200px;
+	min-width: 450px;
 	border-radius: 10px;
+}
+
+.description, .answer {
+	height: 200px;
+}
+
+#clarification {
+	border-radius: 0;
+	border-bottom: 1px solid grey;
 }
 
 .send {
@@ -62,8 +75,4 @@
 .btn-group>.btn:last-child:not(:first-child) {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
-}
-
-.description {
-	/* border: 1px solid blue; */
 }

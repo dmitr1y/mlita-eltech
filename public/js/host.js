@@ -127,26 +127,43 @@ var convertToSymbols = function(vertex) {
 	for (let i = 0, count = 0; i < vertex.length && count < 4; ++i) {
 		switch(count) {
 			case 0: {
-				string += vertex[i] == 1 ? "t" : "!t";
+				string += vertex[i] == 1 ? "T" : "!T";
 				++count;
 				break;
 			}
 			case 1: {
-				string += vertex[i] == 1? "x" : "!x";
+				string += vertex[i] == 1? "X" : "!X";
 				++count;
 				break;
 			}
 			case 2: {
-				string += vertex[i] == 1? "y" : "!y";
+				string += vertex[i] == 1? "Y" : "!Y";
 				++count;
 				break;
 			}
 			case 3: {
-				string += vertex[i] == 1? "z" : "!z";
+				string += vertex[i] == 1? "Z" : "!Z";
 				++count;
 				break;
 			}
 		}
 	}	
 	return string;
+}
+
+var parseIntoDnf = function(fromRibs, fromFacet, fromVertex) {
+	var dnf = [];
+	for (key in fromRibs) {
+		dnf.concat(key.split(",").filter(function(vertex){
+			return convertToSymbols(vertex);
+		}));
+	}
+
+	for (key in fromFacet) {
+		dnf.concat(key.split(",").filter(function(vertex){
+			return convertToSymbols(vertex);
+		}));	
+	}
+	dnf.concat(fromVertex).join(" || ");
+	return dnf;
 }
