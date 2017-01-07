@@ -17,5 +17,15 @@
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0",
     "touch": "1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-uglifycss": "^1.0.6",
+    "tiny-lr": "^1.0.3"
   }
 }
