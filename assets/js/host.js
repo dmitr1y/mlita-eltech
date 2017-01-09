@@ -1,7 +1,7 @@
 // var host = "http://192.168.0.1:3000";
-//var host = "http://88.201.187.23:3001";
+var host = "http://88.201.187.23:3001";
 // var host = "http://83.217.26.85:3000/";
-var host = "http://localhost:3000"
+// var host = "http://localhost:3000"
 
 var canUseRib = 0;
 var canUseVertex = 0;

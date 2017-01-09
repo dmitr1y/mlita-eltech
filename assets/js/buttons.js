@@ -148,14 +148,7 @@ $(document).ready(function(){
 		hint = "<br>Можно менять значения вершин.<br>";
 		$(".title").empty().append("Многочлен Жегалкина");
 		$(".answer").empty();
-		$.getJSON(host + '/task/jegalkin', function(json, textStatus) {
-			console.log(json);
-			variant = json.variant;
-			for (var i = 0; i < 16; ++i) {
-				$(".vertex_" + (i + 1)).empty().append(convertIntoZhegalkin(i,  ".vertex_", assocify(i)) + " = " + json.truthTable.assoc[assocify(i)]);
-			}
-			$("#condition").empty().append(json.condition + hint);
-		});
+		$("#condition").empty().append(hint);
 	})
 
 	$(".task_7").click(function(){

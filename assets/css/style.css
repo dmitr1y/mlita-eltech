@@ -37,7 +37,7 @@
 	position: relative;
 }
 
-.task, .buttons {    
+.task, .buttons, .coords {    
 	text-align: center;
 	display: flex;
     align-items: center;
@@ -75,4 +75,26 @@
 .btn-group>.btn:last-child:not(:first-child) {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
+}
+
+.coords > div {
+	margin-left: 5px;
+	font-size: 50px;
+	width: 100px;
+	display: inline-block;
+}
+
+#coordX {
+	color: #0000aa;
+	border-bottom: 1px solid #0000aa;
+}
+
+#coordY {
+	color: #aa0000;
+	border-bottom: 1px solid #aa0000;
+}
+
+#coordZ {
+	color: #00aa00;
+	border-bottom: 1px solid #00aa00;
 }

@@ -1,0 +1,113 @@
+.slider {
+  width: 200px;
+  margin: auto;
+}
+
+.x, .y, .z {
+  top: -70px;
+}
+
+.x {
+  margin-left: 10%;
+}
+
+
+input[type="range"] {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 20px;
+  margin: 0;
+  border: none;
+  padding: 1px 2px;
+  border-radius: 14px;
+  background: #7a7d7a;
+  box-shadow: inset 0 1px 0 0 #0d0e0f, inset 0 -1px 0 0 #3a3d42;
+  -webkit-box-shadow: inset 0 1px 0 0 #0d0e0f, inset 0 -1px 0 0 #3a3d42;
+  outline: none; /* no focus outline */
+}
+
+input[type="range"]::-moz-range-track {
+  border: inherit;
+  background: transparent;
+}
+
+input[type="range"]::-ms-track {
+  border: inherit;
+  color: transparent; /* don't drawn vertical reference line */
+  background: transparent;
+}
+
+input[type="range"]::-ms-fill-lower,
+input[type="range"]::-ms-fill-upper {
+  background: transparent;
+}
+
+input[type="range"]::-ms-tooltip {
+  display: none;
+}
+
+/* thumb */
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 40px;
+  height: 18px;
+  border: none;
+  border-radius: 12px;
+}
+
+input[type="range"]::-ms-thumb {
+  width: 40px;
+  height: 18px;
+  border-radius: 12px;
+  border: 0;
+}
+
+#xRange::-webkit-slider-thumb {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0000cc), color-stop(100%, #000066)); /* android <= 2.2 */
+  background-image: -webkit-linear-gradient(top , #0000cc 0, #000066 100%); /* older mobile safari and android > 2.2 */;
+  background-image: linear-gradient(to bottom, #0000cc 0, #000066 100%); /* W3C */
+}
+
+#xRange::-moz-range-thumb {
+  background-image: linear-gradient(to bottom, #0000cc 0, #000066 100%); /* W3C */
+}
+
+#xRange::-ms-thumb {
+  background-image: linear-gradient(to bottom, #0000cc 0, #000066 100%); /* W3C */
+}
+
+#yRange::-webkit-slider-thumb {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cc0000), color-stop(100%, #660000)); /* android <= 2.2 */
+  background-image: -webkit-linear-gradient(top , #cc0000 0, #660000 100%); /* older mobile safari and android > 2.2 */;
+  background-image: linear-gradient(to bottom, #cc0000 0, #660000 100%); /* W3C */
+}
+
+#yRange::-moz-range-thumb {
+  background-image: linear-gradient(to bottom, #cc0000 0, #660000 100%); /* W3C */
+}
+
+#yRange::-ms-thumb {
+  background-image: linear-gradient(to bottom, #cc0000 0, #660000 100%); /* W3C */
+}
+
+#zRange::-webkit-slider-thumb {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00cc00), color-006600(100%, #000066)); /* android <= 2.2 */
+  background-image: -webkit-linear-gradient(top , #00cc00 0, #006600 100%); /* older mobile safari and android > 2.2 */;
+  background-image: linear-gradient(to bottom, #00cc00 0, #006600 100%); /* W3C */
+}
+
+#zRange::-moz-range-thumb {
+  background-image: linear-gradient(to bottom, #00cc00 0, #006600 100%); /* W3C */
+}
+
+#zRange::-ms-thumb {
+  background-image: linear-gradient(to bottom, #00cc00 0, #006600 100%); /* W3C */
+}
